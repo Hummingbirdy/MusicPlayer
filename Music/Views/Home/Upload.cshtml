@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>YouTube Data API Quickstart</title>
+    <meta charset='utf-8' />
+
+    <script type="text/JavaScript"
+            src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+</head>
+<body>
+    <h3>YouTube Upload</h3>
+
+    <!--Add buttons to initiate auth sequence and sign out-->
+    <button id="authorize-button" style="display: none;">Authorize</button>
+    <button id="signout-button" style="display: none;">Sign Out</button>
+    <br/>
+    <button id="load-songs" onclick="getPlaylists()">Load</button>
+    <br/>
+    <button id="upload" onclick="send()">Upload</button>
+
+    <pre id="content"></pre>
+
+    <script src="~/Source/quickstart.js"></script>
+
+    <script async defer src="https://apis.google.com/js/api.js"
+            onload="this.onload=function(){};handleClientLoad()"
+            onreadystatechange="if (this.readyState === 'complete') this.onload()">
+    </script>
+</body>
+</html>
+
+
+
