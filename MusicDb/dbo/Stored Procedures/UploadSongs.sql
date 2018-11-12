@@ -8,10 +8,12 @@ AS
 					USING  @songs AS SOURCE 
 					ON
 						TARGET.[YouTubeId] = SOURCE.[YouTubeId]
+						AND TARGET.[UserId] = SOURCE.[UserId]
 
 				WHEN MATCHED THEN
 					UPDATE
 						SET 
+							[UserId] = SOURCE.[UserId],
 							[Name] = SOURCE.[Name],
 							[Type] = 1,
 							[Thumbnail] = SOURCE.[Thumbnail],
@@ -20,6 +22,7 @@ AS
 
 				WHEN NOT MATCHED THEN
 					INSERT (
+						[UserId],
 						[YouTubeId],
 						[Name],
 						[Type],
@@ -29,6 +32,7 @@ AS
 						[UpdatedDate]
 					)
 					VALUES (
+						SOURCE.[UserId],
 						SOURCE.[YouTubeId],
 						SOURCE.[Name],
 						1,

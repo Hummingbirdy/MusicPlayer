@@ -6,15 +6,24 @@ using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 using Dapper;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Protocols;
 using Music.Modals;
+
 
 namespace Music.Controllers
 {
     public class UploadController : Controller
     {
         private string _connectionString = "Server=tcp:lemasterworks.database.windows.net,1433;Initial Catalog=MusicPlayer;Persist Security Info=False;User ID=tlemaster;Password=Lexielm2;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+        private readonly UserManager<ApplicationUser> _userManager;
+
+        public UploadController(UserManager<ApplicationUser> userManager)
+        {
+            _userManager = userManager;
+        }       
 
         [HttpPost]
         public void Playlist(List<Songs> songs)
@@ -22,9 +31,10 @@ namespace Music.Controllers
             UploadSongs(songs);
         }
 
-
         public void UploadSongs(List<Songs> songs)
         {
+            var userId = _userManager.GetUserId(HttpContext.User);
+
             var distinctSongs = songs.GroupBy(s => s.YouTubeId).Select(s => s.OrderBy(x => x.YouTubeId).First()).ToList();
 
             using (var connection = new SqlConnection(_connectionString))
@@ -69,6 +79,7 @@ namespace Music.Controllers
 
                     var records = distinctSongs.Select(s => new
                     {
+                        userId,
                         s.YouTubeId,
                         s.Name,
                         s.Thumbnail,

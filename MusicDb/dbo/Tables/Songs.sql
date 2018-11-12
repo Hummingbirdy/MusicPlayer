@@ -1,5 +1,6 @@
 ﻿CREATE TABLE [dbo].[Songs] (
     [SongId]      INT           IDENTITY (1, 1) NOT NULL,
+	[UserId]	  NVARCHAR(50) NOT NULL,
 	[YouTubeId]	  NVARCHAR(100)  NULL,
     [Name]        NVARCHAR (100) NULL,
     [Type]        INT           NULL,
