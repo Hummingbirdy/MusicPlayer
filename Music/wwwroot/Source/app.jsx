@@ -6,12 +6,12 @@ import '../CSS/site.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 //import Counter from './reactComponent';
-import Player from './Player.jsx';
+import Home from './Home.jsx';
 
 //import ES6Lib from './es6codelib';
 
 ReactDOM.render(
-    <Player />,
+    <Home />,
     document.getElementById('content')
 );
 

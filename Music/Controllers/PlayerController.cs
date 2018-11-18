@@ -24,7 +24,7 @@ namespace Music.Controllers
         [HttpGet]
         public JsonResult Songs()
         {
-            var songs = GetSongs();
+            var songs = GetSongs().OrderBy(s => s.Name);
             return Json(new { songs });
         }
 

@@ -43958,38 +43958,139 @@ if(false) {}
 
 /***/ }),
 
-/***/ "./wwwroot/source/Player.jsx":
-/*!***********************************!*\
-  !*** ./wwwroot/source/Player.jsx ***!
-  \***********************************/
+/***/ "./wwwroot/source/Components/Player.jsx":
+/*!**********************************************!*\
+  !*** ./wwwroot/source/Components/Player.jsx ***!
+  \**********************************************/
+/*! exports provided: Player */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Player", function() { return Player; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_player_lib_players_YouTube__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-player/lib/players/YouTube */ "./node_modules/react-player/lib/players/YouTube.js");
+/* harmony import */ var react_player_lib_players_YouTube__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_player_lib_players_YouTube__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var office_ui_fabric_react_lib_Button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! office-ui-fabric-react/lib/Button */ "./node_modules/office-ui-fabric-react/lib/Button.js");
+/* harmony import */ var office_ui_fabric_react_lib_Label__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! office-ui-fabric-react/lib/Label */ "./node_modules/office-ui-fabric-react/lib/Label.js");
+
+
+
+
+let Player = class Player extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    let {
+      songs,
+      index,
+      url
+    } = this.props;
+    return react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", null, react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("strong", null, "Playing: ", songs[index - 1].name), react__WEBPACK_IMPORTED_MODULE_0__["createElement"](react_player_lib_players_YouTube__WEBPACK_IMPORTED_MODULE_1___default.a, {
+      playing: true,
+      url: url,
+      controls: true,
+      onEnded: this.props.goNext
+    }), "Up next: ", songs[index].name, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](office_ui_fabric_react_lib_Button__WEBPACK_IMPORTED_MODULE_2__["IconButton"], {
+      iconProps: {
+        iconName: 'Next'
+      },
+      onClick: this.props.goNext
+    }), react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("hr", null), react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", null, react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("span", null, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](office_ui_fabric_react_lib_Label__WEBPACK_IMPORTED_MODULE_3__["Label"], null, "Current Playlist...")), react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", {
+      style: {
+        'textAlign': 'right'
+      }
+    }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](office_ui_fabric_react_lib_Button__WEBPACK_IMPORTED_MODULE_2__["DefaultButton"], {
+      text: "Shuffle",
+      onClick: this.props.shuffle
+    }))), react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", {
+      style: {
+        overflow: 'scroll',
+        height: '500px'
+      }
+    }, songs.map((s, i) => react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", null, s.name, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](office_ui_fabric_react_lib_Button__WEBPACK_IMPORTED_MODULE_2__["IconButton"], {
+      iconProps: {
+        iconName: 'Play'
+      },
+      onClick: () => {
+        this.props.playSong(i);
+      }
+    })))));
+  }
+
+};
+
+/***/ }),
+
+/***/ "./wwwroot/source/Components/Search.jsx":
+/*!**********************************************!*\
+  !*** ./wwwroot/source/Components/Search.jsx ***!
+  \**********************************************/
+/*! exports provided: Search */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Search", function() { return Search; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var office_ui_fabric_react_lib_SearchBox__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! office-ui-fabric-react/lib/SearchBox */ "./node_modules/office-ui-fabric-react/lib/SearchBox.js");
+/* harmony import */ var office_ui_fabric_react_lib_Button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! office-ui-fabric-react/lib/Button */ "./node_modules/office-ui-fabric-react/lib/Button.js");
+
+
+
+let Search = class Search extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", null, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](office_ui_fabric_react_lib_SearchBox__WEBPACK_IMPORTED_MODULE_1__["SearchBox"], {
+      placeholder: "Search for Songs",
+      onSearch: value => {
+        this.props.addSearchTerm(value);
+      }
+    }), react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", null, this.props.searchTerms.map((v, i) => react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("span", null, v, " "))), react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", {
+      style: {
+        'textAlign': 'right'
+      }
+    }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](office_ui_fabric_react_lib_Button__WEBPACK_IMPORTED_MODULE_2__["DefaultButton"], {
+      text: "Search",
+      onClick: () => this.props.search()
+    })));
+  }
+
+};
+
+/***/ }),
+
+/***/ "./wwwroot/source/Home.jsx":
+/*!*********************************!*\
+  !*** ./wwwroot/source/Home.jsx ***!
+  \*********************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Player; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Home; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react_player_lib_players_YouTube__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-player/lib/players/YouTube */ "./node_modules/react-player/lib/players/YouTube.js");
-/* harmony import */ var react_player_lib_players_YouTube__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_player_lib_players_YouTube__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var office_ui_fabric_react_lib_Icons__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! office-ui-fabric-react/lib/Icons */ "./node_modules/office-ui-fabric-react/lib/Icons.js");
-/* harmony import */ var office_ui_fabric_react_lib_Button__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! office-ui-fabric-react/lib/Button */ "./node_modules/office-ui-fabric-react/lib/Button.js");
-/* harmony import */ var office_ui_fabric_react_lib_SearchBox__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! office-ui-fabric-react/lib/SearchBox */ "./node_modules/office-ui-fabric-react/lib/SearchBox.js");
-/* harmony import */ var querystring__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! querystring */ "./node_modules/querystring-es3/index.js");
-/* harmony import */ var querystring__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(querystring__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var office_ui_fabric_react_lib_Label__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! office-ui-fabric-react/lib/Label */ "./node_modules/office-ui-fabric-react/lib/Label.js");
+/* harmony import */ var querystring__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! querystring */ "./node_modules/querystring-es3/index.js");
+/* harmony import */ var querystring__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(querystring__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var office_ui_fabric_react_lib_Icons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! office-ui-fabric-react/lib/Icons */ "./node_modules/office-ui-fabric-react/lib/Icons.js");
+/* harmony import */ var _Components_Search_jsx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Components/Search.jsx */ "./wwwroot/source/Components/Search.jsx");
+/* harmony import */ var _Components_Player_jsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Components/Player.jsx */ "./wwwroot/source/Components/Player.jsx");
 
 
 
 
 
-
-
-
-Object(office_ui_fabric_react_lib_Icons__WEBPACK_IMPORTED_MODULE_3__["initializeIcons"])();
-let Player = class Player extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+Object(office_ui_fabric_react_lib_Icons__WEBPACK_IMPORTED_MODULE_2__["initializeIcons"])();
+let Home = class Home extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   constructor(props) {
     super(props);
     this.goNext = this.goNext.bind(this);
@@ -44079,48 +44180,18 @@ let Player = class Player extends react__WEBPACK_IMPORTED_MODULE_0__["Component"
   }
 
   render() {
-    return react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", null, this.state.songs.length > 0 && react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", null, react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", null, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](office_ui_fabric_react_lib_SearchBox__WEBPACK_IMPORTED_MODULE_5__["SearchBox"], {
-      placeholder: "Search for Songs",
-      onSearch: value => {
-        this.addSearchTerm(value);
-      }
-    }), react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", null, this.state.searchTerms.map((v, i) => react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("span", null, v, " "))), react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", {
-      style: {
-        'textAlign': 'right'
-      }
-    }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](office_ui_fabric_react_lib_Button__WEBPACK_IMPORTED_MODULE_4__["DefaultButton"], {
-      text: "Search",
-      onClick: () => this.search()
-    }))), react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("hr", null), react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("strong", null, "Playing: ", this.state.songs[this.state.index - 1].name), react__WEBPACK_IMPORTED_MODULE_0__["createElement"](react_player_lib_players_YouTube__WEBPACK_IMPORTED_MODULE_2___default.a, {
-      playing: true,
+    return react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", null, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_Components_Search_jsx__WEBPACK_IMPORTED_MODULE_3__["Search"], {
+      search: this.search,
+      addSearchTerm: this.addSearchTerm,
+      searchTerms: this.state.searchTerms
+    }), this.state.songs.length > 0 && react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_Components_Player_jsx__WEBPACK_IMPORTED_MODULE_4__["Player"], {
+      songs: this.state.songs,
+      index: this.state.index,
       url: this.state.url,
-      controls: true,
-      onEnded: this.goNext
-    }), "Up next: ", this.state.songs[this.state.index].name, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](office_ui_fabric_react_lib_Button__WEBPACK_IMPORTED_MODULE_4__["IconButton"], {
-      iconProps: {
-        iconName: 'Next'
-      },
-      onClick: this.goNext
-    }), react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("hr", null), react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", null, react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("span", null, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](office_ui_fabric_react_lib_Label__WEBPACK_IMPORTED_MODULE_7__["Label"], null, "Current Playlist...")), react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", {
-      style: {
-        'textAlign': 'right'
-      }
-    }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](office_ui_fabric_react_lib_Button__WEBPACK_IMPORTED_MODULE_4__["DefaultButton"], {
-      text: "Shuffle",
-      onClick: this.shuffle
-    }))), react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", {
-      style: {
-        overflow: 'scroll',
-        height: '500px'
-      }
-    }, this.state.songs.map((s, i) => react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", null, s.name, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](office_ui_fabric_react_lib_Button__WEBPACK_IMPORTED_MODULE_4__["IconButton"], {
-      iconProps: {
-        iconName: 'Play'
-      },
-      onClick: () => {
-        this.playSong(i);
-      }
-    }))))));
+      goNext: this.goNext,
+      shuffle: this.shuffle,
+      playSong: this.playSong
+    }));
   }
 
 };
@@ -44145,7 +44216,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _Player_jsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Player.jsx */ "./wwwroot/source/Player.jsx");
+/* harmony import */ var _Home_jsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Home.jsx */ "./wwwroot/source/Home.jsx");
 //require('./lib');
 
 
@@ -44154,7 +44225,7 @@ __webpack_require__.r(__webpack_exports__);
 
  //import ES6Lib from './es6codelib';
 
-react_dom__WEBPACK_IMPORTED_MODULE_3___default.a.render(react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_Player_jsx__WEBPACK_IMPORTED_MODULE_4__["default"], null), document.getElementById('content'));
+react_dom__WEBPACK_IMPORTED_MODULE_3___default.a.render(react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_Home_jsx__WEBPACK_IMPORTED_MODULE_4__["default"], null), document.getElementById('content'));
 
 /***/ })
 
