@@ -3,6 +3,7 @@ import { stringify } from 'querystring';
 import { initializeIcons } from 'office-ui-fabric-react/lib/Icons';
 import { Search } from "./Components/Search.jsx";
 import { Player } from "./Components/Player.jsx";
+import { DefaultButton } from 'office-ui-fabric-react/lib/Button';
 
 initializeIcons(/* optional base url */);
 
@@ -12,15 +13,16 @@ export default class Home extends React.Component {
         this.goNext = this.goNext.bind(this);
         this.playSong = this.playSong.bind(this);
         this.search = this.search.bind(this);
-        this.addSearchTerm = this.addSearchTerm.bind(this);
         this.shuffle = this.shuffle.bind(this);
+        this.openModal = this.openModal.bind(this);
+        this.closeModal = this.closeModal.bind(this);
 
         this.state = {
             songs: [],
             url: null,
             index: 0,
             nextSongName: null,
-            searchTerms: []
+            showModal: false
         };
     }
 
@@ -37,24 +39,14 @@ export default class Home extends React.Component {
             })
     }
 
-    addSearchTerm(value) {
-        let terms = this.state.searchTerms;
-        terms.push(value);
-
-        this.setState({
-            searchTerms: terms
-        });
-    }
-
-    search() {
-        let values = this.state.searchTerms;
+    search(tags) {
         fetch(`/Player/Search`, {
             method: 'post',
             headers: {
                 'Accept': 'application/json, text/plain, */*',
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(values),
+            body: JSON.stringify(tags),
 
         })
             .then(res => res.json())
@@ -62,7 +54,8 @@ export default class Home extends React.Component {
                 this.setState({
                     songs: result.songs,
                     url: 'https://www.youtube.com/watch?v=' + result.songs[0].youTubeId,
-                    index: 1
+                    index: 1,
+                    showModal: false
                 });
             })
     }
@@ -101,13 +94,32 @@ export default class Home extends React.Component {
         })
     }
 
+    openModal() {
+        this.setState({
+            showModal: true
+        });
+    }
+
+    closeModal() {
+        this.setState({
+            showModal: false
+        });
+    }
+
     render() {
         return (
             <div>
+                <div style={{ 'textAlign': 'right' }}>
+                    <DefaultButton
+                        text='Create your song list'
+                        onClick={() => this.openModal()}
+                    />
+                </div>
                 <Search
                     search={this.search}
-                    addSearchTerm={this.addSearchTerm}
-                    searchTerms={this.state.searchTerms}
+                    showModal={this.state.showModal}
+                    openModal={this.openModal}
+                    closeModal={this.closeModal}
                 />
                 {this.state.songs.length > 0 &&
                     <Player

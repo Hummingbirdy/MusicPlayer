@@ -51,7 +51,9 @@ module.exports = {
                                     'browsers': ['Chrome >=59']
                                 },
                                 "modules": false
-                            }], "@babel/react"],
+                            }], "@babel/react", {
+                                'plugins': ['@babel/plugin-proposal-class-properties']
+                            }],
                     }
                 }
             }

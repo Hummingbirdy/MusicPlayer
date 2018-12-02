@@ -29,13 +29,13 @@ namespace Music.Controllers
         }
 
         [HttpPost]
-        public JsonResult Search([FromBody] List<string> values)
+        public JsonResult Search([FromBody] List<SearchTerms> values)
         {
             var fullPlayList = GetSongs();
             var results = new List<Songs>();
             values.ForEach(value =>
             {
-                var searched = fullPlayList.Where(s => s.Name.ToLower().Contains(value.ToLower())).ToList();
+                var searched = fullPlayList.Where(s => s.Name.ToLower().Contains(value.Name.ToLower())).ToList();
                 results = results.Concat(searched).ToList();
             });
 
@@ -61,5 +61,10 @@ namespace Music.Controllers
 
             return songs;
         }
+    }
+
+    public class SearchTerms
+    {
+        public string Name { get; set; }
     }
 }

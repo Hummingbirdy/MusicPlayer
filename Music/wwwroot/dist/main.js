@@ -10726,7 +10726,7 @@ exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader
 
 
 // module
-exports.push([module.i, "h1 {\r\n    color: darkred;\r\n}\r\n", ""]);
+exports.push([module.i, ".modal-container {\r\n    height: 70vh;\r\n    min-height: 670px;\r\n    min-width: 500px;\r\n    width: 30vw;\r\n    position: relative;\r\n}\r\n\r\n.-auto {\r\n    height: initial;\r\n    min-height: initial;\r\n}\r\n\r\n.-wide {\r\n    min-width: 850px;\r\n    width: 40vw;\r\n}\r\n\r\n.-xwide {\r\n    min-width: 971px;\r\n    width: 55vw;\r\n}\r\n\r\n.-xxwide {\r\n    min-width: 1100px;\r\n    width: 70vw;\r\n}\r\n\r\n.modal-container .header {\r\n    color: darkred;\r\n    margin: 40px 0 20px 0;\r\n    padding: 0 40px;\r\n    border-bottom: 1px solid darkgrey;\r\n}\r\n\r\n    .modal-container .header .title {\r\n        font-size: 21px;\r\n        font-weight: 400;\r\n        font-family: Georgia;\r\n        font-style: italic;\r\n    }\r\n\r\n.modal-container .body {\r\n    padding: 5px 47px;\r\n    padding-bottom: 20px;\r\n}\r\n\r\n    .modal-container .body .controls {\r\n        width: 100%;\r\n        text-align: right;\r\n        cursor: pointer;\r\n    }\r\n\r\n        .modal-container .body .controls i {\r\n            color: #a80000;\r\n            cursor: pointer;\r\n            margin-left: 4px;\r\n        }\r\n\r\n.modal-container .footer {\r\n    position: absolute;\r\n    bottom: 0;\r\n    width: 100%;\r\n    padding: 40px 40px;\r\n    text-align: right;\r\n    background-color: lightgrey;\r\n}\r\n\r\n    .modal-container .footer .button {\r\n        margin-left: 8px;\r\n    }\r\n\r\n.search-term-bubble {\r\n    border: 2px solid darkred;\r\n    border-radius: 10px;\r\n    margin: 5px;\r\n    padding: 5px;\r\n    color: darkred;\r\n    box-shadow: 5px 5px 2px grey;\r\n    background-color: #f5f5f5;\r\n}\r\n", ""]);
 
 // exports
 
@@ -11143,15 +11143,15 @@ __webpack_require__.r(__webpack_exports__);
 /*!************************************************************!*\
   !*** ./node_modules/office-ui-fabric-react/lib/Callout.js ***!
   \************************************************************/
-/*! exports provided: DirectionalHint, Callout */
+/*! exports provided: Callout, DirectionalHint */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Callout_index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/Callout/index */ "./node_modules/office-ui-fabric-react/lib/components/Callout/index.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "DirectionalHint", function() { return _components_Callout_index__WEBPACK_IMPORTED_MODULE_0__["DirectionalHint"]; });
-
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Callout", function() { return _components_Callout_index__WEBPACK_IMPORTED_MODULE_0__["Callout"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "DirectionalHint", function() { return _components_Callout_index__WEBPACK_IMPORTED_MODULE_0__["DirectionalHint"]; });
 
 
 //# sourceMappingURL=Callout.js.map
@@ -11335,6 +11335,45 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/office-ui-fabric-react/lib/Modal.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/office-ui-fabric-react/lib/Modal.js ***!
+  \**********************************************************/
+/*! exports provided: default, Modal */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _components_Modal_index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/Modal/index */ "./node_modules/office-ui-fabric-react/lib/components/Modal/index.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Modal", function() { return _components_Modal_index__WEBPACK_IMPORTED_MODULE_0__["Modal"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _components_Modal_index__WEBPACK_IMPORTED_MODULE_0__["Modal"]; });
+
+
+
+//# sourceMappingURL=Modal.js.map
+
+/***/ }),
+
+/***/ "./node_modules/office-ui-fabric-react/lib/Overlay.js":
+/*!************************************************************!*\
+  !*** ./node_modules/office-ui-fabric-react/lib/Overlay.js ***!
+  \************************************************************/
+/*! exports provided: Overlay, OverlayBase */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _components_Overlay_index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/Overlay/index */ "./node_modules/office-ui-fabric-react/lib/components/Overlay/index.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Overlay", function() { return _components_Overlay_index__WEBPACK_IMPORTED_MODULE_0__["Overlay"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "OverlayBase", function() { return _components_Overlay_index__WEBPACK_IMPORTED_MODULE_0__["OverlayBase"]; });
+
+
+//# sourceMappingURL=Overlay.js.map
+
+/***/ }),
+
 /***/ "./node_modules/office-ui-fabric-react/lib/Popup.js":
 /*!**********************************************************!*\
   !*** ./node_modules/office-ui-fabric-react/lib/Popup.js ***!
@@ -11368,6 +11407,27 @@ __webpack_require__.r(__webpack_exports__);
 
 
 //# sourceMappingURL=SearchBox.js.map
+
+/***/ }),
+
+/***/ "./node_modules/office-ui-fabric-react/lib/Spinner.js":
+/*!************************************************************!*\
+  !*** ./node_modules/office-ui-fabric-react/lib/Spinner.js ***!
+  \************************************************************/
+/*! exports provided: Spinner, SpinnerSize, SpinnerType */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _components_Spinner_index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/Spinner/index */ "./node_modules/office-ui-fabric-react/lib/components/Spinner/index.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Spinner", function() { return _components_Spinner_index__WEBPACK_IMPORTED_MODULE_0__["Spinner"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "SpinnerSize", function() { return _components_Spinner_index__WEBPACK_IMPORTED_MODULE_0__["SpinnerSize"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "SpinnerType", function() { return _components_Spinner_index__WEBPACK_IMPORTED_MODULE_0__["SpinnerType"]; });
+
+
+//# sourceMappingURL=Spinner.js.map
 
 /***/ }),
 
@@ -11825,6 +11885,309 @@ var DirectionalHint;
     DirectionalHint[DirectionalHint["rightBottomEdge"] = 13] = "rightBottomEdge";
 })(DirectionalHint || (DirectionalHint = {}));
 //# sourceMappingURL=DirectionalHint.js.map
+
+/***/ }),
+
+/***/ "./node_modules/office-ui-fabric-react/lib/components/Autofill/Autofill.js":
+/*!*********************************************************************************!*\
+  !*** ./node_modules/office-ui-fabric-react/lib/components/Autofill/Autofill.js ***!
+  \*********************************************************************************/
+/*! exports provided: Autofill, BaseAutoFill */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Autofill", function() { return Autofill; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BaseAutoFill", function() { return BaseAutoFill; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _Utilities__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../Utilities */ "./node_modules/office-ui-fabric-react/lib/Utilities.js");
+
+
+
+var SELECTION_FORWARD = 'forward';
+var SELECTION_BACKWARD = 'backward';
+var Autofill = /** @class */ (function (_super) {
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"](Autofill, _super);
+    function Autofill(props) {
+        var _this = _super.call(this, props) || this;
+        _this._inputElement = Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__["createRef"])();
+        _this._autoFillEnabled = true;
+        // Composition events are used when the character/text requires several keystrokes to be completed.
+        // Some examples of this are mobile text input and langauges like Japanese or Arabic.
+        // Find out more at https://developer.mozilla.org/en-US/docs/Web/Events/compositionstart
+        _this._onCompositionStart = function (ev) {
+            _this._autoFillEnabled = false;
+        };
+        // Composition events are used when the character/text requires several keystrokes to be completed.
+        // Some examples of this are mobile text input and langauges like Japanese or Arabic.
+        // Find out more at https://developer.mozilla.org/en-US/docs/Web/Events/compositionstart
+        _this._onCompositionEnd = function (ev) {
+            var inputValue = _this._getCurrentInputValue();
+            _this._tryEnableAutofill(inputValue, _this.value, false, true);
+            // Due to timing, this needs to be async, otherwise no text will be selected.
+            _this._async.setTimeout(function () { return _this._updateValue(inputValue); }, 0);
+        };
+        _this._onClick = function () {
+            if (_this._value && _this._value !== '' && _this._autoFillEnabled) {
+                _this._autoFillEnabled = false;
+            }
+        };
+        _this._onKeyDown = function (ev) {
+            if (_this.props.onKeyDown) {
+                _this.props.onKeyDown(ev);
+            }
+            // If the event is actively being composed, then don't alert autofill.
+            // Right now typing does not have isComposing, once that has been fixed any should be removed.
+            if (!ev.nativeEvent.isComposing) {
+                switch (ev.which) {
+                    case 8 /* backspace */:
+                        _this._autoFillEnabled = false;
+                        break;
+                    case 37 /* left */:
+                    case 39 /* right */:
+                        if (_this._autoFillEnabled) {
+                            _this._value = _this.state.displayValue;
+                            _this._autoFillEnabled = false;
+                        }
+                        break;
+                    default:
+                        if (!_this._autoFillEnabled) {
+                            if (_this.props.enableAutofillOnKeyPress.indexOf(ev.which) !== -1) {
+                                _this._autoFillEnabled = true;
+                            }
+                        }
+                        break;
+                }
+            }
+        };
+        _this._onInputChanged = function (ev) {
+            var value = _this._getCurrentInputValue(ev);
+            // Right now typing does not have isComposing, once that has been fixed any should be removed.
+            _this._tryEnableAutofill(value, _this._value, ev.nativeEvent.isComposing);
+            _this._updateValue(value);
+        };
+        _this._onChanged = function () {
+            // Swallow this event, we don't care about it
+            // We must provide it because React PropTypes marks it as required, but onInput serves the correct purpose
+            return;
+        };
+        /**
+         * Updates the current input value as well as getting a new display value.
+         * @param newValue The new value from the input
+         */
+        _this._updateValue = function (newValue) {
+            _this._value = _this.props.onInputChange ? _this.props.onInputChange(newValue) : newValue;
+            _this.setState({
+                displayValue: _this._getDisplayValue(_this._value, _this.props.suggestedDisplayValue)
+            }, function () { return _this._notifyInputChange(_this._value); });
+        };
+        _this._value = props.defaultVisibleValue || '';
+        _this.state = {
+            displayValue: props.defaultVisibleValue || ''
+        };
+        return _this;
+    }
+    Object.defineProperty(Autofill.prototype, "cursorLocation", {
+        get: function () {
+            if (this._inputElement.current) {
+                var inputElement = this._inputElement.current;
+                if (inputElement.selectionDirection !== SELECTION_FORWARD) {
+                    return inputElement.selectionEnd;
+                }
+                else {
+                    return inputElement.selectionStart;
+                }
+            }
+            else {
+                return -1;
+            }
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(Autofill.prototype, "isValueSelected", {
+        get: function () {
+            return Boolean(this.inputElement && this.inputElement.selectionStart !== this.inputElement.selectionEnd);
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(Autofill.prototype, "value", {
+        get: function () {
+            return this._value;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(Autofill.prototype, "selectionStart", {
+        get: function () {
+            return this._inputElement.current ? this._inputElement.current.selectionStart : -1;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(Autofill.prototype, "selectionEnd", {
+        get: function () {
+            return this._inputElement.current ? this._inputElement.current.selectionEnd : -1;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(Autofill.prototype, "inputElement", {
+        get: function () {
+            return this._inputElement.current;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Autofill.prototype.componentWillReceiveProps = function (nextProps) {
+        var newValue;
+        if (this.props.updateValueInWillReceiveProps) {
+            newValue = this.props.updateValueInWillReceiveProps();
+        }
+        newValue = this._getDisplayValue(newValue ? newValue : this._value, nextProps.suggestedDisplayValue);
+        if (typeof newValue === 'string') {
+            this.setState({ displayValue: newValue });
+        }
+    };
+    Autofill.prototype.componentDidUpdate = function () {
+        var value = this._value;
+        var _a = this.props, suggestedDisplayValue = _a.suggestedDisplayValue, shouldSelectFullInputValueInComponentDidUpdate = _a.shouldSelectFullInputValueInComponentDidUpdate;
+        var differenceIndex = 0;
+        if (this._autoFillEnabled &&
+            value &&
+            suggestedDisplayValue &&
+            this._doesTextStartWith(suggestedDisplayValue, value)) {
+            var shouldSelectFullRange = false;
+            if (shouldSelectFullInputValueInComponentDidUpdate) {
+                shouldSelectFullRange = shouldSelectFullInputValueInComponentDidUpdate();
+            }
+            if (shouldSelectFullRange && this._inputElement.current) {
+                this._inputElement.current.setSelectionRange(0, suggestedDisplayValue.length, SELECTION_BACKWARD);
+            }
+            else {
+                while (differenceIndex < value.length &&
+                    value[differenceIndex].toLocaleLowerCase() === suggestedDisplayValue[differenceIndex].toLocaleLowerCase()) {
+                    differenceIndex++;
+                }
+                if (differenceIndex > 0 && this._inputElement.current) {
+                    this._inputElement.current.setSelectionRange(differenceIndex, suggestedDisplayValue.length, SELECTION_BACKWARD);
+                }
+            }
+        }
+    };
+    Autofill.prototype.render = function () {
+        var displayValue = this.state.displayValue;
+        var nativeProps = Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__["getNativeProps"])(this.props, _Utilities__WEBPACK_IMPORTED_MODULE_2__["inputProperties"]);
+        return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("input", tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"]({}, nativeProps, { ref: this._inputElement, value: displayValue, autoCapitalize: 'off', autoComplete: 'off', onCompositionStart: this._onCompositionStart, onCompositionEnd: this._onCompositionEnd, onChange: this._onChanged, onInput: this._onInputChanged, onKeyDown: this._onKeyDown, onClick: this.props.onClick ? this.props.onClick : this._onClick, "data-lpignore": true })));
+    };
+    Autofill.prototype.focus = function () {
+        this._inputElement.current && this._inputElement.current.focus();
+    };
+    Autofill.prototype.clear = function () {
+        this._autoFillEnabled = true;
+        this._updateValue('');
+        this._inputElement.current && this._inputElement.current.setSelectionRange(0, 0);
+    };
+    Autofill.prototype._getCurrentInputValue = function (ev) {
+        if (ev && ev.target && ev.target.value) {
+            return ev.target.value;
+        }
+        else if (this.inputElement && this.inputElement.value) {
+            return this.inputElement.value;
+        }
+        else {
+            return '';
+        }
+    };
+    /**
+     * Attempts to enable autofill. Whether or not autofill is enabled depends on the input value,
+     * whether or not any text is selected, and only if the new input value is longer than the old input value.
+     * Autofill should never be set to true if the value is composing. Once compositionEnd is called, then
+     * it should be completed.
+     * See https://developer.mozilla.org/en-US/docs/Web/API/CompositionEvent for more information on composition.
+     * @param newValue
+     * @param oldValue
+     * @param isComposing if true then the text is actively being composed and it has not completed.
+     * @param isComposed if the text is a composed text value.
+     */
+    Autofill.prototype._tryEnableAutofill = function (newValue, oldValue, isComposing, isComposed) {
+        if (!isComposing &&
+            newValue &&
+            this._inputElement.current &&
+            this._inputElement.current.selectionStart === newValue.length &&
+            !this._autoFillEnabled &&
+            (newValue.length > oldValue.length || isComposed)) {
+            this._autoFillEnabled = true;
+        }
+    };
+    Autofill.prototype._notifyInputChange = function (newValue) {
+        if (this.props.onInputValueChange) {
+            this.props.onInputValueChange(newValue);
+        }
+    };
+    /**
+     * Returns a string that should be used as the display value.
+     * It evaluates this based on whether or not the suggested value starts with the input value
+     * and whether or not autofill is enabled.
+     * @param inputValue the value that the input currently has.
+     * @param suggestedDisplayValue the possible full value
+     */
+    Autofill.prototype._getDisplayValue = function (inputValue, suggestedDisplayValue) {
+        var displayValue = inputValue;
+        if (suggestedDisplayValue &&
+            inputValue &&
+            this._doesTextStartWith(suggestedDisplayValue, displayValue) &&
+            this._autoFillEnabled) {
+            displayValue = suggestedDisplayValue;
+        }
+        return displayValue;
+    };
+    Autofill.prototype._doesTextStartWith = function (text, startWith) {
+        if (!text || !startWith) {
+            return false;
+        }
+        return text.toLocaleLowerCase().indexOf(startWith.toLocaleLowerCase()) === 0;
+    };
+    Autofill.defaultProps = {
+        enableAutofillOnKeyPress: [40 /* down */, 38 /* up */]
+    };
+    return Autofill;
+}(_Utilities__WEBPACK_IMPORTED_MODULE_2__["BaseComponent"]));
+
+/**
+ *  Legacy, @deprecated, do not use.
+ */
+var BaseAutoFill = /** @class */ (function (_super) {
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"](BaseAutoFill, _super);
+    function BaseAutoFill() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    return BaseAutoFill;
+}(Autofill));
+
+//# sourceMappingURL=Autofill.js.map
+
+/***/ }),
+
+/***/ "./node_modules/office-ui-fabric-react/lib/components/Autofill/index.js":
+/*!******************************************************************************!*\
+  !*** ./node_modules/office-ui-fabric-react/lib/components/Autofill/index.js ***!
+  \******************************************************************************/
+/*! exports provided: Autofill, BaseAutoFill */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Autofill__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Autofill */ "./node_modules/office-ui-fabric-react/lib/components/Autofill/Autofill.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Autofill", function() { return _Autofill__WEBPACK_IMPORTED_MODULE_0__["Autofill"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BaseAutoFill", function() { return _Autofill__WEBPACK_IMPORTED_MODULE_0__["BaseAutoFill"]; });
+
+
+//# sourceMappingURL=index.js.map
 
 /***/ }),
 
@@ -14417,7 +14780,7 @@ var getStyles = function (props) {
 /*!*****************************************************************************!*\
   !*** ./node_modules/office-ui-fabric-react/lib/components/Callout/index.js ***!
   \*****************************************************************************/
-/*! exports provided: DirectionalHint, Callout */
+/*! exports provided: Callout, DirectionalHint */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -16282,6 +16645,200 @@ var getStyles = function (props) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Fabric__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Fabric */ "./node_modules/office-ui-fabric-react/lib/components/Fabric/Fabric.js");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Fabric", function() { return _Fabric__WEBPACK_IMPORTED_MODULE_0__["Fabric"]; });
+
+
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "./node_modules/office-ui-fabric-react/lib/components/FocusTrapZone/FocusTrapZone.js":
+/*!*******************************************************************************************!*\
+  !*** ./node_modules/office-ui-fabric-react/lib/components/FocusTrapZone/FocusTrapZone.js ***!
+  \*******************************************************************************************/
+/*! exports provided: FocusTrapZone */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FocusTrapZone", function() { return FocusTrapZone; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _Utilities__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../Utilities */ "./node_modules/office-ui-fabric-react/lib/Utilities.js");
+
+
+
+var FocusTrapZone = /** @class */ (function (_super) {
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"](FocusTrapZone, _super);
+    function FocusTrapZone() {
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this._root = Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__["createRef"])();
+        _this._isInFocusStack = false;
+        _this._isInClickStack = false;
+        _this._onFocusCapture = function (ev) {
+            if (_this.props.onFocusCapture) {
+                _this.props.onFocusCapture(ev);
+            }
+            if (ev.target !== ev.currentTarget) {
+                // every time focus changes within the trap zone, remember the focused element so that
+                // it can be restored if focus leaves the pane and returns via keystroke (i.e. via a call to this.focus(true))
+                _this._previouslyFocusedElementInTrapZone = ev.target;
+            }
+        };
+        _this._onKeyboardHandler = function (ev) {
+            if (_this.props.onKeyDown) {
+                _this.props.onKeyDown(ev);
+            }
+            // If the default has been prevented, do not process keyboard events.
+            if (ev.isDefaultPrevented()) {
+                return;
+            }
+            if (ev.which !== 9 /* tab */) {
+                return;
+            }
+            if (!_this._root.current) {
+                return;
+            }
+            var _firstTabbableChild = Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__["getFirstTabbable"])(_this._root.current, _this._root.current.firstChild, true);
+            var _lastTabbableChild = Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__["getLastTabbable"])(_this._root.current, _this._root.current.lastChild, true);
+            if (ev.shiftKey && _firstTabbableChild === ev.target) {
+                Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__["focusAsync"])(_lastTabbableChild);
+                ev.preventDefault();
+                ev.stopPropagation();
+            }
+            else if (!ev.shiftKey && _lastTabbableChild === ev.target) {
+                Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__["focusAsync"])(_firstTabbableChild);
+                ev.preventDefault();
+                ev.stopPropagation();
+            }
+        };
+        return _this;
+    }
+    FocusTrapZone.prototype.componentWillMount = function () {
+        var _a = this.props, _b = _a.isClickableOutsideFocusTrap, isClickableOutsideFocusTrap = _b === void 0 ? false : _b, _c = _a.forceFocusInsideTrap, forceFocusInsideTrap = _c === void 0 ? true : _c;
+        if (forceFocusInsideTrap) {
+            this._isInFocusStack = true;
+            FocusTrapZone._focusStack.push(this);
+        }
+        if (!isClickableOutsideFocusTrap) {
+            this._isInClickStack = true;
+            FocusTrapZone._clickStack.push(this);
+        }
+    };
+    FocusTrapZone.prototype.componentDidMount = function () {
+        var _a = this.props, _b = _a.isClickableOutsideFocusTrap, isClickableOutsideFocusTrap = _b === void 0 ? false : _b, _c = _a.forceFocusInsideTrap, forceFocusInsideTrap = _c === void 0 ? true : _c, elementToFocusOnDismiss = _a.elementToFocusOnDismiss, _d = _a.disableFirstFocus, disableFirstFocus = _d === void 0 ? false : _d;
+        this._previouslyFocusedElementOutsideTrapZone = elementToFocusOnDismiss
+            ? elementToFocusOnDismiss
+            : document.activeElement;
+        if (!Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__["elementContains"])(this._root.current, this._previouslyFocusedElementOutsideTrapZone) && !disableFirstFocus) {
+            this.focus();
+        }
+        if (forceFocusInsideTrap) {
+            this._events.on(window, 'focus', this._forceFocusInTrap, true);
+        }
+        if (!isClickableOutsideFocusTrap) {
+            this._events.on(window, 'click', this._forceClickInTrap, true);
+        }
+    };
+    FocusTrapZone.prototype.componentWillReceiveProps = function (nextProps) {
+        var elementToFocusOnDismiss = nextProps.elementToFocusOnDismiss;
+        if (elementToFocusOnDismiss && this._previouslyFocusedElementOutsideTrapZone !== elementToFocusOnDismiss) {
+            this._previouslyFocusedElementOutsideTrapZone = elementToFocusOnDismiss;
+        }
+    };
+    FocusTrapZone.prototype.componentWillUnmount = function () {
+        var _this = this;
+        var ignoreExternalFocusing = this.props.ignoreExternalFocusing;
+        this._events.dispose();
+        if (this._isInFocusStack || this._isInClickStack) {
+            var filter = function (value) {
+                return _this !== value;
+            };
+            if (this._isInFocusStack) {
+                FocusTrapZone._focusStack = FocusTrapZone._focusStack.filter(filter);
+            }
+            if (this._isInClickStack) {
+                FocusTrapZone._clickStack = FocusTrapZone._clickStack.filter(filter);
+            }
+        }
+        var activeElement = document.activeElement;
+        if (!ignoreExternalFocusing &&
+            this._previouslyFocusedElementOutsideTrapZone &&
+            typeof this._previouslyFocusedElementOutsideTrapZone.focus === 'function' &&
+            (Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__["elementContains"])(this._root.value, activeElement) || activeElement === document.body)) {
+            Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__["focusAsync"])(this._previouslyFocusedElementOutsideTrapZone);
+        }
+    };
+    FocusTrapZone.prototype.render = function () {
+        var _a = this.props, className = _a.className, ariaLabelledBy = _a.ariaLabelledBy;
+        var divProps = Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__["getNativeProps"])(this.props, _Utilities__WEBPACK_IMPORTED_MODULE_2__["divProperties"]);
+        return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"]({}, divProps, { className: className, ref: this._root, "aria-labelledby": ariaLabelledBy, onKeyDown: this._onKeyboardHandler, onFocusCapture: this._onFocusCapture }), this.props.children));
+    };
+    FocusTrapZone.prototype.focus = function () {
+        var _a = this.props, focusPreviouslyFocusedInnerElement = _a.focusPreviouslyFocusedInnerElement, firstFocusableSelector = _a.firstFocusableSelector;
+        if (focusPreviouslyFocusedInnerElement &&
+            this._previouslyFocusedElementInTrapZone &&
+            Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__["elementContains"])(this._root.value, this._previouslyFocusedElementInTrapZone)) {
+            // focus on the last item that had focus in the zone before we left the zone
+            Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__["focusAsync"])(this._previouslyFocusedElementInTrapZone);
+            return;
+        }
+        var focusSelector = typeof firstFocusableSelector === 'string'
+            ? firstFocusableSelector
+            : firstFocusableSelector && firstFocusableSelector();
+        var _firstFocusableChild;
+        if (this._root.current) {
+            if (focusSelector) {
+                _firstFocusableChild = this._root.current.querySelector('.' + focusSelector);
+            }
+            else {
+                _firstFocusableChild = Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__["getNextElement"])(this._root.current, this._root.current.firstChild, true, false, false, true);
+            }
+        }
+        if (_firstFocusableChild) {
+            Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__["focusAsync"])(_firstFocusableChild);
+        }
+    };
+    FocusTrapZone.prototype._forceFocusInTrap = function (ev) {
+        if (FocusTrapZone._focusStack.length && this === FocusTrapZone._focusStack[FocusTrapZone._focusStack.length - 1]) {
+            var focusedElement = document.activeElement;
+            if (!Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__["elementContains"])(this._root.current, focusedElement)) {
+                this.focus();
+                ev.preventDefault();
+                ev.stopPropagation();
+            }
+        }
+    };
+    FocusTrapZone.prototype._forceClickInTrap = function (ev) {
+        if (FocusTrapZone._clickStack.length && this === FocusTrapZone._clickStack[FocusTrapZone._clickStack.length - 1]) {
+            var clickedElement = ev.target;
+            if (clickedElement && !Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__["elementContains"])(this._root.current, clickedElement)) {
+                this.focus();
+                ev.preventDefault();
+                ev.stopPropagation();
+            }
+        }
+    };
+    FocusTrapZone._focusStack = [];
+    FocusTrapZone._clickStack = [];
+    return FocusTrapZone;
+}(_Utilities__WEBPACK_IMPORTED_MODULE_2__["BaseComponent"]));
+
+//# sourceMappingURL=FocusTrapZone.js.map
+
+/***/ }),
+
+/***/ "./node_modules/office-ui-fabric-react/lib/components/FocusTrapZone/index.js":
+/*!***********************************************************************************!*\
+  !*** ./node_modules/office-ui-fabric-react/lib/components/FocusTrapZone/index.js ***!
+  \***********************************************************************************/
+/*! exports provided: FocusTrapZone */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _FocusTrapZone__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FocusTrapZone */ "./node_modules/office-ui-fabric-react/lib/components/FocusTrapZone/FocusTrapZone.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "FocusTrapZone", function() { return _FocusTrapZone__WEBPACK_IMPORTED_MODULE_0__["FocusTrapZone"]; });
 
 
 //# sourceMappingURL=index.js.map
@@ -18159,6 +18716,317 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/office-ui-fabric-react/lib/components/Modal/Modal.js":
+/*!***************************************************************************!*\
+  !*** ./node_modules/office-ui-fabric-react/lib/components/Modal/Modal.js ***!
+  \***************************************************************************/
+/*! exports provided: Modal */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Modal", function() { return Modal; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _Utilities__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../Utilities */ "./node_modules/office-ui-fabric-react/lib/Utilities.js");
+/* harmony import */ var _FocusTrapZone_index__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../FocusTrapZone/index */ "./node_modules/office-ui-fabric-react/lib/components/FocusTrapZone/index.js");
+/* harmony import */ var _Overlay__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../Overlay */ "./node_modules/office-ui-fabric-react/lib/Overlay.js");
+/* harmony import */ var _Layer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../Layer */ "./node_modules/office-ui-fabric-react/lib/Layer.js");
+/* harmony import */ var _Popup_index__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../Popup/index */ "./node_modules/office-ui-fabric-react/lib/components/Popup/index.js");
+/* harmony import */ var _utilities_decorators_withResponsiveMode__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../utilities/decorators/withResponsiveMode */ "./node_modules/office-ui-fabric-react/lib/utilities/decorators/withResponsiveMode.js");
+/* harmony import */ var _Modal_scss__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Modal.scss */ "./node_modules/office-ui-fabric-react/lib/components/Modal/Modal.scss.js");
+
+
+
+
+
+
+
+
+
+var styles = _Modal_scss__WEBPACK_IMPORTED_MODULE_8__;
+var Modal = /** @class */ (function (_super) {
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"](Modal, _super);
+    function Modal(props) {
+        var _this = _super.call(this, props) || this;
+        _this._focusTrapZone = Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__["createRef"])();
+        _this.state = {
+            id: Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__["getId"])('Modal'),
+            isOpen: props.isOpen,
+            isVisible: props.isOpen
+        };
+        return _this;
+    }
+    Modal.prototype.componentWillReceiveProps = function (newProps) {
+        clearTimeout(this._onModalCloseTimer);
+        // Opening the dialog
+        if (newProps.isOpen) {
+            if (!this.state.isOpen) {
+                // First Open
+                this.setState({
+                    isOpen: true
+                });
+            }
+            else {
+                // Reopen during closing
+                this.setState({
+                    isVisible: true
+                });
+            }
+        }
+        // Closing the dialog
+        if (!newProps.isOpen && this.state.isOpen) {
+            this._onModalCloseTimer = this._async.setTimeout(this._onModalClose, parseFloat(styles.duration) * 1000);
+            this.setState({
+                isVisible: false
+            });
+        }
+    };
+    Modal.prototype.componentDidUpdate = function (prevProps, prevState) {
+        if (!prevProps.isOpen && !prevState.isVisible) {
+            this.setState({
+                isVisible: true
+            });
+        }
+    };
+    Modal.prototype.render = function () {
+        var _a = this.props, elementToFocusOnDismiss = _a.elementToFocusOnDismiss, firstFocusableSelector = _a.firstFocusableSelector, forceFocusInsideTrap = _a.forceFocusInsideTrap, ignoreExternalFocusing = _a.ignoreExternalFocusing, isBlocking = _a.isBlocking, isClickableOutsideFocusTrap = _a.isClickableOutsideFocusTrap, isDarkOverlay = _a.isDarkOverlay, onDismiss = _a.onDismiss, onLayerDidMount = _a.onLayerDidMount, responsiveMode = _a.responsiveMode, titleAriaId = _a.titleAriaId, subtitleAriaId = _a.subtitleAriaId;
+        var _b = this.state, isOpen = _b.isOpen, isVisible = _b.isVisible;
+        var modalClassName = Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__["css"])('ms-Modal', styles.root, this.props.className, !!isOpen && 'is-open', !!isVisible && styles.rootIsVisible);
+        if (!isOpen) {
+            return null;
+        }
+        // @temp tuatology - Will adjust this to be a panel at certain breakpoints
+        if (responsiveMode >= _utilities_decorators_withResponsiveMode__WEBPACK_IMPORTED_MODULE_7__["ResponsiveMode"].small) {
+            return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_Layer__WEBPACK_IMPORTED_MODULE_5__["Layer"], { onLayerDidMount: onLayerDidMount },
+                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_Popup_index__WEBPACK_IMPORTED_MODULE_6__["Popup"], { role: isBlocking ? 'alertdialog' : 'dialog', ariaLabelledBy: titleAriaId, ariaDescribedBy: subtitleAriaId, onDismiss: onDismiss },
+                    react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: modalClassName },
+                        react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_Overlay__WEBPACK_IMPORTED_MODULE_4__["Overlay"], { isDarkThemed: isDarkOverlay, onClick: isBlocking ? undefined : onDismiss }),
+                        react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_FocusTrapZone_index__WEBPACK_IMPORTED_MODULE_3__["FocusTrapZone"], { componentRef: this._focusTrapZone, className: Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__["css"])('ms-Dialog-main', styles.main, this.props.containerClassName), elementToFocusOnDismiss: elementToFocusOnDismiss, isClickableOutsideFocusTrap: isClickableOutsideFocusTrap ? isClickableOutsideFocusTrap : !isBlocking, ignoreExternalFocusing: ignoreExternalFocusing, forceFocusInsideTrap: forceFocusInsideTrap, firstFocusableSelector: firstFocusableSelector }, this.props.children)))));
+        }
+        return null;
+    };
+    Modal.prototype.focus = function () {
+        if (this._focusTrapZone.current) {
+            this._focusTrapZone.current.focus();
+        }
+    };
+    // Watch for completed animations and set the state
+    Modal.prototype._onModalClose = function () {
+        this.setState({
+            isOpen: false
+        });
+        // Call the onDismiss callback
+        if (this.props.onDismissed) {
+            this.props.onDismissed();
+        }
+    };
+    Modal.defaultProps = {
+        isOpen: false,
+        isDarkOverlay: true,
+        isBlocking: false,
+        className: '',
+        containerClassName: ''
+    };
+    Modal = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        _utilities_decorators_withResponsiveMode__WEBPACK_IMPORTED_MODULE_7__["withResponsiveMode"]
+    ], Modal);
+    return Modal;
+}(_Utilities__WEBPACK_IMPORTED_MODULE_2__["BaseComponent"]));
+
+//# sourceMappingURL=Modal.js.map
+
+/***/ }),
+
+/***/ "./node_modules/office-ui-fabric-react/lib/components/Modal/Modal.scss.js":
+/*!********************************************************************************!*\
+  !*** ./node_modules/office-ui-fabric-react/lib/components/Modal/Modal.scss.js ***!
+  \********************************************************************************/
+/*! exports provided: duration, root, rootIsVisible, main */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "duration", function() { return duration; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "root", function() { return root; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "rootIsVisible", function() { return rootIsVisible; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "main", function() { return main; });
+/* harmony import */ var _microsoft_load_themed_styles__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @microsoft/load-themed-styles */ "./node_modules/@microsoft/load-themed-styles/lib/index.js");
+/* harmony import */ var _microsoft_load_themed_styles__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_microsoft_load_themed_styles__WEBPACK_IMPORTED_MODULE_0__);
+/* tslint:disable */
+
+Object(_microsoft_load_themed_styles__WEBPACK_IMPORTED_MODULE_0__["loadStyles"])([{ "rawString": ".root_40cbea6c{background-color:transparent;position:fixed;height:100%;width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;opacity:0;pointer-events:none;-webkit-transition:opacity .267s;transition:opacity .267s}.root_40cbea6c .ms-Button.ms-Button--compound{display:block}[dir='ltr'] .root_40cbea6c .ms-Button.ms-Button--compound{margin-left:0}[dir='rtl'] .root_40cbea6c .ms-Button.ms-Button--compound{margin-right:0}@media screen and (-ms-high-contrast: active){.root_40cbea6c .ms-Overlay{opacity:0}}.rootIsVisible_40cbea6c{opacity:1;pointer-events:auto}.main_40cbea6c{background-color:" }, { "theme": "white", "defaultValue": "#ffffff" }, { "rawString": ";-webkit-box-sizing:border-box;box-sizing:border-box;position:relative;outline:3px solid transparent;max-height:100%;overflow-y:auto}[dir='ltr'] .main_40cbea6c{-webkit-box-shadow:0 0 5px 0 rgba(0,0,0,0.4);box-shadow:0 0 5px 0 rgba(0,0,0,0.4)}[dir='rtl'] .main_40cbea6c{-webkit-box-shadow:0 0 5px 0 rgba(0,0,0,0.4);box-shadow:0 0 5px 0 rgba(0,0,0,0.4)}[dir='ltr'] .main_40cbea6c{text-align:left}[dir='rtl'] .main_40cbea6c{text-align:right}\n" }]);
+var duration = ".267s";
+var root = "root_40cbea6c";
+var rootIsVisible = "rootIsVisible_40cbea6c";
+var main = "main_40cbea6c";
+//# sourceMappingURL=Modal.scss.js.map
+
+/***/ }),
+
+/***/ "./node_modules/office-ui-fabric-react/lib/components/Modal/index.js":
+/*!***************************************************************************!*\
+  !*** ./node_modules/office-ui-fabric-react/lib/components/Modal/index.js ***!
+  \***************************************************************************/
+/*! exports provided: Modal */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Modal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Modal */ "./node_modules/office-ui-fabric-react/lib/components/Modal/Modal.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Modal", function() { return _Modal__WEBPACK_IMPORTED_MODULE_0__["Modal"]; });
+
+
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "./node_modules/office-ui-fabric-react/lib/components/Overlay/Overlay.base.js":
+/*!************************************************************************************!*\
+  !*** ./node_modules/office-ui-fabric-react/lib/components/Overlay/Overlay.base.js ***!
+  \************************************************************************************/
+/*! exports provided: OverlayBase */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "OverlayBase", function() { return OverlayBase; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _Utilities__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../Utilities */ "./node_modules/office-ui-fabric-react/lib/Utilities.js");
+
+
+
+var getClassNames = Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__["classNamesFunction"])();
+var OverlayBase = /** @class */ (function (_super) {
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"](OverlayBase, _super);
+    function OverlayBase() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    OverlayBase.prototype.componentDidMount = function () {
+        Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__["disableBodyScroll"])();
+    };
+    OverlayBase.prototype.componentWillUnmount = function () {
+        Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__["enableBodyScroll"])();
+    };
+    OverlayBase.prototype.render = function () {
+        var _a = this.props, isDark = _a.isDarkThemed, className = _a.className, theme = _a.theme, styles = _a.styles;
+        var divProps = Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__["getNativeProps"])(this.props, _Utilities__WEBPACK_IMPORTED_MODULE_2__["divProperties"]);
+        var classNames = getClassNames(styles, {
+            theme: theme,
+            className: className,
+            isDark: isDark
+        });
+        return react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"]({}, divProps, { className: classNames.root }));
+    };
+    OverlayBase = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__["customizable"])('Overlay', ['theme', 'styles'])
+    ], OverlayBase);
+    return OverlayBase;
+}(_Utilities__WEBPACK_IMPORTED_MODULE_2__["BaseComponent"]));
+
+//# sourceMappingURL=Overlay.base.js.map
+
+/***/ }),
+
+/***/ "./node_modules/office-ui-fabric-react/lib/components/Overlay/Overlay.js":
+/*!*******************************************************************************!*\
+  !*** ./node_modules/office-ui-fabric-react/lib/components/Overlay/Overlay.js ***!
+  \*******************************************************************************/
+/*! exports provided: Overlay */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Overlay", function() { return Overlay; });
+/* harmony import */ var _Utilities__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../Utilities */ "./node_modules/office-ui-fabric-react/lib/Utilities.js");
+/* harmony import */ var _Overlay_base__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Overlay.base */ "./node_modules/office-ui-fabric-react/lib/components/Overlay/Overlay.base.js");
+/* harmony import */ var _Overlay_styles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Overlay.styles */ "./node_modules/office-ui-fabric-react/lib/components/Overlay/Overlay.styles.js");
+
+
+
+var Overlay = Object(_Utilities__WEBPACK_IMPORTED_MODULE_0__["styled"])(_Overlay_base__WEBPACK_IMPORTED_MODULE_1__["OverlayBase"], _Overlay_styles__WEBPACK_IMPORTED_MODULE_2__["getStyles"]);
+//# sourceMappingURL=Overlay.js.map
+
+/***/ }),
+
+/***/ "./node_modules/office-ui-fabric-react/lib/components/Overlay/Overlay.styles.js":
+/*!**************************************************************************************!*\
+  !*** ./node_modules/office-ui-fabric-react/lib/components/Overlay/Overlay.styles.js ***!
+  \**************************************************************************************/
+/*! exports provided: getStyles */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getStyles", function() { return getStyles; });
+/* harmony import */ var _Styling__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../Styling */ "./node_modules/office-ui-fabric-react/lib/Styling.js");
+
+var GlobalClassNames = {
+    root: 'ms-Overlay',
+    rootDark: 'ms-Overlay--dark'
+};
+var getStyles = function (props) {
+    var className = props.className, theme = props.theme, isNone = props.isNone, isDark = props.isDark;
+    var palette = theme.palette;
+    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_0__["getGlobalClassNames"])(GlobalClassNames, theme);
+    return {
+        root: [
+            classNames.root,
+            {
+                backgroundColor: palette.whiteTranslucent40,
+                top: 0,
+                right: 0,
+                bottom: 0,
+                left: 0,
+                position: 'absolute',
+                selectors: (_a = {},
+                    _a[_Styling__WEBPACK_IMPORTED_MODULE_0__["HighContrastSelector"]] = {
+                        border: '1px solid WindowText'
+                    },
+                    _a)
+            },
+            isNone && {
+                visibility: 'hidden'
+            },
+            isDark && [
+                classNames.rootDark,
+                {
+                    backgroundColor: palette.blackTranslucent40
+                }
+            ],
+            className
+        ]
+    };
+    var _a;
+};
+//# sourceMappingURL=Overlay.styles.js.map
+
+/***/ }),
+
+/***/ "./node_modules/office-ui-fabric-react/lib/components/Overlay/index.js":
+/*!*****************************************************************************!*\
+  !*** ./node_modules/office-ui-fabric-react/lib/components/Overlay/index.js ***!
+  \*****************************************************************************/
+/*! exports provided: Overlay, OverlayBase */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Overlay__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Overlay */ "./node_modules/office-ui-fabric-react/lib/components/Overlay/Overlay.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Overlay", function() { return _Overlay__WEBPACK_IMPORTED_MODULE_0__["Overlay"]; });
+
+/* harmony import */ var _Overlay_base__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Overlay.base */ "./node_modules/office-ui-fabric-react/lib/components/Overlay/Overlay.base.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "OverlayBase", function() { return _Overlay_base__WEBPACK_IMPORTED_MODULE_1__["OverlayBase"]; });
+
+
+
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
 /***/ "./node_modules/office-ui-fabric-react/lib/components/Popup/Popup.js":
 /*!***************************************************************************!*\
   !*** ./node_modules/office-ui-fabric-react/lib/components/Popup/Popup.js ***!
@@ -18697,6 +19565,1514 @@ __webpack_require__.r(__webpack_exports__);
 
 
 //# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "./node_modules/office-ui-fabric-react/lib/components/Spinner/Spinner.base.js":
+/*!************************************************************************************!*\
+  !*** ./node_modules/office-ui-fabric-react/lib/components/Spinner/Spinner.base.js ***!
+  \************************************************************************************/
+/*! exports provided: SpinnerBase */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SpinnerBase", function() { return SpinnerBase; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _Spinner_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Spinner.types */ "./node_modules/office-ui-fabric-react/lib/components/Spinner/Spinner.types.js");
+/* harmony import */ var _Utilities__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../Utilities */ "./node_modules/office-ui-fabric-react/lib/Utilities.js");
+
+
+
+
+var getClassNames = Object(_Utilities__WEBPACK_IMPORTED_MODULE_3__["classNamesFunction"])();
+var SpinnerBase = /** @class */ (function (_super) {
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"](SpinnerBase, _super);
+    function SpinnerBase() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    SpinnerBase.prototype.render = function () {
+        var _a = this.props, type = _a.type, size = _a.size, ariaLabel = _a.ariaLabel, ariaLive = _a.ariaLive, styles = _a.styles, label = _a.label, theme = _a.theme, className = _a.className;
+        var statusMessage = ariaLabel || label;
+        var nativeProps = Object(_Utilities__WEBPACK_IMPORTED_MODULE_3__["getNativeProps"])(this.props, _Utilities__WEBPACK_IMPORTED_MODULE_3__["divProperties"], ['size']);
+        // SpinnerType is deprecated. If someone is still using this property, rather than putting the SpinnerType into the ISpinnerStyleProps,
+        // we'll map SpinnerType to its equivalent SpinnerSize and pass that in. Once SpinnerType finally goes away we should delete this.
+        var styleSize = size;
+        if (styleSize === undefined && type !== undefined) {
+            styleSize = type === _Spinner_types__WEBPACK_IMPORTED_MODULE_2__["SpinnerType"].large ? _Spinner_types__WEBPACK_IMPORTED_MODULE_2__["SpinnerSize"].large : _Spinner_types__WEBPACK_IMPORTED_MODULE_2__["SpinnerSize"].medium;
+        }
+        var classNames = getClassNames(styles, {
+            theme: theme,
+            size: styleSize,
+            className: className
+        });
+        return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"]({}, nativeProps, { className: classNames.root }),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: classNames.circle }),
+            label && react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: classNames.label }, label),
+            statusMessage && (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { role: "status", "aria-live": ariaLive },
+                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_Utilities__WEBPACK_IMPORTED_MODULE_3__["DelayedRender"], null,
+                    react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: classNames.screenReaderText }, statusMessage))))));
+    };
+    SpinnerBase.defaultProps = {
+        size: _Spinner_types__WEBPACK_IMPORTED_MODULE_2__["SpinnerSize"].medium,
+        ariaLive: 'polite'
+    };
+    SpinnerBase = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_Utilities__WEBPACK_IMPORTED_MODULE_3__["customizable"])('Spinner', ['theme', 'styles'])
+    ], SpinnerBase);
+    return SpinnerBase;
+}(_Utilities__WEBPACK_IMPORTED_MODULE_3__["BaseComponent"]));
+
+//# sourceMappingURL=Spinner.base.js.map
+
+/***/ }),
+
+/***/ "./node_modules/office-ui-fabric-react/lib/components/Spinner/Spinner.js":
+/*!*******************************************************************************!*\
+  !*** ./node_modules/office-ui-fabric-react/lib/components/Spinner/Spinner.js ***!
+  \*******************************************************************************/
+/*! exports provided: Spinner */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Spinner", function() { return Spinner; });
+/* harmony import */ var _Utilities__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../Utilities */ "./node_modules/office-ui-fabric-react/lib/Utilities.js");
+/* harmony import */ var _Spinner_base__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Spinner.base */ "./node_modules/office-ui-fabric-react/lib/components/Spinner/Spinner.base.js");
+/* harmony import */ var _Spinner_styles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Spinner.styles */ "./node_modules/office-ui-fabric-react/lib/components/Spinner/Spinner.styles.js");
+
+
+
+var Spinner = Object(_Utilities__WEBPACK_IMPORTED_MODULE_0__["styled"])(_Spinner_base__WEBPACK_IMPORTED_MODULE_1__["SpinnerBase"], _Spinner_styles__WEBPACK_IMPORTED_MODULE_2__["getStyles"]);
+//# sourceMappingURL=Spinner.js.map
+
+/***/ }),
+
+/***/ "./node_modules/office-ui-fabric-react/lib/components/Spinner/Spinner.styles.js":
+/*!**************************************************************************************!*\
+  !*** ./node_modules/office-ui-fabric-react/lib/components/Spinner/Spinner.styles.js ***!
+  \**************************************************************************************/
+/*! exports provided: getStyles */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getStyles", function() { return getStyles; });
+/* harmony import */ var _Spinner_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Spinner.types */ "./node_modules/office-ui-fabric-react/lib/components/Spinner/Spinner.types.js");
+/* harmony import */ var _Styling__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../Styling */ "./node_modules/office-ui-fabric-react/lib/Styling.js");
+
+
+var spinAnimation = Object(_Styling__WEBPACK_IMPORTED_MODULE_1__["keyframes"])({
+    '0%': {
+        transform: 'rotateZ(0deg)'
+    },
+    '100%': {
+        transform: 'rotateZ(360deg)'
+    }
+});
+var getStyles = function (props) {
+    var theme = props.theme, size = props.size, className = props.className;
+    var palette = theme.palette;
+    return {
+        root: ['ms-Spinner', className],
+        circle: [
+            'ms-Spinner-circle',
+            {
+                margin: 'auto',
+                boxSizing: 'border-box',
+                borderRadius: '50%',
+                width: '100%',
+                height: '100%',
+                border: '1.5px solid ' + palette.themeLight,
+                borderTopColor: palette.themePrimary,
+                animationName: spinAnimation,
+                animationDuration: '1.3s',
+                animationIterationCount: 'infinite',
+                animationTimingFunction: 'cubic-bezier(.53,.21,.29,.67)',
+                selectors: (_a = {},
+                    _a[_Styling__WEBPACK_IMPORTED_MODULE_1__["HighContrastSelector"]] = {
+                        borderTopColor: 'Highlight'
+                    },
+                    _a)
+            },
+            size === _Spinner_types__WEBPACK_IMPORTED_MODULE_0__["SpinnerSize"].xSmall && [
+                'ms-Spinner--xSmall',
+                {
+                    width: 12,
+                    height: 12
+                }
+            ],
+            size === _Spinner_types__WEBPACK_IMPORTED_MODULE_0__["SpinnerSize"].small && [
+                'ms-Spinner--small',
+                {
+                    width: 16,
+                    height: 16
+                }
+            ],
+            size === _Spinner_types__WEBPACK_IMPORTED_MODULE_0__["SpinnerSize"].medium && [
+                'ms-Spinner--medium',
+                {
+                    width: 20,
+                    height: 20
+                }
+            ],
+            size === _Spinner_types__WEBPACK_IMPORTED_MODULE_0__["SpinnerSize"].large && [
+                'ms-Spinner--large',
+                {
+                    width: 28,
+                    height: 28
+                }
+            ]
+        ],
+        label: [
+            'ms-Spinner-label',
+            {
+                color: palette.themePrimary,
+                marginTop: 10,
+                textAlign: 'center'
+            }
+        ],
+        screenReaderText: _Styling__WEBPACK_IMPORTED_MODULE_1__["hiddenContentStyle"]
+    };
+    var _a;
+};
+//# sourceMappingURL=Spinner.styles.js.map
+
+/***/ }),
+
+/***/ "./node_modules/office-ui-fabric-react/lib/components/Spinner/Spinner.types.js":
+/*!*************************************************************************************!*\
+  !*** ./node_modules/office-ui-fabric-react/lib/components/Spinner/Spinner.types.js ***!
+  \*************************************************************************************/
+/*! exports provided: SpinnerSize, SpinnerType */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SpinnerSize", function() { return SpinnerSize; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SpinnerType", function() { return SpinnerType; });
+var SpinnerSize;
+(function (SpinnerSize) {
+    /**
+     * 12px Spinner diameter
+     */
+    SpinnerSize[SpinnerSize["xSmall"] = 0] = "xSmall";
+    /**
+     * 16px Spinner diameter
+     */
+    SpinnerSize[SpinnerSize["small"] = 1] = "small";
+    /**
+     * 20px Spinner diameter
+     */
+    SpinnerSize[SpinnerSize["medium"] = 2] = "medium";
+    /**
+     * 28px Spinner diameter
+     */
+    SpinnerSize[SpinnerSize["large"] = 3] = "large";
+})(SpinnerSize || (SpinnerSize = {}));
+/**
+ * Deprecated at v2.0.0, use 'SpinnerSize' instead.
+ * @deprecated
+ */
+var SpinnerType;
+(function (SpinnerType) {
+    /**
+     * Deprecated and will be removed at >= 2.0.0. Use SpinnerSize.medium instead.
+     */
+    SpinnerType[SpinnerType["normal"] = 0] = "normal";
+    /**
+     * Deprecated and will be removed at >= 2.0.0. Use SpinnerSize.large instead.
+     */
+    SpinnerType[SpinnerType["large"] = 1] = "large";
+})(SpinnerType || (SpinnerType = {}));
+//# sourceMappingURL=Spinner.types.js.map
+
+/***/ }),
+
+/***/ "./node_modules/office-ui-fabric-react/lib/components/Spinner/index.js":
+/*!*****************************************************************************!*\
+  !*** ./node_modules/office-ui-fabric-react/lib/components/Spinner/index.js ***!
+  \*****************************************************************************/
+/*! exports provided: Spinner, SpinnerSize, SpinnerType */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Spinner__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Spinner */ "./node_modules/office-ui-fabric-react/lib/components/Spinner/Spinner.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Spinner", function() { return _Spinner__WEBPACK_IMPORTED_MODULE_0__["Spinner"]; });
+
+/* harmony import */ var _Spinner_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Spinner.types */ "./node_modules/office-ui-fabric-react/lib/components/Spinner/Spinner.types.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "SpinnerSize", function() { return _Spinner_types__WEBPACK_IMPORTED_MODULE_1__["SpinnerSize"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "SpinnerType", function() { return _Spinner_types__WEBPACK_IMPORTED_MODULE_1__["SpinnerType"]; });
+
+
+
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "./node_modules/office-ui-fabric-react/lib/components/pickers/BasePicker.js":
+/*!**********************************************************************************!*\
+  !*** ./node_modules/office-ui-fabric-react/lib/components/pickers/BasePicker.js ***!
+  \**********************************************************************************/
+/*! exports provided: BasePicker, BasePickerListBelow */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BasePicker", function() { return BasePicker; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BasePickerListBelow", function() { return BasePickerListBelow; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _Utilities__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../Utilities */ "./node_modules/office-ui-fabric-react/lib/Utilities.js");
+/* harmony import */ var _FocusZone__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../FocusZone */ "./node_modules/office-ui-fabric-react/lib/FocusZone.js");
+/* harmony import */ var _Callout__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../Callout */ "./node_modules/office-ui-fabric-react/lib/Callout.js");
+/* harmony import */ var _utilities_selection_index__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../utilities/selection/index */ "./node_modules/office-ui-fabric-react/lib/utilities/selection/index.js");
+/* harmony import */ var _Suggestions_Suggestions__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Suggestions/Suggestions */ "./node_modules/office-ui-fabric-react/lib/components/pickers/Suggestions/Suggestions.js");
+/* harmony import */ var _Suggestions_SuggestionsController__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Suggestions/SuggestionsController */ "./node_modules/office-ui-fabric-react/lib/components/pickers/Suggestions/SuggestionsController.js");
+/* harmony import */ var _BasePicker_types__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./BasePicker.types */ "./node_modules/office-ui-fabric-react/lib/components/pickers/BasePicker.types.js");
+/* harmony import */ var _Autofill_index__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../Autofill/index */ "./node_modules/office-ui-fabric-react/lib/components/Autofill/index.js");
+/* harmony import */ var _BasePicker_scss__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./BasePicker.scss */ "./node_modules/office-ui-fabric-react/lib/components/pickers/BasePicker.scss.js");
+
+
+
+
+
+
+
+
+
+
+
+var styles = _BasePicker_scss__WEBPACK_IMPORTED_MODULE_10__;
+var BasePicker = /** @class */ (function (_super) {
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"](BasePicker, _super);
+    function BasePicker(basePickerProps) {
+        var _this = _super.call(this, basePickerProps) || this;
+        _this.root = Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__["createRef"])();
+        _this.input = Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__["createRef"])();
+        _this.focusZone = Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__["createRef"])();
+        _this.suggestionElement = Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__["createRef"])();
+        _this.SuggestionOfProperType = _Suggestions_Suggestions__WEBPACK_IMPORTED_MODULE_6__["Suggestions"];
+        _this.dismissSuggestions = function (ev) {
+            var selectItemFunction = function () {
+                if (_this.props.onDismiss) {
+                    _this.props.onDismiss(ev, _this.suggestionStore.currentSuggestion ? _this.suggestionStore.currentSuggestion.item : undefined);
+                }
+                if (!ev || (ev && !ev.defaultPrevented)) {
+                    // Select the first suggestion if one is available when user leaves.
+                    if (_this.canAddItems() && _this.suggestionStore.hasSelectedSuggestion() && _this.state.suggestedDisplayValue) {
+                        _this.addItemByIndex(0);
+                    }
+                }
+            };
+            if (_this.currentPromise) {
+                _this.currentPromise.then(function () { return selectItemFunction(); });
+            }
+            else {
+                selectItemFunction();
+            }
+            _this.setState({ suggestionsVisible: false });
+        };
+        _this.refocusSuggestions = function (keyCode) {
+            _this.resetFocus();
+            if (_this.suggestionStore.suggestions && _this.suggestionStore.suggestions.length > 0) {
+                if (keyCode === 38 /* up */) {
+                    _this.suggestionStore.setSelectedSuggestion(_this.suggestionStore.suggestions.length - 1);
+                }
+                else if (keyCode === 40 /* down */) {
+                    _this.suggestionStore.setSelectedSuggestion(0);
+                }
+            }
+        };
+        _this.onInputChange = function (value) {
+            _this.updateValue(value);
+            _this.setState({
+                moreSuggestionsAvailable: true,
+                isMostRecentlyUsedVisible: false
+            });
+        };
+        _this.onSuggestionClick = function (ev, item, index) {
+            _this.addItemByIndex(index);
+            _this.setState({ suggestionsVisible: false });
+        };
+        _this.onSuggestionRemove = function (ev, item, index) {
+            if (_this.props.onRemoveSuggestion) {
+                _this.props.onRemoveSuggestion(item);
+            }
+            _this.suggestionStore.removeSuggestion(index);
+        };
+        _this.onInputFocus = function (ev) {
+            // Only trigger all of the focus if this component isn't already focused.
+            // For example when an item is selected or removed from the selected list it should be treated
+            // as though the input is still focused.
+            if (!_this.state.isFocused) {
+                _this.setState({ isFocused: true });
+                _this.selection.setAllSelected(false);
+                if (_this.input.current && _this.input.current.value === '' && _this.props.onEmptyInputFocus) {
+                    _this.onEmptyInputFocus();
+                    _this.setState({
+                        isMostRecentlyUsedVisible: true,
+                        moreSuggestionsAvailable: false,
+                        suggestionsVisible: true
+                    });
+                }
+                else if (_this.input.current && _this.input.current.value) {
+                    _this.setState({
+                        isMostRecentlyUsedVisible: false,
+                        suggestionsVisible: true
+                    });
+                }
+                if (_this.props.inputProps && _this.props.inputProps.onFocus) {
+                    _this.props.inputProps.onFocus(ev);
+                }
+            }
+        };
+        _this.onInputBlur = function (ev) {
+            if (_this.props.inputProps && _this.props.inputProps.onBlur) {
+                _this.props.inputProps.onBlur(ev);
+            }
+            // Only blur the entire component if an unrelated element gets focus. Otherwise treat it as though it still has focus.
+            if (!Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__["elementContains"])(_this.root.value, ev.relatedTarget)) {
+                _this.setState({ isFocused: false });
+                if (_this.props.onBlur) {
+                    _this.props.onBlur(ev);
+                }
+            }
+        };
+        _this.onKeyDown = function (ev) {
+            var keyCode = ev.which;
+            switch (keyCode) {
+                case 27 /* escape */:
+                    if (_this.state.suggestionsVisible) {
+                        _this.setState({ suggestionsVisible: false });
+                        ev.preventDefault();
+                        ev.stopPropagation();
+                    }
+                    break;
+                case 9 /* tab */:
+                case 13 /* enter */:
+                    if (_this.suggestionElement.current && _this.suggestionElement.current.hasSuggestedActionSelected()) {
+                        _this.suggestionElement.current.executeSelectedAction();
+                    }
+                    else if (!ev.shiftKey && _this.suggestionStore.hasSelectedSuggestion() && _this.state.suggestionsVisible) {
+                        _this.completeSuggestion();
+                        ev.preventDefault();
+                        ev.stopPropagation();
+                    }
+                    else {
+                        _this._onValidateInput();
+                    }
+                    break;
+                case 8 /* backspace */:
+                    if (!_this.props.disabled) {
+                        _this.onBackspace(ev);
+                    }
+                    ev.stopPropagation();
+                    break;
+                case 46 /* del */:
+                    if (!_this.props.disabled) {
+                        if (_this.input.current &&
+                            ev.target === _this.input.current.inputElement &&
+                            _this.state.suggestionsVisible &&
+                            _this.suggestionStore.currentIndex !== -1) {
+                            if (_this.props.onRemoveSuggestion) {
+                                _this.props.onRemoveSuggestion(_this.suggestionStore.currentSuggestion.item);
+                            }
+                            _this.suggestionStore.removeSuggestion(_this.suggestionStore.currentIndex);
+                            _this.forceUpdate();
+                        }
+                        else {
+                            _this.onBackspace(ev);
+                        }
+                    }
+                    ev.stopPropagation();
+                    break;
+                case 38 /* up */:
+                    if (_this.input.current && ev.target === _this.input.current.inputElement && _this.state.suggestionsVisible) {
+                        if (_this.suggestionElement.current &&
+                            _this.suggestionElement.current.tryHandleKeyDown(keyCode, _this.suggestionStore.currentIndex)) {
+                            ev.preventDefault();
+                            ev.stopPropagation();
+                        }
+                        else {
+                            if (_this.suggestionElement.current &&
+                                _this.suggestionElement.current.hasSuggestedAction() &&
+                                _this.suggestionStore.currentIndex === 0) {
+                                ev.preventDefault();
+                                ev.stopPropagation();
+                                _this.suggestionElement.current.focusAboveSuggestions();
+                                _this.suggestionStore.deselectAllSuggestions();
+                                _this.forceUpdate();
+                            }
+                            else {
+                                if (_this.suggestionStore.previousSuggestion()) {
+                                    ev.preventDefault();
+                                    ev.stopPropagation();
+                                    _this.onSuggestionSelect();
+                                }
+                            }
+                        }
+                    }
+                    break;
+                case 40 /* down */:
+                    if (_this.input.current && ev.target === _this.input.current.inputElement && _this.state.suggestionsVisible) {
+                        if (_this.suggestionElement.current &&
+                            _this.suggestionElement.current.tryHandleKeyDown(keyCode, _this.suggestionStore.currentIndex)) {
+                            ev.preventDefault();
+                            ev.stopPropagation();
+                        }
+                        else {
+                            if (_this.suggestionElement.current &&
+                                _this.suggestionElement.current.hasSuggestedAction() &&
+                                _this.suggestionStore.currentIndex + 1 === _this.suggestionStore.suggestions.length) {
+                                ev.preventDefault();
+                                ev.stopPropagation();
+                                _this.suggestionElement.current.focusBelowSuggestions();
+                                _this.suggestionStore.deselectAllSuggestions();
+                                _this.forceUpdate();
+                            }
+                            else {
+                                if (_this.suggestionStore.nextSuggestion()) {
+                                    ev.preventDefault();
+                                    ev.stopPropagation();
+                                    _this.onSuggestionSelect();
+                                }
+                            }
+                        }
+                    }
+                    break;
+            }
+        };
+        _this.onItemChange = function (changedItem, index) {
+            var items = _this.state.items;
+            if (index >= 0) {
+                var newItems = items;
+                newItems[index] = changedItem;
+                _this._updateSelectedItems(newItems);
+            }
+        };
+        _this.onGetMoreResults = function () {
+            _this.setState({
+                isSearching: true
+            }, function () {
+                if (_this.props.onGetMoreResults && _this.input.current) {
+                    var suggestions = _this.props.onGetMoreResults(_this.input.current.value, _this.state.items);
+                    var suggestionsArray = suggestions;
+                    var suggestionsPromiseLike = suggestions;
+                    if (Array.isArray(suggestionsArray)) {
+                        _this.updateSuggestions(suggestionsArray);
+                        _this.setState({ isSearching: false });
+                    }
+                    else if (suggestionsPromiseLike.then) {
+                        suggestionsPromiseLike.then(function (newSuggestions) {
+                            _this.updateSuggestions(newSuggestions);
+                            _this.setState({ isSearching: false });
+                        });
+                    }
+                }
+                else {
+                    _this.setState({ isSearching: false });
+                }
+                if (_this.input.current) {
+                    _this.input.current.focus();
+                }
+                _this.setState({
+                    moreSuggestionsAvailable: false,
+                    isResultsFooterVisible: true
+                });
+            });
+        };
+        _this.addItemByIndex = function (index) {
+            _this.addItem(_this.suggestionStore.getSuggestionAtIndex(index).item);
+            if (_this.input.current) {
+                _this.input.current.clear();
+            }
+            _this.updateValue('');
+        };
+        _this.addItem = function (item) {
+            var processedItem = _this.props.onItemSelected
+                ? _this.props.onItemSelected(item)
+                : item;
+            if (processedItem === null) {
+                return;
+            }
+            var processedItemObject = processedItem;
+            var processedItemPromiseLike = processedItem;
+            if (processedItemPromiseLike && processedItemPromiseLike.then) {
+                processedItemPromiseLike.then(function (resolvedProcessedItem) {
+                    var newItems = _this.state.items.concat([resolvedProcessedItem]);
+                    _this._updateSelectedItems(newItems);
+                });
+            }
+            else {
+                var newItems = _this.state.items.concat([processedItemObject]);
+                _this._updateSelectedItems(newItems);
+            }
+            _this.setState({ suggestedDisplayValue: '' });
+        };
+        _this.removeItem = function (item) {
+            var items = _this.state.items;
+            var index = items.indexOf(item);
+            if (index >= 0) {
+                var newItems = items.slice(0, index).concat(items.slice(index + 1));
+                _this._updateSelectedItems(newItems);
+            }
+        };
+        _this.removeItems = function (itemsToRemove) {
+            var items = _this.state.items;
+            var newItems = items.filter(function (item) { return itemsToRemove.indexOf(item) === -1; });
+            var firstItemToRemove = itemsToRemove[0];
+            var index = items.indexOf(firstItemToRemove);
+            _this._updateSelectedItems(newItems, index);
+        };
+        _this._isFocusZoneInnerKeystroke = function (ev) {
+            // If suggestions are shown const up/down keys control them, otherwise allow them through to control the focusZone.
+            if (_this.state.suggestionsVisible) {
+                switch (ev.which) {
+                    case 38 /* up */:
+                    case 40 /* down */:
+                        return true;
+                }
+            }
+            if (ev.which === 13 /* enter */) {
+                return true;
+            }
+            return false;
+        };
+        var items = basePickerProps.selectedItems || basePickerProps.defaultSelectedItems || [];
+        _this.suggestionStore = new _Suggestions_SuggestionsController__WEBPACK_IMPORTED_MODULE_7__["SuggestionsController"]();
+        _this.selection = new _utilities_selection_index__WEBPACK_IMPORTED_MODULE_5__["Selection"]({ onSelectionChanged: function () { return _this.onSelectionChange(); } });
+        _this.selection.setItems(items);
+        _this.state = {
+            items: items,
+            suggestedDisplayValue: '',
+            isMostRecentlyUsedVisible: false,
+            moreSuggestionsAvailable: false,
+            isFocused: false,
+            isSearching: false
+        };
+        return _this;
+    }
+    Object.defineProperty(BasePicker.prototype, "items", {
+        get: function () {
+            return this.state.items;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    BasePicker.prototype.componentWillUpdate = function (newProps, newState) {
+        if (newState.items && newState.items !== this.state.items) {
+            this.selection.setItems(newState.items);
+        }
+    };
+    BasePicker.prototype.componentDidMount = function () {
+        this.selection.setItems(this.state.items);
+        this._onResolveSuggestions = this._async.debounce(this._onResolveSuggestions, this.props.resolveDelay);
+    };
+    BasePicker.prototype.componentWillReceiveProps = function (newProps) {
+        var _this = this;
+        var newItems = newProps.selectedItems;
+        if (newItems) {
+            var focusIndex_1;
+            // If there are less new items than old items then something was removed and we
+            // should try to keep focus consistent
+            if (newItems.length < this.state.items.length) {
+                focusIndex_1 = this.state.items.indexOf(this.selection.getSelection()[0]);
+            }
+            this.setState({
+                items: newProps.selectedItems
+            }, function () {
+                if (focusIndex_1 >= 0) {
+                    _this.resetFocus(focusIndex_1);
+                }
+            });
+        }
+    };
+    BasePicker.prototype.componentWillUnmount = function () {
+        _super.prototype.componentWillUnmount.call(this);
+        if (this.loadingTimer) {
+            this._async.clearTimeout(this.loadingTimer);
+        }
+        if (this.currentPromise) {
+            this.currentPromise = undefined;
+        }
+    };
+    BasePicker.prototype.focus = function () {
+        if (this.focusZone.current) {
+            this.focusZone.current.focus();
+        }
+    };
+    BasePicker.prototype.focusInput = function () {
+        if (this.input.current) {
+            this.input.current.focus();
+        }
+    };
+    BasePicker.prototype.completeSuggestion = function () {
+        if (this.suggestionStore.hasSelectedSuggestion() && this.input.current) {
+            this.addItem(this.suggestionStore.currentSuggestion.item);
+            this.updateValue('');
+            this.input.current.clear();
+        }
+    };
+    BasePicker.prototype.render = function () {
+        var suggestedDisplayValue = this.state.suggestedDisplayValue;
+        var _a = this.props, className = _a.className, inputProps = _a.inputProps, disabled = _a.disabled;
+        var currentIndex = this.suggestionStore.currentIndex;
+        var activeDescendant = currentIndex > -1 ? 'sug-' + currentIndex : undefined;
+        var selectedSuggestionAlert = undefined;
+        if (this.props.enableSelectedSuggestionAlert) {
+            var selectedSuggestion = currentIndex > -1 ? this.suggestionStore.getSuggestionAtIndex(this.suggestionStore.currentIndex) : undefined;
+            var selectedSuggestionAlertText = selectedSuggestion ? selectedSuggestion.ariaLabel : undefined;
+            selectedSuggestionAlert = (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: styles.screenReaderOnly, role: "alert", id: "selected-suggestion-alert", "aria-live": "assertive" },
+                selectedSuggestionAlertText,
+                ' '));
+        }
+        return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { ref: this.root, className: Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__["css"])('ms-BasePicker', className ? className : ''), onKeyDown: this.onKeyDown },
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_FocusZone__WEBPACK_IMPORTED_MODULE_3__["FocusZone"], { componentRef: this.focusZone, direction: _FocusZone__WEBPACK_IMPORTED_MODULE_3__["FocusZoneDirection"].bidirectional, isInnerZoneKeystroke: this._isFocusZoneInnerKeystroke },
+                selectedSuggestionAlert,
+                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_utilities_selection_index__WEBPACK_IMPORTED_MODULE_5__["SelectionZone"], { selection: this.selection, selectionMode: _utilities_selection_index__WEBPACK_IMPORTED_MODULE_5__["SelectionMode"].multiple },
+                    react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__["css"])('ms-BasePicker-text', styles.pickerText, this.state.isFocused && styles.inputFocused), role: 'list' },
+                        this.renderItems(),
+                        this.canAddItems() && (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_Autofill_index__WEBPACK_IMPORTED_MODULE_9__["Autofill"], tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"]({}, inputProps, { className: Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__["css"])('ms-BasePicker-input', styles.pickerInput), ref: this.input, onFocus: this.onInputFocus, onBlur: this.onInputBlur, onInputValueChange: this.onInputChange, suggestedDisplayValue: suggestedDisplayValue, "aria-activedescendant": activeDescendant, "aria-owns": this.state.suggestionsVisible ? 'suggestion-list' : undefined, "aria-expanded": !!this.state.suggestionsVisible, "aria-haspopup": "true", autoCapitalize: "off", autoComplete: "off", role: "combobox", disabled: disabled, "aria-controls": "selected-suggestion-alert", onInputChange: this.props.onInputChange })))))),
+            this.renderSuggestions()));
+    };
+    BasePicker.prototype.canAddItems = function () {
+        var items = this.state.items;
+        var itemLimit = this.props.itemLimit;
+        return itemLimit === undefined || items.length < itemLimit;
+    };
+    BasePicker.prototype.renderSuggestions = function () {
+        var TypedSuggestion = this.SuggestionOfProperType;
+        return this.state.suggestionsVisible && this.input ? (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_Callout__WEBPACK_IMPORTED_MODULE_4__["Callout"], { isBeakVisible: false, gapSpace: 5, target: this.input.current ? this.input.current.inputElement : undefined, onDismiss: this.dismissSuggestions, directionalHint: 4 /* bottomLeftEdge */, directionalHintForRTL: 6 /* bottomRightEdge */ },
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](TypedSuggestion, tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"]({ onRenderSuggestion: this.props.onRenderSuggestionsItem, onSuggestionClick: this.onSuggestionClick, onSuggestionRemove: this.onSuggestionRemove, suggestions: this.suggestionStore.getSuggestions(), ref: this.suggestionElement, onGetMoreResults: this.onGetMoreResults, moreSuggestionsAvailable: this.state.moreSuggestionsAvailable, isLoading: this.state.suggestionsLoading, isSearching: this.state.isSearching, isMostRecentlyUsedVisible: this.state.isMostRecentlyUsedVisible, isResultsFooterVisible: this.state.isResultsFooterVisible, refocusSuggestions: this.refocusSuggestions, removeSuggestionAriaLabel: this.props.removeButtonAriaLabel }, this.props.pickerSuggestionsProps)))) : null;
+    };
+    BasePicker.prototype.renderItems = function () {
+        var _this = this;
+        var _a = this.props, disabled = _a.disabled, removeButtonAriaLabel = _a.removeButtonAriaLabel;
+        var onRenderItem = this.props.onRenderItem;
+        var items = this.state.items;
+        return items.map(function (item, index) {
+            return onRenderItem({
+                item: item,
+                index: index,
+                key: item.key ? item.key : index,
+                selected: _this.selection.isIndexSelected(index),
+                onRemoveItem: function () { return _this.removeItem(item); },
+                disabled: disabled,
+                onItemChange: _this.onItemChange,
+                removeButtonAriaLabel: removeButtonAriaLabel
+            });
+        });
+    };
+    BasePicker.prototype.resetFocus = function (index) {
+        var items = this.state.items;
+        if (items.length && index >= 0) {
+            var newEl = this.root.current &&
+                this.root.current.querySelectorAll('[data-selection-index]')[Math.min(index, items.length - 1)];
+            if (newEl && this.focusZone.current) {
+                this.focusZone.current.focusElement(newEl);
+            }
+        }
+        else if (!this.canAddItems()) {
+            items[items.length - 1].selected = true;
+            this.resetFocus(items.length - 1);
+        }
+        else {
+            if (this.input.current) {
+                this.input.current.focus();
+            }
+        }
+    };
+    BasePicker.prototype.onSuggestionSelect = function () {
+        if (this.suggestionStore.currentSuggestion) {
+            var currentValue = this.input.current ? this.input.current.value : '';
+            var itemValue = this._getTextFromItem(this.suggestionStore.currentSuggestion.item, currentValue);
+            this.setState({ suggestedDisplayValue: itemValue });
+        }
+    };
+    BasePicker.prototype.onSelectionChange = function () {
+        this.forceUpdate();
+    };
+    BasePicker.prototype.updateSuggestions = function (suggestions) {
+        this.suggestionStore.updateSuggestions(suggestions, 0);
+        this.forceUpdate();
+    };
+    BasePicker.prototype.onEmptyInputFocus = function () {
+        var onEmptyInputFocus = this.props.onEmptyInputFocus;
+        var suggestions = onEmptyInputFocus(this.state.items);
+        this.updateSuggestionsList(suggestions);
+    };
+    BasePicker.prototype.updateValue = function (updatedValue) {
+        this._onResolveSuggestions(updatedValue);
+    };
+    BasePicker.prototype.updateSuggestionsList = function (suggestions, updatedValue) {
+        var _this = this;
+        var suggestionsArray = suggestions;
+        var suggestionsPromiseLike = suggestions;
+        // Check to see if the returned value is an array, if it is then just pass it into the next function.
+        // If the returned value is not an array then check to see if it's a promise or PromiseLike. If it is then resolve it asynchronously.
+        if (Array.isArray(suggestionsArray)) {
+            if (updatedValue !== undefined) {
+                this.resolveNewValue(updatedValue, suggestionsArray);
+            }
+            else {
+                this.suggestionStore.updateSuggestions(suggestionsArray, 0);
+            }
+        }
+        else if (suggestionsPromiseLike && suggestionsPromiseLike.then) {
+            if (!this.loadingTimer) {
+                this.loadingTimer = this._async.setTimeout(function () {
+                    _this.setState({
+                        suggestionsLoading: true
+                    });
+                }, 500);
+            }
+            // Clear suggestions
+            this.suggestionStore.updateSuggestions([]);
+            if (updatedValue !== undefined) {
+                this.setState({
+                    suggestionsVisible: this.input.current
+                        ? this.input.current.value !== '' && this.input.current.inputElement === document.activeElement
+                        : false
+                });
+            }
+            else {
+                this.setState({
+                    suggestionsVisible: this.input.current ? this.input.current.inputElement === document.activeElement : false
+                });
+            }
+            // Ensure that the promise will only use the callback if it was the most recent one.
+            var promise_1 = (this.currentPromise = suggestionsPromiseLike);
+            promise_1.then(function (newSuggestions) {
+                if (promise_1 === _this.currentPromise) {
+                    if (updatedValue !== undefined) {
+                        _this.resolveNewValue(updatedValue, newSuggestions);
+                    }
+                    else {
+                        _this.suggestionStore.updateSuggestions(newSuggestions);
+                        _this.setState({
+                            suggestionsLoading: false
+                        });
+                    }
+                    if (_this.loadingTimer) {
+                        _this._async.clearTimeout(_this.loadingTimer);
+                        _this.loadingTimer = undefined;
+                    }
+                }
+            });
+        }
+    };
+    BasePicker.prototype.resolveNewValue = function (updatedValue, suggestions) {
+        this.suggestionStore.updateSuggestions(suggestions, 0);
+        var itemValue = undefined;
+        if (this.suggestionStore.currentSuggestion) {
+            itemValue = this._getTextFromItem(this.suggestionStore.currentSuggestion.item, updatedValue);
+        }
+        this.setState({
+            suggestionsLoading: false,
+            suggestedDisplayValue: itemValue,
+            suggestionsVisible: this.input.current
+                ? this.input.current.value !== '' && this.input.current.inputElement === document.activeElement
+                : false
+        });
+    };
+    BasePicker.prototype.onChange = function (items) {
+        if (this.props.onChange) {
+            this.props.onChange(items);
+        }
+    };
+    // This is protected because we may expect the backspace key to work differently in a different kind of picker.
+    // This lets the subclass override it and provide it's own onBackspace. For an example see the BasePickerListBelow
+    BasePicker.prototype.onBackspace = function (ev) {
+        if ((this.state.items.length && !this.input.current) ||
+            (this.input.current && (!this.input.current.isValueSelected && this.input.current.cursorLocation === 0))) {
+            if (this.selection.getSelectedCount() > 0) {
+                this.removeItems(this.selection.getSelection());
+            }
+            else {
+                this.removeItem(this.state.items[this.state.items.length - 1]);
+            }
+        }
+    };
+    /**
+     * Controls what happens whenever there is an action that impacts the selected items.
+     * If selectedItems is provided as a property then this will act as a controlled component and it will not update it's own state.
+     */
+    BasePicker.prototype._updateSelectedItems = function (items, focusIndex) {
+        var _this = this;
+        if (this.props.selectedItems) {
+            // If the component is a controlled component then the controlling component will need
+            this.onChange(items);
+        }
+        else {
+            this.setState({ items: items }, function () {
+                _this._onSelectedItemsUpdated(items, focusIndex);
+            });
+        }
+    };
+    BasePicker.prototype._onSelectedItemsUpdated = function (items, focusIndex) {
+        this.resetFocus(focusIndex);
+        this.onChange(items);
+    };
+    BasePicker.prototype._onResolveSuggestions = function (updatedValue) {
+        var suggestions = this.props.onResolveSuggestions(updatedValue, this.state.items);
+        if (suggestions !== null) {
+            this.updateSuggestionsList(suggestions, updatedValue);
+        }
+    };
+    BasePicker.prototype._onValidateInput = function () {
+        if (this.props.onValidateInput &&
+            this.input.current &&
+            this.props.onValidateInput(this.input.current.value) !== _BasePicker_types__WEBPACK_IMPORTED_MODULE_8__["ValidationState"].invalid &&
+            this.props.createGenericItem) {
+            var itemToConvert = this.props.createGenericItem(this.input.current.value, this.props.onValidateInput(this.input.current.value));
+            this.suggestionStore.createGenericSuggestion(itemToConvert);
+            this.completeSuggestion();
+        }
+    };
+    BasePicker.prototype._getTextFromItem = function (item, currentValue) {
+        if (this.props.getTextFromItem) {
+            return this.props.getTextFromItem(item, currentValue);
+        }
+        else {
+            return '';
+        }
+    };
+    return BasePicker;
+}(_Utilities__WEBPACK_IMPORTED_MODULE_2__["BaseComponent"]));
+
+var BasePickerListBelow = /** @class */ (function (_super) {
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"](BasePickerListBelow, _super);
+    function BasePickerListBelow() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    BasePickerListBelow.prototype.render = function () {
+        var suggestedDisplayValue = this.state.suggestedDisplayValue;
+        var _a = this.props, className = _a.className, inputProps = _a.inputProps, disabled = _a.disabled;
+        return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", null,
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { ref: this.root, className: Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__["css"])('ms-BasePicker', className ? className : ''), onKeyDown: this.onKeyDown },
+                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_utilities_selection_index__WEBPACK_IMPORTED_MODULE_5__["SelectionZone"], { selection: this.selection, selectionMode: _utilities_selection_index__WEBPACK_IMPORTED_MODULE_5__["SelectionMode"].multiple },
+                    react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__["css"])('ms-BasePicker-text', styles.pickerText, this.state.isFocused && styles.inputFocused) },
+                        react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_Autofill_index__WEBPACK_IMPORTED_MODULE_9__["Autofill"], tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"]({}, inputProps, { className: Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__["css"])('ms-BasePicker-input', styles.pickerInput), ref: this.input, onFocus: this.onInputFocus, onBlur: this.onInputBlur, onInputValueChange: this.onInputChange, suggestedDisplayValue: suggestedDisplayValue, "aria-activedescendant": this.state.suggestionsVisible ? 'sug-' + this.suggestionStore.currentIndex : undefined, "aria-owns": this.state.suggestionsVisible ? 'suggestion-list' : undefined, "aria-expanded": !!this.state.suggestionsVisible, "aria-haspopup": "true", autoCapitalize: "off", autoComplete: "off", role: "combobox", disabled: disabled }))))),
+            this.renderSuggestions(),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_FocusZone__WEBPACK_IMPORTED_MODULE_3__["FocusZone"], { componentRef: this.focusZone, className: "ms-BasePicker-selectedItems", isCircularNavigation: true, direction: _FocusZone__WEBPACK_IMPORTED_MODULE_3__["FocusZoneDirection"].bidirectional, isInnerZoneKeystroke: this._isFocusZoneInnerKeystroke }, this.renderItems())));
+    };
+    BasePickerListBelow.prototype.onBackspace = function (ev) {
+        // override the existing backspace method to not do anything because the list items appear below.
+    };
+    return BasePickerListBelow;
+}(BasePicker));
+
+//# sourceMappingURL=BasePicker.js.map
+
+/***/ }),
+
+/***/ "./node_modules/office-ui-fabric-react/lib/components/pickers/BasePicker.scss.js":
+/*!***************************************************************************************!*\
+  !*** ./node_modules/office-ui-fabric-react/lib/components/pickers/BasePicker.scss.js ***!
+  \***************************************************************************************/
+/*! exports provided: pickerText, inputFocused, pickerInput, screenReaderOnly */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "pickerText", function() { return pickerText; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "inputFocused", function() { return inputFocused; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "pickerInput", function() { return pickerInput; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "screenReaderOnly", function() { return screenReaderOnly; });
+/* harmony import */ var _microsoft_load_themed_styles__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @microsoft/load-themed-styles */ "./node_modules/@microsoft/load-themed-styles/lib/index.js");
+/* harmony import */ var _microsoft_load_themed_styles__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_microsoft_load_themed_styles__WEBPACK_IMPORTED_MODULE_0__);
+/* tslint:disable */
+
+Object(_microsoft_load_themed_styles__WEBPACK_IMPORTED_MODULE_0__["loadStyles"])([{ "rawString": ".pickerText_4fe0caaf{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-sizing:border-box;box-sizing:border-box;border:1px solid " }, { "theme": "neutralTertiary", "defaultValue": "#a6a6a6" }, { "rawString": ";min-width:180px;min-height:30px}.pickerText_4fe0caaf:hover{border-color:" }, { "theme": "inputBorderHovered", "defaultValue": "#212121" }, { "rawString": "}.pickerText_4fe0caaf.inputFocused_4fe0caaf{border-color:" }, { "theme": "inputFocusBorderAlt", "defaultValue": "#0078d4" }, { "rawString": "}.pickerInput_4fe0caaf{height:34px;border:none;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;outline:none;padding:0 6px 0px}.screenReaderOnly_4fe0caaf{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);border:0}\n" }]);
+var pickerText = "pickerText_4fe0caaf";
+var inputFocused = "inputFocused_4fe0caaf";
+var pickerInput = "pickerInput_4fe0caaf";
+var screenReaderOnly = "screenReaderOnly_4fe0caaf";
+//# sourceMappingURL=BasePicker.scss.js.map
+
+/***/ }),
+
+/***/ "./node_modules/office-ui-fabric-react/lib/components/pickers/BasePicker.types.js":
+/*!****************************************************************************************!*\
+  !*** ./node_modules/office-ui-fabric-react/lib/components/pickers/BasePicker.types.js ***!
+  \****************************************************************************************/
+/*! exports provided: ValidationState */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ValidationState", function() { return ValidationState; });
+var ValidationState;
+(function (ValidationState) {
+    ValidationState[ValidationState["valid"] = 0] = "valid";
+    ValidationState[ValidationState["warning"] = 1] = "warning";
+    ValidationState[ValidationState["invalid"] = 2] = "invalid";
+})(ValidationState || (ValidationState = {}));
+//# sourceMappingURL=BasePicker.types.js.map
+
+/***/ }),
+
+/***/ "./node_modules/office-ui-fabric-react/lib/components/pickers/Suggestions/Suggestions.js":
+/*!***********************************************************************************************!*\
+  !*** ./node_modules/office-ui-fabric-react/lib/components/pickers/Suggestions/Suggestions.js ***!
+  \***********************************************************************************************/
+/*! exports provided: SuggestionActionType, SuggestionsItem, Suggestions */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SuggestionActionType", function() { return SuggestionActionType; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SuggestionsItem", function() { return SuggestionsItem; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Suggestions", function() { return Suggestions; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _Utilities__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../Utilities */ "./node_modules/office-ui-fabric-react/lib/Utilities.js");
+/* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../Button */ "./node_modules/office-ui-fabric-react/lib/Button.js");
+/* harmony import */ var _Spinner__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../Spinner */ "./node_modules/office-ui-fabric-react/lib/Spinner.js");
+/* harmony import */ var _Suggestions_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Suggestions.scss */ "./node_modules/office-ui-fabric-react/lib/components/pickers/Suggestions/Suggestions.scss.js");
+
+
+
+
+
+
+var styles = _Suggestions_scss__WEBPACK_IMPORTED_MODULE_5__;
+var SuggestionActionType;
+(function (SuggestionActionType) {
+    SuggestionActionType[SuggestionActionType["none"] = 0] = "none";
+    SuggestionActionType[SuggestionActionType["forceResolve"] = 1] = "forceResolve";
+    SuggestionActionType[SuggestionActionType["searchMore"] = 2] = "searchMore";
+})(SuggestionActionType || (SuggestionActionType = {}));
+var SuggestionsItem = /** @class */ (function (_super) {
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"](SuggestionsItem, _super);
+    function SuggestionsItem() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    SuggestionsItem.prototype.render = function () {
+        var _a = this.props, suggestionModel = _a.suggestionModel, RenderSuggestion = _a.RenderSuggestion, onClick = _a.onClick, className = _a.className, onRemoveItem = _a.onRemoveItem, isSelectedOverride = _a.isSelectedOverride, removeButtonAriaLabel = _a.removeButtonAriaLabel;
+        return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__["css"])('ms-Suggestions-item', styles.suggestionsItem, (_b = {},
+                _b['is-suggested ' + styles.suggestionsItemIsSuggested] = suggestionModel.selected || isSelectedOverride,
+                _b), className) },
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_Button__WEBPACK_IMPORTED_MODULE_3__["CommandButton"], { onClick: onClick, className: Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__["css"])('ms-Suggestions-itemButton', styles.itemButton) }, RenderSuggestion(suggestionModel.item, this.props)),
+            this.props.showRemoveButton ? (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_Button__WEBPACK_IMPORTED_MODULE_3__["IconButton"], { iconProps: { iconName: 'Cancel', style: { fontSize: '12px' } }, title: removeButtonAriaLabel, ariaLabel: removeButtonAriaLabel, onClick: onRemoveItem, className: Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__["css"])('ms-Suggestions-closeButton', styles.closeButton) })) : null));
+        var _b;
+    };
+    return SuggestionsItem;
+}(_Utilities__WEBPACK_IMPORTED_MODULE_2__["BaseComponent"]));
+
+var Suggestions = /** @class */ (function (_super) {
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"](Suggestions, _super);
+    function Suggestions(suggestionsProps) {
+        var _this = _super.call(this, suggestionsProps) || this;
+        _this._forceResolveButton = Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__["createRef"])();
+        _this._searchForMoreButton = Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__["createRef"])();
+        _this._selectedElement = Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__["createRef"])();
+        _this.SuggestionsItemOfProperType = SuggestionsItem;
+        /**
+         * Returns true if the event was handled, false otherwise
+         */
+        _this.tryHandleKeyDown = function (keyCode, currentSuggestionIndex) {
+            var isEventHandled = false;
+            var newSelectedActionType = null;
+            var currentSelectedAction = _this.state.selectedActionType;
+            var suggestionLength = _this.props.suggestions.length;
+            if (keyCode === 40 /* down */) {
+                switch (currentSelectedAction) {
+                    case SuggestionActionType.forceResolve:
+                        if (suggestionLength > 0) {
+                            _this._refocusOnSuggestions(keyCode);
+                            newSelectedActionType = SuggestionActionType.none;
+                        }
+                        else if (_this._searchForMoreButton.current) {
+                            newSelectedActionType = SuggestionActionType.searchMore;
+                        }
+                        else {
+                            newSelectedActionType = SuggestionActionType.forceResolve;
+                        }
+                        break;
+                    case SuggestionActionType.searchMore:
+                        if (_this._forceResolveButton.current) {
+                            newSelectedActionType = SuggestionActionType.forceResolve;
+                        }
+                        else if (suggestionLength > 0) {
+                            _this._refocusOnSuggestions(keyCode);
+                            newSelectedActionType = SuggestionActionType.none;
+                        }
+                        else {
+                            newSelectedActionType = SuggestionActionType.searchMore;
+                        }
+                        break;
+                    case SuggestionActionType.none:
+                        if (currentSuggestionIndex === -1 && _this._forceResolveButton.current) {
+                            newSelectedActionType = SuggestionActionType.forceResolve;
+                        }
+                        break;
+                }
+            }
+            else if (keyCode === 38 /* up */) {
+                switch (currentSelectedAction) {
+                    case SuggestionActionType.forceResolve:
+                        if (_this._searchForMoreButton.current) {
+                            newSelectedActionType = SuggestionActionType.searchMore;
+                        }
+                        else if (suggestionLength > 0) {
+                            _this._refocusOnSuggestions(keyCode);
+                            newSelectedActionType = SuggestionActionType.none;
+                        }
+                        break;
+                    case SuggestionActionType.searchMore:
+                        if (suggestionLength > 0) {
+                            _this._refocusOnSuggestions(keyCode);
+                            newSelectedActionType = SuggestionActionType.none;
+                        }
+                        else if (_this._forceResolveButton.current) {
+                            newSelectedActionType = SuggestionActionType.forceResolve;
+                        }
+                        break;
+                    case SuggestionActionType.none:
+                        if (currentSuggestionIndex === -1 && _this._searchForMoreButton.current) {
+                            newSelectedActionType = SuggestionActionType.searchMore;
+                        }
+                        break;
+                }
+            }
+            if (newSelectedActionType !== null) {
+                _this.setState({ selectedActionType: newSelectedActionType });
+                isEventHandled = true;
+            }
+            return isEventHandled;
+        };
+        _this._getMoreResults = function () {
+            if (_this.props.onGetMoreResults) {
+                _this.props.onGetMoreResults();
+            }
+        };
+        _this._forceResolve = function () {
+            if (_this.props.createGenericItem) {
+                _this.props.createGenericItem();
+            }
+        };
+        _this._shouldShowForceResolve = function () {
+            return _this.props.showForceResolve ? _this.props.showForceResolve() : false;
+        };
+        _this._onClickTypedSuggestionsItem = function (item, index) {
+            return function (ev) {
+                _this.props.onSuggestionClick(ev, item, index);
+            };
+        };
+        _this._refocusOnSuggestions = function (keyCode) {
+            if (typeof _this.props.refocusSuggestions === 'function') {
+                _this.props.refocusSuggestions(keyCode);
+            }
+        };
+        _this._onRemoveTypedSuggestionsItem = function (item, index) {
+            return function (ev) {
+                var onSuggestionRemove = _this.props.onSuggestionRemove;
+                onSuggestionRemove(ev, item, index);
+                ev.stopPropagation();
+            };
+        };
+        _this.state = {
+            selectedActionType: SuggestionActionType.none
+        };
+        return _this;
+    }
+    Suggestions.prototype.componentDidMount = function () {
+        this.scrollSelected();
+        this.activeSelectedElement = this._selectedElement ? this._selectedElement.current : null;
+    };
+    Suggestions.prototype.componentDidUpdate = function () {
+        // Only scroll to selected element if the selected element has changed. Otherwise do nothing.
+        // This prevents some odd behavior where scrolling the active element out of view and clicking on a selected element
+        // will trigger a focus event and not give the clicked element the click.
+        if (this._selectedElement.current && this.activeSelectedElement !== this._selectedElement.current) {
+            this.scrollSelected();
+            this.activeSelectedElement = this._selectedElement.current;
+        }
+    };
+    Suggestions.prototype.render = function () {
+        var _a = this.props, forceResolveText = _a.forceResolveText, mostRecentlyUsedHeaderText = _a.mostRecentlyUsedHeaderText, searchForMoreText = _a.searchForMoreText, className = _a.className, moreSuggestionsAvailable = _a.moreSuggestionsAvailable, noResultsFoundText = _a.noResultsFoundText, suggestions = _a.suggestions, isLoading = _a.isLoading, isSearching = _a.isSearching, loadingText = _a.loadingText, onRenderNoResultFound = _a.onRenderNoResultFound, searchingText = _a.searchingText, isMostRecentlyUsedVisible = _a.isMostRecentlyUsedVisible, resultsMaximumNumber = _a.resultsMaximumNumber, resultsFooterFull = _a.resultsFooterFull, resultsFooter = _a.resultsFooter, _b = _a.isResultsFooterVisible, isResultsFooterVisible = _b === void 0 ? true : _b, suggestionsAvailableAlertText = _a.suggestionsAvailableAlertText, suggestionsHeaderText = _a.suggestionsHeaderText;
+        var noResults = function () {
+            return noResultsFoundText ? (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { role: "alert", className: Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__["css"])('ms-Suggestions-none', styles.suggestionsNone) }, noResultsFoundText)) : null;
+        };
+        // MostRecently Used text should supercede the header text if it's there and available.
+        var headerText = suggestionsHeaderText;
+        if (isMostRecentlyUsedVisible && mostRecentlyUsedHeaderText) {
+            headerText = mostRecentlyUsedHeaderText;
+        }
+        var footerTitle = undefined;
+        if (isResultsFooterVisible) {
+            footerTitle = suggestions.length >= resultsMaximumNumber ? resultsFooterFull : resultsFooter;
+        }
+        var hasNoSuggestions = (!suggestions || !suggestions.length) && !isLoading;
+        return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__["css"])('ms-Suggestions', className ? className : '', styles.root) },
+            headerText ? react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__["css"])('ms-Suggestions-title', styles.suggestionsTitle) }, headerText) : null,
+            forceResolveText &&
+                this._shouldShowForceResolve() && (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_Button__WEBPACK_IMPORTED_MODULE_3__["CommandButton"], { componentRef: this._forceResolveButton, className: Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__["css"])('ms-forceResolve-button', styles.actionButton, (_c = {},
+                    _c['is-selected ' + styles.buttonSelected] = this.state.selectedActionType === SuggestionActionType.forceResolve,
+                    _c)), onClick: this._forceResolve }, forceResolveText)),
+            isLoading && (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_Spinner__WEBPACK_IMPORTED_MODULE_4__["Spinner"], { className: Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__["css"])('ms-Suggestions-spinner', styles.suggestionsSpinner), label: loadingText })),
+            hasNoSuggestions
+                ? onRenderNoResultFound
+                    ? onRenderNoResultFound(undefined, noResults)
+                    : noResults()
+                : this._renderSuggestions(),
+            searchForMoreText &&
+                moreSuggestionsAvailable && (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_Button__WEBPACK_IMPORTED_MODULE_3__["CommandButton"], { componentRef: this._searchForMoreButton, className: Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__["css"])('ms-SearchMore-button', styles.actionButton, (_d = {},
+                    _d['is-selected ' + styles.buttonSelected] = this.state.selectedActionType === SuggestionActionType.searchMore,
+                    _d)), iconProps: { iconName: 'Search' }, onClick: this._getMoreResults }, searchForMoreText)),
+            isSearching ? (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_Spinner__WEBPACK_IMPORTED_MODULE_4__["Spinner"], { className: Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__["css"])('ms-Suggestions-spinner', styles.suggestionsSpinner), label: searchingText })) : null,
+            footerTitle && !moreSuggestionsAvailable && !isMostRecentlyUsedVisible && !isSearching ? (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__["css"])('ms-Suggestions-title', styles.suggestionsTitle) }, footerTitle(this.props))) : null,
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("span", { role: "alert", "aria-live": "polite", className: Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__["css"])('ms-Suggestions-suggestionsAvailable', styles.suggestionsAvailable) }, !isLoading && !isSearching && suggestions && suggestions.length > 0 && suggestionsAvailableAlertText
+                ? suggestionsAvailableAlertText
+                : null)));
+        var _c, _d;
+    };
+    Suggestions.prototype.hasSuggestedAction = function () {
+        return this._searchForMoreButton.current !== undefined || this._forceResolveButton.current !== undefined;
+    };
+    Suggestions.prototype.hasSuggestedActionSelected = function () {
+        return this.state.selectedActionType !== SuggestionActionType.none;
+    };
+    Suggestions.prototype.executeSelectedAction = function () {
+        switch (this.state.selectedActionType) {
+            case SuggestionActionType.forceResolve:
+                this._forceResolve();
+                break;
+            case SuggestionActionType.searchMore:
+                this._getMoreResults();
+                break;
+        }
+    };
+    Suggestions.prototype.focusAboveSuggestions = function () {
+        if (this._forceResolveButton.current) {
+            this.setState({ selectedActionType: SuggestionActionType.forceResolve });
+        }
+        else if (this._searchForMoreButton.current) {
+            this.setState({ selectedActionType: SuggestionActionType.searchMore });
+        }
+    };
+    Suggestions.prototype.focusBelowSuggestions = function () {
+        if (this._searchForMoreButton.current) {
+            this.setState({ selectedActionType: SuggestionActionType.searchMore });
+        }
+        else if (this._forceResolveButton.current) {
+            this.setState({ selectedActionType: SuggestionActionType.forceResolve });
+        }
+    };
+    Suggestions.prototype.focusSearchForMoreButton = function () {
+        if (this._searchForMoreButton.current) {
+            this._searchForMoreButton.current.focus();
+        }
+    };
+    // TODO get the element to scroll into view properly regardless of direction.
+    Suggestions.prototype.scrollSelected = function () {
+        if (this._selectedElement.current && this._selectedElement.current.scrollIntoView !== undefined) {
+            this._selectedElement.current.scrollIntoView(false);
+        }
+    };
+    Suggestions.prototype._renderSuggestions = function () {
+        var _this = this;
+        var _a = this.props, onRenderSuggestion = _a.onRenderSuggestion, removeSuggestionAriaLabel = _a.removeSuggestionAriaLabel, suggestionsItemClassName = _a.suggestionsItemClassName, resultsMaximumNumber = _a.resultsMaximumNumber, showRemoveButtons = _a.showRemoveButtons, suggestionsContainerAriaLabel = _a.suggestionsContainerAriaLabel;
+        var suggestions = this.props.suggestions;
+        var TypedSuggestionsItem = this.SuggestionsItemOfProperType;
+        if (resultsMaximumNumber) {
+            suggestions = suggestions.slice(0, resultsMaximumNumber);
+        }
+        return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__["css"])('ms-Suggestions-container', styles.suggestionsContainer), id: "suggestion-list", role: "list", "aria-label": suggestionsContainerAriaLabel }, suggestions.map(function (suggestion, index) { return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { ref: suggestion.selected ? _this._selectedElement : '', 
+            // tslint:disable-next-line:no-string-literal
+            key: suggestion.item['key'] ? suggestion.item['key'] : index, id: 'sug-' + index, role: "listitem", "aria-label": suggestion.ariaLabel },
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](TypedSuggestionsItem, { id: 'sug-item' + index, suggestionModel: suggestion, RenderSuggestion: onRenderSuggestion, onClick: _this._onClickTypedSuggestionsItem(suggestion.item, index), className: suggestionsItemClassName, showRemoveButton: showRemoveButtons, removeButtonAriaLabel: removeSuggestionAriaLabel, onRemoveItem: _this._onRemoveTypedSuggestionsItem(suggestion.item, index) }))); })));
+    };
+    return Suggestions;
+}(_Utilities__WEBPACK_IMPORTED_MODULE_2__["BaseComponent"]));
+
+//# sourceMappingURL=Suggestions.js.map
+
+/***/ }),
+
+/***/ "./node_modules/office-ui-fabric-react/lib/components/pickers/Suggestions/Suggestions.scss.js":
+/*!****************************************************************************************************!*\
+  !*** ./node_modules/office-ui-fabric-react/lib/components/pickers/Suggestions/Suggestions.scss.js ***!
+  \****************************************************************************************************/
+/*! exports provided: root, suggestionsItem, closeButton, suggestionsItemIsSuggested, itemButton, actionButton, buttonSelected, suggestionsTitle, suggestionsContainer, suggestionsNone, suggestionsSpinner, suggestionsAvailable */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "root", function() { return root; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "suggestionsItem", function() { return suggestionsItem; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "closeButton", function() { return closeButton; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "suggestionsItemIsSuggested", function() { return suggestionsItemIsSuggested; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "itemButton", function() { return itemButton; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "actionButton", function() { return actionButton; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "buttonSelected", function() { return buttonSelected; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "suggestionsTitle", function() { return suggestionsTitle; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "suggestionsContainer", function() { return suggestionsContainer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "suggestionsNone", function() { return suggestionsNone; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "suggestionsSpinner", function() { return suggestionsSpinner; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "suggestionsAvailable", function() { return suggestionsAvailable; });
+/* harmony import */ var _microsoft_load_themed_styles__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @microsoft/load-themed-styles */ "./node_modules/@microsoft/load-themed-styles/lib/index.js");
+/* harmony import */ var _microsoft_load_themed_styles__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_microsoft_load_themed_styles__WEBPACK_IMPORTED_MODULE_0__);
+/* tslint:disable */
+
+Object(_microsoft_load_themed_styles__WEBPACK_IMPORTED_MODULE_0__["loadStyles"])([{ "rawString": ".root_7d6cc1a2{min-width:260px}.suggestionsItem_7d6cc1a2{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;-webkit-box-sizing:border-box;box-sizing:border-box;width:100%;position:relative}.suggestionsItem_7d6cc1a2:hover{background:" }, { "theme": "neutralLighter", "defaultValue": "#f4f4f4" }, { "rawString": "}.suggestionsItem_7d6cc1a2:hover .closeButton_7d6cc1a2{display:block}.suggestionsItem_7d6cc1a2.suggestionsItemIsSuggested_7d6cc1a2{background:" }, { "theme": "neutralLight", "defaultValue": "#eaeaea" }, { "rawString": "}.suggestionsItem_7d6cc1a2.suggestionsItemIsSuggested_7d6cc1a2:hover{background:" }, { "theme": "neutralTertiaryAlt", "defaultValue": "#c8c8c8" }, { "rawString": "}@media screen and (-ms-high-contrast: active){.suggestionsItem_7d6cc1a2.suggestionsItemIsSuggested_7d6cc1a2:hover{background:Highlight;color:HighlightText}}@media screen and (-ms-high-contrast: active){.suggestionsItem_7d6cc1a2.suggestionsItemIsSuggested_7d6cc1a2{background:Highlight;color:HighlightText;-ms-high-contrast-adjust:none}}.suggestionsItem_7d6cc1a2.suggestionsItemIsSuggested_7d6cc1a2 .closeButton_7d6cc1a2:hover{background:" }, { "theme": "neutralTertiary", "defaultValue": "#a6a6a6" }, { "rawString": ";color:" }, { "theme": "neutralPrimary", "defaultValue": "#333333" }, { "rawString": "}@media screen and (-ms-high-contrast: active){.suggestionsItem_7d6cc1a2.suggestionsItemIsSuggested_7d6cc1a2 .itemButton_7d6cc1a2{color:HighlightText}}.suggestionsItem_7d6cc1a2 .closeButton_7d6cc1a2{display:none;color:" }, { "theme": "neutralSecondary", "defaultValue": "#666666" }, { "rawString": "}.suggestionsItem_7d6cc1a2 .closeButton_7d6cc1a2:hover{background:" }, { "theme": "neutralLight", "defaultValue": "#eaeaea" }, { "rawString": "}.actionButton_7d6cc1a2{background:none;background-color:transparent;border:0;cursor:pointer;margin:0;position:relative;border-top:1px solid " }, { "theme": "neutralLight", "defaultValue": "#eaeaea" }, { "rawString": ";height:40px;width:100%;font-size:12px}[dir='ltr'] .actionButton_7d6cc1a2{padding-left:8px}[dir='rtl'] .actionButton_7d6cc1a2{padding-right:8px}[dir='ltr'] .actionButton_7d6cc1a2{text-align:left}[dir='rtl'] .actionButton_7d6cc1a2{text-align:right}.actionButton_7d6cc1a2:hover{background-color:" }, { "theme": "neutralLight", "defaultValue": "#eaeaea" }, { "rawString": ";cursor:pointer}.actionButton_7d6cc1a2:focus,.actionButton_7d6cc1a2:active{background-color:" }, { "theme": "themeLight", "defaultValue": "#c7e0f4" }, { "rawString": "}.actionButton_7d6cc1a2 .ms-Button-icon{font-size:16px;width:25px}.actionButton_7d6cc1a2 .ms-Button-label{margin:0 4px 0 9px}html[dir='rtl'] .actionButton_7d6cc1a2 .ms-Button-label{margin:0 9px 0 4px}.buttonSelected_7d6cc1a2{background-color:" }, { "theme": "themeLight", "defaultValue": "#c7e0f4" }, { "rawString": "}.suggestionsTitle_7d6cc1a2{padding:0 12px;color:" }, { "theme": "themePrimary", "defaultValue": "#0078d4" }, { "rawString": ";font-size:12px;line-height:40px;border-bottom:1px solid " }, { "theme": "neutralLight", "defaultValue": "#eaeaea" }, { "rawString": "}.suggestionsContainer_7d6cc1a2{overflow-y:auto;overflow-x:hidden;max-height:300px;border-bottom:1px solid " }, { "theme": "neutralLight", "defaultValue": "#eaeaea" }, { "rawString": "}.suggestionsNone_7d6cc1a2{text-align:center;color:" }, { "theme": "info", "defaultValue": "#666666" }, { "rawString": ";font-size:12px;line-height:30px}.suggestionsSpinner_7d6cc1a2{margin:5px 0;white-space:nowrap;line-height:20px;font-size:12px}html[dir='ltr'] .suggestionsSpinner_7d6cc1a2{padding-left:14px}html[dir='rtl'] .suggestionsSpinner_7d6cc1a2{padding-right:14px}html[dir='ltr'] .suggestionsSpinner_7d6cc1a2{text-align:left}html[dir='rtl'] .suggestionsSpinner_7d6cc1a2{text-align:right}.suggestionsSpinner_7d6cc1a2 .ms-Spinner-circle{display:inline-block;vertical-align:middle}.suggestionsSpinner_7d6cc1a2 .ms-Spinner-label{display:inline-block;margin:0px 10px 0 16px;vertical-align:middle}html[dir='rtl'] .suggestionsSpinner_7d6cc1a2 .ms-Spinner-label{margin:0px 16px 0 10px}.itemButton_7d6cc1a2.itemButton_7d6cc1a2{width:100%;height:100%;padding:7px 12px}@media screen and (-ms-high-contrast: active){.itemButton_7d6cc1a2.itemButton_7d6cc1a2{color:WindowText}}.closeButton_7d6cc1a2.closeButton_7d6cc1a2{padding:0 4px;height:auto;width:32px}@media screen and (-ms-high-contrast: active){.closeButton_7d6cc1a2.closeButton_7d6cc1a2{color:WindowText}}.closeButton_7d6cc1a2.closeButton_7d6cc1a2:hover{background:" }, { "theme": "neutralTertiaryAlt", "defaultValue": "#c8c8c8" }, { "rawString": ";color:" }, { "theme": "neutralDark", "defaultValue": "#212121" }, { "rawString": "}.suggestionsAvailable_7d6cc1a2{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);border:0}\n" }]);
+var root = "root_7d6cc1a2";
+var suggestionsItem = "suggestionsItem_7d6cc1a2";
+var closeButton = "closeButton_7d6cc1a2";
+var suggestionsItemIsSuggested = "suggestionsItemIsSuggested_7d6cc1a2";
+var itemButton = "itemButton_7d6cc1a2";
+var actionButton = "actionButton_7d6cc1a2";
+var buttonSelected = "buttonSelected_7d6cc1a2";
+var suggestionsTitle = "suggestionsTitle_7d6cc1a2";
+var suggestionsContainer = "suggestionsContainer_7d6cc1a2";
+var suggestionsNone = "suggestionsNone_7d6cc1a2";
+var suggestionsSpinner = "suggestionsSpinner_7d6cc1a2";
+var suggestionsAvailable = "suggestionsAvailable_7d6cc1a2";
+//# sourceMappingURL=Suggestions.scss.js.map
+
+/***/ }),
+
+/***/ "./node_modules/office-ui-fabric-react/lib/components/pickers/Suggestions/SuggestionsController.js":
+/*!*********************************************************************************************************!*\
+  !*** ./node_modules/office-ui-fabric-react/lib/components/pickers/Suggestions/SuggestionsController.js ***!
+  \*********************************************************************************************************/
+/*! exports provided: SuggestionsController */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SuggestionsController", function() { return SuggestionsController; });
+var SuggestionsController = /** @class */ (function () {
+    function SuggestionsController() {
+        var _this = this;
+        this._isSuggestionModel = function (value) {
+            return value.item !== undefined;
+        };
+        this._ensureSuggestionModel = function (suggestion) {
+            if (_this._isSuggestionModel(suggestion)) {
+                return suggestion;
+            }
+            else {
+                return {
+                    item: suggestion,
+                    selected: false,
+                    ariaLabel: suggestion.name || suggestion.primaryText
+                };
+            }
+        };
+        this.suggestions = [];
+        this.currentIndex = -1;
+    }
+    SuggestionsController.prototype.updateSuggestions = function (newSuggestions, selectedIndex) {
+        if (newSuggestions && newSuggestions.length > 0) {
+            this.suggestions = this.convertSuggestionsToSuggestionItems(newSuggestions);
+            this.currentIndex = 0;
+            if (selectedIndex !== undefined) {
+                this.suggestions[selectedIndex].selected = true;
+                this.currentSuggestion = this.suggestions[selectedIndex];
+            }
+        }
+        else {
+            this.suggestions = [];
+            this.currentIndex = -1;
+            this.currentSuggestion = undefined;
+        }
+    };
+    /**
+     * Increments the suggestion index and gets the next suggestion in the list.
+     */
+    SuggestionsController.prototype.nextSuggestion = function () {
+        if (this.suggestions && this.suggestions.length) {
+            if (this.currentIndex < this.suggestions.length - 1) {
+                this.setSelectedSuggestion(this.currentIndex + 1);
+                return true;
+            }
+            else if (this.currentIndex === this.suggestions.length - 1) {
+                this.setSelectedSuggestion(0);
+                return true;
+            }
+        }
+        return false;
+    };
+    /**
+     * Decrements the suggestion index and gets the previous suggestion in the list.
+     */
+    SuggestionsController.prototype.previousSuggestion = function () {
+        if (this.suggestions && this.suggestions.length) {
+            if (this.currentIndex > 0) {
+                this.setSelectedSuggestion(this.currentIndex - 1);
+                return true;
+            }
+            else if (this.currentIndex === 0) {
+                this.setSelectedSuggestion(this.suggestions.length - 1);
+                return true;
+            }
+        }
+        return false;
+    };
+    SuggestionsController.prototype.getSuggestions = function () {
+        return this.suggestions;
+    };
+    SuggestionsController.prototype.getCurrentItem = function () {
+        return this.currentSuggestion;
+    };
+    SuggestionsController.prototype.getSuggestionAtIndex = function (index) {
+        return this.suggestions[index];
+    };
+    SuggestionsController.prototype.hasSelectedSuggestion = function () {
+        return this.currentSuggestion ? true : false;
+    };
+    SuggestionsController.prototype.removeSuggestion = function (index) {
+        this.suggestions.splice(index, 1);
+    };
+    SuggestionsController.prototype.createGenericSuggestion = function (itemToConvert) {
+        var itemToAdd = this.convertSuggestionsToSuggestionItems([itemToConvert])[0];
+        this.currentSuggestion = itemToAdd;
+    };
+    SuggestionsController.prototype.convertSuggestionsToSuggestionItems = function (suggestions) {
+        return Array.isArray(suggestions) ? suggestions.map(this._ensureSuggestionModel) : [];
+    };
+    SuggestionsController.prototype.deselectAllSuggestions = function () {
+        if (this.currentIndex > -1) {
+            this.suggestions[this.currentIndex].selected = false;
+            this.currentIndex = -1;
+        }
+    };
+    SuggestionsController.prototype.setSelectedSuggestion = function (index) {
+        if (index > this.suggestions.length - 1 || index < 0) {
+            this.currentIndex = 0;
+            this.currentSuggestion.selected = false;
+            this.currentSuggestion = this.suggestions[0];
+            this.currentSuggestion.selected = true;
+        }
+        else {
+            if (this.currentIndex > -1) {
+                this.suggestions[this.currentIndex].selected = false;
+            }
+            this.suggestions[index].selected = true;
+            this.currentIndex = index;
+            this.currentSuggestion = this.suggestions[index];
+        }
+    };
+    return SuggestionsController;
+}());
+
+//# sourceMappingURL=SuggestionsController.js.map
+
+/***/ }),
+
+/***/ "./node_modules/office-ui-fabric-react/lib/components/pickers/TagPicker/TagItem.js":
+/*!*****************************************************************************************!*\
+  !*** ./node_modules/office-ui-fabric-react/lib/components/pickers/TagPicker/TagItem.js ***!
+  \*****************************************************************************************/
+/*! exports provided: TagItem */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TagItem", function() { return TagItem; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Utilities__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../Utilities */ "./node_modules/office-ui-fabric-react/lib/Utilities.js");
+/* harmony import */ var _Icon__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../Icon */ "./node_modules/office-ui-fabric-react/lib/Icon.js");
+/* harmony import */ var _TagItem_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./TagItem.scss */ "./node_modules/office-ui-fabric-react/lib/components/pickers/TagPicker/TagItem.scss.js");
+/* tslint:disable */
+
+/* tslint:enable */
+
+
+
+var styles = _TagItem_scss__WEBPACK_IMPORTED_MODULE_3__;
+var TagItem = function (props) { return (react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { className: Object(_Utilities__WEBPACK_IMPORTED_MODULE_1__["css"])('ms-TagItem', styles.root, { 'is-selected': props.selected }, props.selected && styles.isSelected), role: 'listitem', key: props.index, "data-selection-index": props.index, "data-is-focusable": (props.enableTagFocusInDisabledPicker || !props.disabled) && true },
+    react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("span", { className: Object(_Utilities__WEBPACK_IMPORTED_MODULE_1__["css"])('ms-TagItem-text', styles.tagItemText), "aria-label": props.children }, props.children),
+    !props.disabled && (react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("span", { className: Object(_Utilities__WEBPACK_IMPORTED_MODULE_1__["css"])('ms-TagItem-close', styles.tagItemClose), onClick: props.onRemoveItem },
+        react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_Icon__WEBPACK_IMPORTED_MODULE_2__["Icon"], { iconName: "Cancel" }))))); };
+//# sourceMappingURL=TagItem.js.map
+
+/***/ }),
+
+/***/ "./node_modules/office-ui-fabric-react/lib/components/pickers/TagPicker/TagItem.scss.js":
+/*!**********************************************************************************************!*\
+  !*** ./node_modules/office-ui-fabric-react/lib/components/pickers/TagPicker/TagItem.scss.js ***!
+  \**********************************************************************************************/
+/*! exports provided: root, isSelected, tagItemText, tagItemClose, tagItemButton, tagItemTextOverflow */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "root", function() { return root; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isSelected", function() { return isSelected; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "tagItemText", function() { return tagItemText; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "tagItemClose", function() { return tagItemClose; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "tagItemButton", function() { return tagItemButton; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "tagItemTextOverflow", function() { return tagItemTextOverflow; });
+/* harmony import */ var _microsoft_load_themed_styles__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @microsoft/load-themed-styles */ "./node_modules/@microsoft/load-themed-styles/lib/index.js");
+/* harmony import */ var _microsoft_load_themed_styles__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_microsoft_load_themed_styles__WEBPACK_IMPORTED_MODULE_0__);
+/* tslint:disable */
+
+Object(_microsoft_load_themed_styles__WEBPACK_IMPORTED_MODULE_0__["loadStyles"])([{ "rawString": ".root_77d1a260{-webkit-box-sizing:content-box;box-sizing:content-box;-ms-flex-negative:1;flex-shrink:1;background:" }, { "theme": "neutralLighter", "defaultValue": "#f4f4f4" }, { "rawString": ";margin:2px;height:26px;line-height:26px;cursor:default;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:nowrap;flex-wrap:nowrap;max-width:300px}.root_77d1a260::-moz-focus-inner{border:0}.root_77d1a260{outline:transparent}.root_77d1a260{position:relative}.ms-Fabric--isFocusVisible .root_77d1a260:focus:after{content:'';position:absolute;top:0;right:0;bottom:0;left:0;pointer-events:none;border:1px solid " }, { "theme": "focusBorder", "defaultValue": "#000000" }, { "rawString": "}.root_77d1a260:hover{background:" }, { "theme": "neutralLight", "defaultValue": "#eaeaea" }, { "rawString": "}.root_77d1a260.isSelected_77d1a260{background:" }, { "theme": "neutralQuaternary", "defaultValue": "#d0d0d0" }, { "rawString": "}@media screen and (-ms-high-contrast: active){.root_77d1a260.isSelected_77d1a260{border:1px solid WindowFrame}}.root_77d1a260.isSelected_77d1a260:hover{background:" }, { "theme": "neutralQuaternaryAlt", "defaultValue": "#dadada" }, { "rawString": "}@media screen and (-ms-high-contrast: active){.root_77d1a260{border:1px solid WindowText}}.tagItemText_77d1a260{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:30px;margin:0 8px}.tagItemClose_77d1a260{cursor:pointer;color:" }, { "theme": "neutralSecondary", "defaultValue": "#666666" }, { "rawString": ";font-size:12px;display:inline-block;text-align:center;vertical-align:top;width:30px;height:100%;-ms-flex-negative:0;flex-shrink:0}.tagItemButton_77d1a260{width:100%;height:100%}.tagItemTextOverflow_77d1a260{overflow:hidden;text-overflow:ellipsis;max-width:60vw}\n" }]);
+var root = "root_77d1a260";
+var isSelected = "isSelected_77d1a260";
+var tagItemText = "tagItemText_77d1a260";
+var tagItemClose = "tagItemClose_77d1a260";
+var tagItemButton = "tagItemButton_77d1a260";
+var tagItemTextOverflow = "tagItemTextOverflow_77d1a260";
+//# sourceMappingURL=TagItem.scss.js.map
+
+/***/ }),
+
+/***/ "./node_modules/office-ui-fabric-react/lib/components/pickers/TagPicker/TagPicker.js":
+/*!*******************************************************************************************!*\
+  !*** ./node_modules/office-ui-fabric-react/lib/components/pickers/TagPicker/TagPicker.js ***!
+  \*******************************************************************************************/
+/*! exports provided: TagPicker */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TagPicker", function() { return TagPicker; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _Utilities__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../Utilities */ "./node_modules/office-ui-fabric-react/lib/Utilities.js");
+/* harmony import */ var _BasePicker__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../BasePicker */ "./node_modules/office-ui-fabric-react/lib/components/pickers/BasePicker.js");
+/* harmony import */ var _TagItem__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./TagItem */ "./node_modules/office-ui-fabric-react/lib/components/pickers/TagPicker/TagItem.js");
+/* harmony import */ var _TagItem_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./TagItem.scss */ "./node_modules/office-ui-fabric-react/lib/components/pickers/TagPicker/TagItem.scss.js");
+
+/* tslint:disable */
+
+
+/* tslint:enable */
+
+
+
+var styles = _TagItem_scss__WEBPACK_IMPORTED_MODULE_5__;
+var TagPicker = /** @class */ (function (_super) {
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"](TagPicker, _super);
+    function TagPicker() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    TagPicker.defaultProps = {
+        onRenderItem: function (props) {
+            return react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_TagItem__WEBPACK_IMPORTED_MODULE_4__["TagItem"], tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"]({}, props), props.item.name);
+        },
+        onRenderSuggestionsItem: function (props) { return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__["css"])('ms-TagItem-TextOverflow', styles.tagItemTextOverflow) },
+            " ",
+            props.name,
+            " ")); }
+    };
+    return TagPicker;
+}(_BasePicker__WEBPACK_IMPORTED_MODULE_3__["BasePicker"]));
+
+//# sourceMappingURL=TagPicker.js.map
 
 /***/ }),
 
@@ -19933,6 +22309,889 @@ var Position;
     Position[Position["end"] = 3] = "end";
 })(Position || (Position = {}));
 //# sourceMappingURL=positioning.types.js.map
+
+/***/ }),
+
+/***/ "./node_modules/office-ui-fabric-react/lib/utilities/selection/Selection.js":
+/*!**********************************************************************************!*\
+  !*** ./node_modules/office-ui-fabric-react/lib/utilities/selection/Selection.js ***!
+  \**********************************************************************************/
+/*! exports provided: Selection */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Selection", function() { return Selection; });
+/* harmony import */ var _interfaces__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./interfaces */ "./node_modules/office-ui-fabric-react/lib/utilities/selection/interfaces.js");
+/* harmony import */ var _Utilities__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../Utilities */ "./node_modules/office-ui-fabric-react/lib/Utilities.js");
+
+
+var Selection = /** @class */ (function () {
+    function Selection(options) {
+        if (options === void 0) { options = {}; }
+        var onSelectionChanged = options.onSelectionChanged, getKey = options.getKey, _a = options.canSelectItem, canSelectItem = _a === void 0 ? function (item) { return true; } : _a, _b = options.selectionMode, selectionMode = _b === void 0 ? _interfaces__WEBPACK_IMPORTED_MODULE_0__["SelectionMode"].multiple : _b;
+        this.mode = selectionMode;
+        this._getKey = getKey || defaultGetKey;
+        this._changeEventSuppressionCount = 0;
+        this._exemptedCount = 0;
+        this._anchoredIndex = 0;
+        this._unselectableCount = 0;
+        this._onSelectionChanged = onSelectionChanged;
+        this._canSelectItem = canSelectItem;
+        this._isModal = false;
+        this.setItems([], true);
+    }
+    Selection.prototype.canSelectItem = function (item) {
+        return this._canSelectItem(item);
+    };
+    Selection.prototype.getKey = function (item, index) {
+        var key = this._getKey(item, index);
+        return typeof key === 'number' || key ? "" + key : '';
+    };
+    Selection.prototype.setChangeEvents = function (isEnabled, suppressChange) {
+        this._changeEventSuppressionCount += isEnabled ? -1 : 1;
+        if (this._changeEventSuppressionCount === 0 && this._hasChanged) {
+            this._hasChanged = false;
+            if (!suppressChange) {
+                this._change();
+            }
+        }
+    };
+    Selection.prototype.isModal = function () {
+        return this._isModal;
+    };
+    Selection.prototype.setModal = function (isModal) {
+        if (this._isModal !== isModal) {
+            this.setChangeEvents(false);
+            this._isModal = isModal;
+            if (!isModal) {
+                this.setAllSelected(false);
+            }
+            this._change();
+            this.setChangeEvents(true);
+        }
+    };
+    /**
+     * Selection needs the items, call this method to set them. If the set
+     * of items is the same, this will re-evaluate selection and index maps.
+     * Otherwise, shouldClear should be set to true, so that selection is
+     * cleared.
+     */
+    Selection.prototype.setItems = function (items, shouldClear) {
+        if (shouldClear === void 0) { shouldClear = true; }
+        var newKeyToIndexMap = {};
+        var newUnselectableIndices = {};
+        var hasSelectionChanged = false;
+        this.setChangeEvents(false);
+        // Reset the unselectable count.
+        this._unselectableCount = 0;
+        // Build lookup table for quick selection evaluation.
+        for (var i = 0; i < items.length; i++) {
+            var item = items[i];
+            if (item) {
+                var key = this.getKey(item, i);
+                if (key) {
+                    newKeyToIndexMap[key] = i;
+                }
+            }
+            newUnselectableIndices[i] = item && !this.canSelectItem(item);
+            if (newUnselectableIndices[i]) {
+                this._unselectableCount++;
+            }
+        }
+        if (shouldClear) {
+            this.setAllSelected(false);
+        }
+        // Check the exemption list for discrepencies.
+        var newExemptedIndicies = {};
+        for (var indexProperty in this._exemptedIndices) {
+            if (this._exemptedIndices.hasOwnProperty(indexProperty)) {
+                var index = Number(indexProperty);
+                var item = this._items[index];
+                var exemptKey = item ? this.getKey(item, Number(index)) : undefined;
+                var newIndex = exemptKey ? newKeyToIndexMap[exemptKey] : index;
+                if (newIndex === undefined) {
+                    // We don't know the index of the item any more so it's either moved or removed.
+                    // In this case we reset the entire selection.
+                    this.setAllSelected(false);
+                    break;
+                }
+                else {
+                    // We know the new index of the item. update the existing exemption table.
+                    newExemptedIndicies[newIndex] = true;
+                    hasSelectionChanged = hasSelectionChanged || newIndex !== index;
+                }
+            }
+        }
+        this._exemptedIndices = newExemptedIndicies;
+        this._keyToIndexMap = newKeyToIndexMap;
+        this._unselectableIndices = newUnselectableIndices;
+        this._items = items || [];
+        this._selectedItems = null;
+        if (hasSelectionChanged) {
+            this._change();
+        }
+        this.setChangeEvents(true);
+    };
+    Selection.prototype.getItems = function () {
+        return this._items;
+    };
+    Selection.prototype.getSelection = function () {
+        if (!this._selectedItems) {
+            this._selectedItems = [];
+            var items = this._items;
+            if (items) {
+                for (var i = 0; i < items.length; i++) {
+                    if (this.isIndexSelected(i)) {
+                        this._selectedItems.push(items[i]);
+                    }
+                }
+            }
+        }
+        return this._selectedItems;
+    };
+    Selection.prototype.getSelectedCount = function () {
+        return this._isAllSelected
+            ? this._items.length - this._exemptedCount - this._unselectableCount
+            : this._exemptedCount;
+    };
+    Selection.prototype.getSelectedIndices = function () {
+        if (!this._selectedIndices) {
+            this._selectedIndices = [];
+            var items = this._items;
+            if (items) {
+                for (var i = 0; i < items.length; i++) {
+                    if (this.isIndexSelected(i)) {
+                        this._selectedIndices.push(i);
+                    }
+                }
+            }
+        }
+        return this._selectedIndices;
+    };
+    Selection.prototype.isRangeSelected = function (fromIndex, count) {
+        if (count === 0) {
+            return false;
+        }
+        var endIndex = fromIndex + count;
+        for (var i = fromIndex; i < endIndex; i++) {
+            if (!this.isIndexSelected(i)) {
+                return false;
+            }
+        }
+        return true;
+    };
+    Selection.prototype.isAllSelected = function () {
+        var selectableCount = this._items.length - this._unselectableCount;
+        // In single mode, we can only have a max of 1 item.
+        if (this.mode === _interfaces__WEBPACK_IMPORTED_MODULE_0__["SelectionMode"].single) {
+            selectableCount = Math.min(selectableCount, 1);
+        }
+        return ((this.count > 0 && (this._isAllSelected && this._exemptedCount === 0)) ||
+            (!this._isAllSelected && this._exemptedCount === selectableCount && selectableCount > 0));
+    };
+    Selection.prototype.isKeySelected = function (key) {
+        var index = this._keyToIndexMap[key];
+        return this.isIndexSelected(index);
+    };
+    Selection.prototype.isIndexSelected = function (index) {
+        return !!((this.count > 0 && (this._isAllSelected && !this._exemptedIndices[index] && !this._unselectableIndices[index])) ||
+            (!this._isAllSelected && this._exemptedIndices[index]));
+    };
+    Selection.prototype.setAllSelected = function (isAllSelected) {
+        if (isAllSelected && this.mode !== _interfaces__WEBPACK_IMPORTED_MODULE_0__["SelectionMode"].multiple) {
+            return;
+        }
+        var selectableCount = this._items ? this._items.length - this._unselectableCount : 0;
+        this.setChangeEvents(false);
+        if (selectableCount > 0 && (this._exemptedCount > 0 || isAllSelected !== this._isAllSelected)) {
+            this._exemptedIndices = {};
+            if (isAllSelected !== this._isAllSelected || this._exemptedCount > 0) {
+                this._exemptedCount = 0;
+                this._isAllSelected = isAllSelected;
+                this._change();
+            }
+            this._updateCount();
+        }
+        this.setChangeEvents(true);
+    };
+    Selection.prototype.setKeySelected = function (key, isSelected, shouldAnchor) {
+        var index = this._keyToIndexMap[key];
+        if (index >= 0) {
+            this.setIndexSelected(index, isSelected, shouldAnchor);
+        }
+    };
+    Selection.prototype.setIndexSelected = function (index, isSelected, shouldAnchor) {
+        if (this.mode === _interfaces__WEBPACK_IMPORTED_MODULE_0__["SelectionMode"].none) {
+            return;
+        }
+        // Clamp the index.
+        index = Math.min(Math.max(0, index), this._items.length - 1);
+        // No-op on out of bounds selections.
+        if (index < 0 || index >= this._items.length) {
+            return;
+        }
+        this.setChangeEvents(false);
+        var isExempt = this._exemptedIndices[index];
+        var canSelect = !this._unselectableIndices[index];
+        if (canSelect) {
+            if (isSelected && this.mode === _interfaces__WEBPACK_IMPORTED_MODULE_0__["SelectionMode"].single) {
+                // If this is single-select, the previous selection should be removed.
+                this.setAllSelected(false);
+            }
+            // Determine if we need to remove the exemption.
+            if (isExempt && ((isSelected && this._isAllSelected) || (!isSelected && !this._isAllSelected))) {
+                delete this._exemptedIndices[index];
+                this._exemptedCount--;
+            }
+            // Determine if we need to add the exemption.
+            if (!isExempt && ((isSelected && !this._isAllSelected) || (!isSelected && this._isAllSelected))) {
+                this._exemptedIndices[index] = true;
+                this._exemptedCount++;
+            }
+            if (shouldAnchor) {
+                this._anchoredIndex = index;
+            }
+        }
+        this._updateCount();
+        this.setChangeEvents(true);
+    };
+    Selection.prototype.selectToKey = function (key, clearSelection) {
+        this.selectToIndex(this._keyToIndexMap[key], clearSelection);
+    };
+    Selection.prototype.selectToIndex = function (index, clearSelection) {
+        if (this.mode === _interfaces__WEBPACK_IMPORTED_MODULE_0__["SelectionMode"].none) {
+            return;
+        }
+        if (this.mode === _interfaces__WEBPACK_IMPORTED_MODULE_0__["SelectionMode"].single) {
+            this.setIndexSelected(index, true, true);
+            return;
+        }
+        var anchorIndex = this._anchoredIndex || 0;
+        var startIndex = Math.min(index, anchorIndex);
+        var endIndex = Math.max(index, anchorIndex);
+        this.setChangeEvents(false);
+        if (clearSelection) {
+            this.setAllSelected(false);
+        }
+        for (; startIndex <= endIndex; startIndex++) {
+            this.setIndexSelected(startIndex, true, false);
+        }
+        this.setChangeEvents(true);
+    };
+    Selection.prototype.toggleAllSelected = function () {
+        this.setAllSelected(!this.isAllSelected());
+    };
+    Selection.prototype.toggleKeySelected = function (key) {
+        this.setKeySelected(key, !this.isKeySelected(key), true);
+    };
+    Selection.prototype.toggleIndexSelected = function (index) {
+        this.setIndexSelected(index, !this.isIndexSelected(index), true);
+    };
+    Selection.prototype.toggleRangeSelected = function (fromIndex, count) {
+        if (this.mode === _interfaces__WEBPACK_IMPORTED_MODULE_0__["SelectionMode"].none) {
+            return;
+        }
+        var isRangeSelected = this.isRangeSelected(fromIndex, count);
+        var endIndex = fromIndex + count;
+        if (this.mode === _interfaces__WEBPACK_IMPORTED_MODULE_0__["SelectionMode"].single && count > 1) {
+            return;
+        }
+        this.setChangeEvents(false);
+        for (var i = fromIndex; i < endIndex; i++) {
+            this.setIndexSelected(i, !isRangeSelected, false);
+        }
+        this.setChangeEvents(true);
+    };
+    Selection.prototype._updateCount = function () {
+        var count = this.getSelectedCount();
+        if (count !== this.count) {
+            this.count = count;
+            this._change();
+        }
+        if (!this.count) {
+            this.setModal(false);
+        }
+    };
+    Selection.prototype._change = function () {
+        if (this._changeEventSuppressionCount === 0) {
+            this._selectedItems = null;
+            this._selectedIndices = undefined;
+            _Utilities__WEBPACK_IMPORTED_MODULE_1__["EventGroup"].raise(this, _interfaces__WEBPACK_IMPORTED_MODULE_0__["SELECTION_CHANGE"]);
+            if (this._onSelectionChanged) {
+                this._onSelectionChanged();
+            }
+        }
+        else {
+            this._hasChanged = true;
+        }
+    };
+    return Selection;
+}());
+
+function defaultGetKey(item, index) {
+    return item && item.key ? item.key : "" + index;
+}
+//# sourceMappingURL=Selection.js.map
+
+/***/ }),
+
+/***/ "./node_modules/office-ui-fabric-react/lib/utilities/selection/SelectionZone.js":
+/*!**************************************************************************************!*\
+  !*** ./node_modules/office-ui-fabric-react/lib/utilities/selection/SelectionZone.js ***!
+  \**************************************************************************************/
+/*! exports provided: SelectionZone */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SelectionZone", function() { return SelectionZone; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _Utilities__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../Utilities */ "./node_modules/office-ui-fabric-react/lib/Utilities.js");
+/* harmony import */ var _interfaces__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./interfaces */ "./node_modules/office-ui-fabric-react/lib/utilities/selection/interfaces.js");
+
+
+
+
+// Selection definitions:
+//
+// Anchor index: the point from which a range selection starts.
+// Focus index: the point from which layout movement originates from.
+//
+// These two can differ. Tests:
+//
+// If you start at index 5
+// Shift click to index 10
+//    The focus is 10, the anchor is 5.
+// If you shift click at index 0
+//    The anchor remains at 5, the items between 0 and 5 are selected and everything else is cleared.
+// If you click index 8
+//    The anchor and focus are set to 8.
+var SELECTION_DISABLED_ATTRIBUTE_NAME = 'data-selection-disabled';
+var SELECTION_INDEX_ATTRIBUTE_NAME = 'data-selection-index';
+var SELECTION_TOGGLE_ATTRIBUTE_NAME = 'data-selection-toggle';
+var SELECTION_INVOKE_ATTRIBUTE_NAME = 'data-selection-invoke';
+var SELECTALL_TOGGLE_ALL_ATTRIBUTE_NAME = 'data-selection-all-toggle';
+var SELECTION_SELECT_ATTRIBUTE_NAME = 'data-selection-select';
+var SelectionZone = /** @class */ (function (_super) {
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"](SelectionZone, _super);
+    function SelectionZone() {
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this._root = Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__["createRef"])();
+        /**
+         * In some cases, the consuming scenario requires to set focus on a row without having SelectionZone
+         * react to the event. Note that focus events in IE <= 11 will occur asynchronously after .focus() has
+         * been called on an element, so we need a flag to store the idea that we will bypass the "next"
+         * focus event that occurs. This method does that.
+         */
+        _this.ignoreNextFocus = function () {
+            _this._handleNextFocus(false);
+        };
+        _this._onMouseDownCapture = function (ev) {
+            if (document.activeElement !== ev.target && !Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__["elementContains"])(document.activeElement, ev.target)) {
+                _this.ignoreNextFocus();
+                return;
+            }
+            if (!Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__["elementContains"])(ev.target, _this._root.current)) {
+                return;
+            }
+            var target = ev.target;
+            while (target !== _this._root.current) {
+                if (_this._hasAttribute(target, SELECTION_INVOKE_ATTRIBUTE_NAME)) {
+                    _this.ignoreNextFocus();
+                    break;
+                }
+                target = Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__["getParent"])(target);
+            }
+        };
+        /**
+         * When we focus an item, for single/multi select scenarios, we should try to select it immediately
+         * as long as the focus did not originate from a mouse down/touch event. For those cases, we handle them
+         * specially.
+         */
+        _this._onFocus = function (ev) {
+            var target = ev.target;
+            var selection = _this.props.selection;
+            var isToggleModifierPressed = _this._isCtrlPressed || _this._isMetaPressed;
+            var selectionMode = _this._getSelectionMode();
+            if (_this._shouldHandleFocus && selectionMode !== _interfaces__WEBPACK_IMPORTED_MODULE_3__["SelectionMode"].none) {
+                var isToggle = _this._hasAttribute(target, SELECTION_TOGGLE_ATTRIBUTE_NAME);
+                var itemRoot = _this._findItemRoot(target);
+                if (!isToggle && itemRoot) {
+                    var index = _this._getItemIndex(itemRoot);
+                    if (isToggleModifierPressed) {
+                        // set anchor only.
+                        selection.setIndexSelected(index, selection.isIndexSelected(index), true);
+                        if (_this.props.enterModalOnTouch && _this._isTouch && selection.setModal) {
+                            selection.setModal(true);
+                            _this._setIsTouch(false);
+                        }
+                    }
+                    else {
+                        if (_this.props.isSelectedOnFocus) {
+                            _this._onItemSurfaceClick(ev, index);
+                        }
+                    }
+                }
+            }
+            _this._handleNextFocus(false);
+        };
+        _this._onMouseDown = function (ev) {
+            _this._updateModifiers(ev);
+            var target = ev.target;
+            var itemRoot = _this._findItemRoot(target);
+            // No-op if selection is disabled
+            if (_this._isSelectionDisabled(target)) {
+                return;
+            }
+            while (target !== _this._root.current) {
+                if (_this._hasAttribute(target, SELECTALL_TOGGLE_ALL_ATTRIBUTE_NAME)) {
+                    break;
+                }
+                else if (itemRoot) {
+                    if (_this._hasAttribute(target, SELECTION_TOGGLE_ATTRIBUTE_NAME)) {
+                        break;
+                    }
+                    else if (_this._hasAttribute(target, SELECTION_INVOKE_ATTRIBUTE_NAME)) {
+                        break;
+                    }
+                    else if ((target === itemRoot || _this._shouldAutoSelect(target)) &&
+                        !_this._isShiftPressed &&
+                        !_this._isCtrlPressed) {
+                        _this._onInvokeMouseDown(ev, _this._getItemIndex(itemRoot));
+                        break;
+                    }
+                    else if (_this.props.disableAutoSelectOnInputElements &&
+                        (target.tagName === 'A' || target.tagName === 'BUTTON' || target.tagName === 'INPUT')) {
+                        return;
+                    }
+                }
+                target = Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__["getParent"])(target);
+            }
+        };
+        _this._onTouchStartCapture = function (ev) {
+            _this._setIsTouch(true);
+        };
+        _this._onClick = function (ev) {
+            _this._updateModifiers(ev);
+            var target = ev.target;
+            var itemRoot = _this._findItemRoot(target);
+            // No-op if selection is disabled
+            if (_this._isSelectionDisabled(target)) {
+                return;
+            }
+            while (target !== _this._root.current) {
+                if (_this._hasAttribute(target, SELECTALL_TOGGLE_ALL_ATTRIBUTE_NAME)) {
+                    _this._onToggleAllClick(ev);
+                    break;
+                }
+                else if (itemRoot) {
+                    var index = _this._getItemIndex(itemRoot);
+                    if (_this._hasAttribute(target, SELECTION_TOGGLE_ATTRIBUTE_NAME)) {
+                        if (_this._isShiftPressed) {
+                            _this._onItemSurfaceClick(ev, index);
+                        }
+                        else {
+                            _this._onToggleClick(ev, index);
+                        }
+                        break;
+                    }
+                    else if (_this._hasAttribute(target, SELECTION_INVOKE_ATTRIBUTE_NAME)) {
+                        _this._onInvokeClick(ev, index);
+                        break;
+                    }
+                    else if (target === itemRoot) {
+                        _this._onItemSurfaceClick(ev, index);
+                        break;
+                    }
+                    else if (target.tagName === 'A' || target.tagName === 'BUTTON' || target.tagName === 'INPUT') {
+                        return;
+                    }
+                }
+                target = Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__["getParent"])(target);
+            }
+        };
+        _this._onContextMenu = function (ev) {
+            var target = ev.target;
+            var _a = _this.props, onItemContextMenu = _a.onItemContextMenu, selection = _a.selection;
+            if (onItemContextMenu) {
+                var itemRoot = _this._findItemRoot(target);
+                if (itemRoot) {
+                    var index = _this._getItemIndex(itemRoot);
+                    var skipPreventDefault = onItemContextMenu(selection.getItems()[index], index, ev.nativeEvent);
+                    // In order to keep back compat, if the value here is undefined, then we should still
+                    // call preventDefault(). Only in the case where true is explicitly returned should
+                    // the call be skipped.
+                    if (!skipPreventDefault) {
+                        ev.preventDefault();
+                    }
+                }
+            }
+        };
+        /**
+         * In multi selection, if you double click within an item's root (but not within the invoke element or input elements),
+         * we should execute the invoke handler.
+         */
+        _this._onDoubleClick = function (ev) {
+            var target = ev.target;
+            if (_this._isSelectionDisabled(target)) {
+                return;
+            }
+            var onItemInvoked = _this.props.onItemInvoked;
+            var itemRoot = _this._findItemRoot(target);
+            var selectionMode = _this._getSelectionMode();
+            if (itemRoot && onItemInvoked && selectionMode !== _interfaces__WEBPACK_IMPORTED_MODULE_3__["SelectionMode"].none && !_this._isInputElement(target)) {
+                var index = _this._getItemIndex(itemRoot);
+                while (target !== _this._root.current) {
+                    if (_this._hasAttribute(target, SELECTION_TOGGLE_ATTRIBUTE_NAME) ||
+                        _this._hasAttribute(target, SELECTION_INVOKE_ATTRIBUTE_NAME)) {
+                        break;
+                    }
+                    else if (target === itemRoot) {
+                        _this._onInvokeClick(ev, index);
+                        break;
+                    }
+                    target = Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__["getParent"])(target);
+                }
+                target = Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__["getParent"])(target);
+            }
+        };
+        _this._onKeyDownCapture = function (ev) {
+            _this._updateModifiers(ev);
+            _this._handleNextFocus(true);
+        };
+        _this._onKeyDown = function (ev) {
+            _this._updateModifiers(ev);
+            var target = ev.target;
+            if (_this._isSelectionDisabled(target)) {
+                return;
+            }
+            var selection = _this.props.selection;
+            var isSelectAllKey = ev.which === 65 /* a */ && (_this._isCtrlPressed || _this._isMetaPressed);
+            var isClearSelectionKey = ev.which === 27 /* escape */;
+            // Ignore key downs from input elements.
+            if (_this._isInputElement(target)) {
+                // A key was pressed while an item in this zone was focused.
+                return;
+            }
+            var selectionMode = _this._getSelectionMode();
+            // If ctrl-a is pressed, select all (if all are not already selected.)
+            if (isSelectAllKey && selectionMode === _interfaces__WEBPACK_IMPORTED_MODULE_3__["SelectionMode"].multiple && !selection.isAllSelected()) {
+                selection.setAllSelected(true);
+                ev.stopPropagation();
+                ev.preventDefault();
+                return;
+            }
+            // If escape is pressed, clear selection (if any are selected.)
+            if (isClearSelectionKey && selection.getSelectedCount() > 0) {
+                selection.setAllSelected(false);
+                ev.stopPropagation();
+                ev.preventDefault();
+                return;
+            }
+            var itemRoot = _this._findItemRoot(target);
+            // If a key was pressed within an item, we should treat "enters" as invokes and "space" as toggle
+            if (itemRoot) {
+                var index = _this._getItemIndex(itemRoot);
+                while (target !== _this._root.current) {
+                    if (_this._hasAttribute(target, SELECTION_TOGGLE_ATTRIBUTE_NAME)) {
+                        // For toggle elements, assuming they are rendered as buttons, they will generate a click event,
+                        // so we can no-op for any keydowns in this case.
+                        break;
+                    }
+                    else if (_this._shouldAutoSelect(target)) {
+                        // If the event went to an element which should trigger auto-select, select it and then let
+                        // the default behavior kick in.
+                        _this._onInvokeMouseDown(ev, index);
+                        break;
+                    }
+                    else if ((ev.which === 13 /* enter */ || ev.which === 32 /* space */) &&
+                        (target.tagName === 'BUTTON' || target.tagName === 'A' || target.tagName === 'INPUT')) {
+                        return false;
+                    }
+                    else if (target === itemRoot) {
+                        if (ev.which === 13 /* enter */) {
+                            _this._onInvokeClick(ev, index);
+                            ev.preventDefault();
+                            return;
+                        }
+                        else if (ev.which === 32 /* space */) {
+                            _this._onToggleClick(ev, index);
+                            ev.preventDefault();
+                            return;
+                        }
+                        break;
+                    }
+                    target = Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__["getParent"])(target);
+                }
+            }
+        };
+        return _this;
+    }
+    SelectionZone.prototype.componentDidMount = function () {
+        var win = Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__["getWindow"])(this._root.current);
+        var scrollElement = Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__["findScrollableParent"])(this._root.current);
+        // Track the latest modifier keys globally.
+        this._events.on(win, 'keydown, keyup', this._updateModifiers, true);
+        this._events.on(scrollElement, 'click', this._tryClearOnEmptyClick);
+        this._events.on(document.body, 'touchstart', this._onTouchStartCapture, true);
+        this._events.on(document.body, 'touchend', this._onTouchStartCapture, true);
+    };
+    SelectionZone.prototype.render = function () {
+        return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"]({ className: "ms-SelectionZone", ref: this._root, onKeyDown: this._onKeyDown, onMouseDown: this._onMouseDown, onKeyDownCapture: this._onKeyDownCapture, onClick: this._onClick, role: "presentation", onDoubleClick: this._onDoubleClick, onContextMenu: this._onContextMenu }, {
+            onMouseDownCapture: this._onMouseDownCapture,
+            onFocusCapture: this._onFocus
+        }), this.props.children));
+    };
+    SelectionZone.prototype._isSelectionDisabled = function (target) {
+        while (target !== this._root.current) {
+            if (this._hasAttribute(target, SELECTION_DISABLED_ATTRIBUTE_NAME)) {
+                return true;
+            }
+            target = Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__["getParent"])(target);
+        }
+        return false;
+    };
+    SelectionZone.prototype._onToggleAllClick = function (ev) {
+        var selection = this.props.selection;
+        var selectionMode = this._getSelectionMode();
+        if (selectionMode === _interfaces__WEBPACK_IMPORTED_MODULE_3__["SelectionMode"].multiple) {
+            selection.toggleAllSelected();
+            ev.stopPropagation();
+            ev.preventDefault();
+        }
+    };
+    SelectionZone.prototype._onToggleClick = function (ev, index) {
+        var selection = this.props.selection;
+        var selectionMode = this._getSelectionMode();
+        selection.setChangeEvents(false);
+        if (this.props.enterModalOnTouch && this._isTouch && !selection.isIndexSelected(index) && selection.setModal) {
+            selection.setModal(true);
+            this._setIsTouch(false);
+        }
+        if (selectionMode === _interfaces__WEBPACK_IMPORTED_MODULE_3__["SelectionMode"].multiple) {
+            selection.toggleIndexSelected(index);
+        }
+        else if (selectionMode === _interfaces__WEBPACK_IMPORTED_MODULE_3__["SelectionMode"].single) {
+            var isSelected = selection.isIndexSelected(index);
+            selection.setAllSelected(false);
+            selection.setIndexSelected(index, !isSelected, true);
+        }
+        else {
+            selection.setChangeEvents(true);
+            return;
+        }
+        selection.setChangeEvents(true);
+        ev.stopPropagation();
+        // NOTE: ev.preventDefault is not called for toggle clicks, because this will kill the browser behavior
+        // for checkboxes if you use a checkbox for the toggle.
+    };
+    SelectionZone.prototype._onInvokeClick = function (ev, index) {
+        var _a = this.props, selection = _a.selection, onItemInvoked = _a.onItemInvoked;
+        if (onItemInvoked) {
+            onItemInvoked(selection.getItems()[index], index, ev.nativeEvent);
+            ev.preventDefault();
+            ev.stopPropagation();
+        }
+    };
+    SelectionZone.prototype._onItemSurfaceClick = function (ev, index) {
+        var selection = this.props.selection;
+        var isToggleModifierPressed = this._isCtrlPressed || this._isMetaPressed;
+        var selectionMode = this._getSelectionMode();
+        if (selectionMode === _interfaces__WEBPACK_IMPORTED_MODULE_3__["SelectionMode"].multiple) {
+            if (this._isShiftPressed) {
+                selection.selectToIndex(index, !isToggleModifierPressed);
+            }
+            else if (isToggleModifierPressed) {
+                selection.toggleIndexSelected(index);
+            }
+            else {
+                this._clearAndSelectIndex(index);
+            }
+        }
+        else if (selectionMode === _interfaces__WEBPACK_IMPORTED_MODULE_3__["SelectionMode"].single) {
+            this._clearAndSelectIndex(index);
+        }
+    };
+    SelectionZone.prototype._onInvokeMouseDown = function (ev, index) {
+        var selection = this.props.selection;
+        // Only do work if item is not selected.
+        if (selection.isIndexSelected(index)) {
+            return;
+        }
+        this._clearAndSelectIndex(index);
+    };
+    SelectionZone.prototype._tryClearOnEmptyClick = function (ev) {
+        if (!this.props.selectionPreservedOnEmptyClick && this._isNonHandledClick(ev.target)) {
+            this.props.selection.setAllSelected(false);
+        }
+    };
+    SelectionZone.prototype._clearAndSelectIndex = function (index) {
+        var selection = this.props.selection;
+        var isAlreadySingleSelected = selection.getSelectedCount() === 1 && selection.isIndexSelected(index);
+        if (!isAlreadySingleSelected) {
+            selection.setChangeEvents(false);
+            selection.setAllSelected(false);
+            selection.setIndexSelected(index, true, true);
+            if (this.props.enterModalOnTouch && this._isTouch && selection.setModal) {
+                selection.setModal(true);
+                this._setIsTouch(false);
+            }
+            selection.setChangeEvents(true);
+        }
+    };
+    /**
+     * We need to track the modifier key states so that when focus events occur, which do not contain
+     * modifier states in the Event object, we know how to behave.
+     */
+    SelectionZone.prototype._updateModifiers = function (ev) {
+        this._isShiftPressed = ev.shiftKey;
+        this._isCtrlPressed = ev.ctrlKey;
+        this._isMetaPressed = ev.metaKey;
+    };
+    SelectionZone.prototype._findItemRoot = function (target) {
+        var selection = this.props.selection;
+        while (target !== this._root.current) {
+            var indexValue = target.getAttribute(SELECTION_INDEX_ATTRIBUTE_NAME);
+            var index = Number(indexValue);
+            if (indexValue !== null && index >= 0 && index < selection.getItems().length) {
+                break;
+            }
+            target = Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__["getParent"])(target);
+        }
+        if (target === this._root.current) {
+            return undefined;
+        }
+        return target;
+    };
+    SelectionZone.prototype._getItemIndex = function (itemRoot) {
+        return Number(itemRoot.getAttribute(SELECTION_INDEX_ATTRIBUTE_NAME));
+    };
+    SelectionZone.prototype._shouldAutoSelect = function (element) {
+        return this._hasAttribute(element, SELECTION_SELECT_ATTRIBUTE_NAME);
+    };
+    SelectionZone.prototype._hasAttribute = function (element, attributeName) {
+        var isToggle = false;
+        while (!isToggle && element !== this._root.current) {
+            isToggle = element.getAttribute(attributeName) === 'true';
+            element = Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__["getParent"])(element);
+        }
+        return isToggle;
+    };
+    SelectionZone.prototype._isInputElement = function (element) {
+        return element.tagName === 'INPUT' || element.tagName === 'TEXTAREA';
+    };
+    SelectionZone.prototype._isNonHandledClick = function (element) {
+        var doc = Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__["getDocument"])();
+        if (doc && element) {
+            while (element && element !== doc.documentElement) {
+                if (Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__["isElementTabbable"])(element)) {
+                    return false;
+                }
+                element = Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__["getParent"])(element);
+            }
+        }
+        return true;
+    };
+    SelectionZone.prototype._handleNextFocus = function (handleFocus) {
+        var _this = this;
+        if (this._shouldHandleFocusTimeoutId) {
+            this._async.clearTimeout(this._shouldHandleFocusTimeoutId);
+            this._shouldHandleFocusTimeoutId = undefined;
+        }
+        this._shouldHandleFocus = handleFocus;
+        if (handleFocus) {
+            this._async.setTimeout(function () {
+                _this._shouldHandleFocus = false;
+            }, 100);
+        }
+    };
+    SelectionZone.prototype._setIsTouch = function (isTouch) {
+        var _this = this;
+        if (this._isTouchTimeoutId) {
+            this._async.clearTimeout(this._isTouchTimeoutId);
+            this._isTouchTimeoutId = undefined;
+        }
+        this._isTouch = true;
+        if (isTouch) {
+            this._async.setTimeout(function () {
+                _this._isTouch = false;
+            }, 300);
+        }
+    };
+    SelectionZone.prototype._getSelectionMode = function () {
+        var selection = this.props.selection;
+        var _a = this.props.selectionMode, selectionMode = _a === void 0 ? selection ? selection.mode : _interfaces__WEBPACK_IMPORTED_MODULE_3__["SelectionMode"].none : _a;
+        return selectionMode;
+    };
+    SelectionZone.defaultProps = {
+        isMultiSelectEnabled: true,
+        isSelectedOnFocus: true,
+        selectionMode: _interfaces__WEBPACK_IMPORTED_MODULE_3__["SelectionMode"].multiple
+    };
+    return SelectionZone;
+}(_Utilities__WEBPACK_IMPORTED_MODULE_2__["BaseComponent"]));
+
+//# sourceMappingURL=SelectionZone.js.map
+
+/***/ }),
+
+/***/ "./node_modules/office-ui-fabric-react/lib/utilities/selection/index.js":
+/*!******************************************************************************!*\
+  !*** ./node_modules/office-ui-fabric-react/lib/utilities/selection/index.js ***!
+  \******************************************************************************/
+/*! exports provided: SELECTION_CHANGE, SelectionMode, SelectionDirection, Selection, SelectionZone */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _interfaces__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./interfaces */ "./node_modules/office-ui-fabric-react/lib/utilities/selection/interfaces.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "SELECTION_CHANGE", function() { return _interfaces__WEBPACK_IMPORTED_MODULE_0__["SELECTION_CHANGE"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "SelectionMode", function() { return _interfaces__WEBPACK_IMPORTED_MODULE_0__["SelectionMode"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "SelectionDirection", function() { return _interfaces__WEBPACK_IMPORTED_MODULE_0__["SelectionDirection"]; });
+
+/* harmony import */ var _Selection__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Selection */ "./node_modules/office-ui-fabric-react/lib/utilities/selection/Selection.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Selection", function() { return _Selection__WEBPACK_IMPORTED_MODULE_1__["Selection"]; });
+
+/* harmony import */ var _SelectionZone__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./SelectionZone */ "./node_modules/office-ui-fabric-react/lib/utilities/selection/SelectionZone.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "SelectionZone", function() { return _SelectionZone__WEBPACK_IMPORTED_MODULE_2__["SelectionZone"]; });
+
+
+
+
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "./node_modules/office-ui-fabric-react/lib/utilities/selection/interfaces.js":
+/*!***********************************************************************************!*\
+  !*** ./node_modules/office-ui-fabric-react/lib/utilities/selection/interfaces.js ***!
+  \***********************************************************************************/
+/*! exports provided: SELECTION_CHANGE, SelectionMode, SelectionDirection */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SELECTION_CHANGE", function() { return SELECTION_CHANGE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SelectionMode", function() { return SelectionMode; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SelectionDirection", function() { return SelectionDirection; });
+var SELECTION_CHANGE = 'change';
+var SelectionMode;
+(function (SelectionMode) {
+    SelectionMode[SelectionMode["none"] = 0] = "none";
+    SelectionMode[SelectionMode["single"] = 1] = "single";
+    SelectionMode[SelectionMode["multiple"] = 2] = "multiple";
+})(SelectionMode || (SelectionMode = {}));
+var SelectionDirection;
+(function (SelectionDirection) {
+    SelectionDirection[SelectionDirection["horizontal"] = 0] = "horizontal";
+    SelectionDirection[SelectionDirection["vertical"] = 1] = "vertical";
+})(SelectionDirection || (SelectionDirection = {}));
+//# sourceMappingURL=interfaces.js.map
 
 /***/ }),
 
@@ -44038,29 +47297,117 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var office_ui_fabric_react_lib_SearchBox__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! office-ui-fabric-react/lib/SearchBox */ "./node_modules/office-ui-fabric-react/lib/SearchBox.js");
-/* harmony import */ var office_ui_fabric_react_lib_Button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! office-ui-fabric-react/lib/Button */ "./node_modules/office-ui-fabric-react/lib/Button.js");
+/* harmony import */ var office_ui_fabric_react_lib_components_pickers_TagPicker_TagPicker__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! office-ui-fabric-react/lib/components/pickers/TagPicker/TagPicker */ "./node_modules/office-ui-fabric-react/lib/components/pickers/TagPicker/TagPicker.js");
+/* harmony import */ var office_ui_fabric_react_lib_Button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! office-ui-fabric-react/lib/Button */ "./node_modules/office-ui-fabric-react/lib/Button.js");
+/* harmony import */ var office_ui_fabric_react_lib_Modal__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! office-ui-fabric-react/lib/Modal */ "./node_modules/office-ui-fabric-react/lib/Modal.js");
+/* harmony import */ var office_ui_fabric_react_lib_Label__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! office-ui-fabric-react/lib/Label */ "./node_modules/office-ui-fabric-react/lib/Label.js");
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
 
 
 
 let Search = class Search extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   constructor(props) {
     super(props);
+
+    _defineProperty(this, "searchBoxRef", null);
+
+    this._onFilterChanged = this._onFilterChanged.bind(this);
+    this._getTextFromItem = this._getTextFromItem.bind(this);
+    this._resolveSearchBoxRef = this._resolveSearchBoxRef.bind(this);
+    this._onChange = this._onChange.bind(this);
+    this._onSearch = this._onSearch.bind(this);
+    this.state = {
+      items: [{
+        name: ''
+      }]
+    };
+  }
+
+  _onChange() {
+    var newList = this.state.items;
+    newList.unshift({
+      name: ''
+    });
+    this.setState({
+      items: newList
+    });
+  }
+
+  _onFilterChanged(filterText, tagList) {
+    if (filterText != '') {
+      var newList = this.state.items;
+      newList[0].name = filterText;
+      this.setState({
+        items: newList
+      });
+    }
+
+    return filterText ? this.state.items.filter(tag => tag.name.toLowerCase().indexOf(filterText.toLowerCase()) === 0) : [];
+  }
+
+  _listContainsDocument(tag, tagList) {
+    if (!tagList || !tagList.length || tagList.length === 0) {
+      return false;
+    }
+
+    return tagList.filter(compareTag => compareTag.key === tag.key).length > 0;
+  }
+
+  _getTextFromItem(item) {
+    return item.name;
+  }
+
+  _resolveSearchBoxRef(el) {
+    this.searchBoxRef = el;
+  }
+
+  _onSearch(terms) {
+    this.setState({
+      items: [{
+        name: ''
+      }]
+    });
+    this.props.search(this.searchBoxRef.items);
   }
 
   render() {
-    return react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", null, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](office_ui_fabric_react_lib_SearchBox__WEBPACK_IMPORTED_MODULE_1__["SearchBox"], {
-      placeholder: "Search for Songs",
-      onSearch: value => {
-        this.props.addSearchTerm(value);
-      }
-    }), react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", null, this.props.searchTerms.map((v, i) => react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("span", null, v, " "))), react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", {
-      style: {
-        'textAlign': 'right'
-      }
-    }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](office_ui_fabric_react_lib_Button__WEBPACK_IMPORTED_MODULE_2__["DefaultButton"], {
+    return react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", null, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](office_ui_fabric_react_lib_Modal__WEBPACK_IMPORTED_MODULE_4__["Modal"], {
+      isOpen: this.props.showModal,
+      onDismiss: this.props.closeModal,
+      isBlocking: false,
+      containerClassName: "modal-container -xwide"
+    }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", {
+      className: "header"
+    }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("span", {
+      class: "title"
+    }, "Add search terms to create playlist")), react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", {
+      className: "body"
+    }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](office_ui_fabric_react_lib_components_pickers_TagPicker_TagPicker__WEBPACK_IMPORTED_MODULE_2__["TagPicker"], {
+      componentRef: this._resolveSearchBoxRef,
+      onResolveSuggestions: this._onFilterChanged,
+      getTextFromItem: this._getTextFromItem,
+      pickerSuggestionsProps: {
+        suggestionsHeaderText: 'Suggested Tags',
+        noResultsFoundText: 'No Color Tags Found'
+      },
+      itemLimit: 20,
+      disabled: false,
+      inputProps: {
+        'aria-label': 'Tag Picker'
+      },
+      onChange: this._onChange
+    })), react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", {
+      className: "footer"
+    }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", {
+      className: "button"
+    }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](office_ui_fabric_react_lib_Button__WEBPACK_IMPORTED_MODULE_3__["DefaultButton"], {
       text: "Search",
-      onClick: () => this.props.search()
-    })));
+      onClick: () => this._onSearch()
+    })))));
   }
 
 };
@@ -44084,6 +47431,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var office_ui_fabric_react_lib_Icons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! office-ui-fabric-react/lib/Icons */ "./node_modules/office-ui-fabric-react/lib/Icons.js");
 /* harmony import */ var _Components_Search_jsx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Components/Search.jsx */ "./wwwroot/source/Components/Search.jsx");
 /* harmony import */ var _Components_Player_jsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Components/Player.jsx */ "./wwwroot/source/Components/Player.jsx");
+/* harmony import */ var office_ui_fabric_react_lib_Button__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! office-ui-fabric-react/lib/Button */ "./node_modules/office-ui-fabric-react/lib/Button.js");
+
 
 
 
@@ -44096,14 +47445,15 @@ let Home = class Home extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     this.goNext = this.goNext.bind(this);
     this.playSong = this.playSong.bind(this);
     this.search = this.search.bind(this);
-    this.addSearchTerm = this.addSearchTerm.bind(this);
     this.shuffle = this.shuffle.bind(this);
+    this.openModal = this.openModal.bind(this);
+    this.closeModal = this.closeModal.bind(this);
     this.state = {
       songs: [],
       url: null,
       index: 0,
       nextSongName: null,
-      searchTerms: []
+      showModal: false
     };
   }
 
@@ -44118,28 +47468,20 @@ let Home = class Home extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     });
   }
 
-  addSearchTerm(value) {
-    let terms = this.state.searchTerms;
-    terms.push(value);
-    this.setState({
-      searchTerms: terms
-    });
-  }
-
-  search() {
-    let values = this.state.searchTerms;
+  search(tags) {
     fetch(`/Player/Search`, {
       method: 'post',
       headers: {
         'Accept': 'application/json, text/plain, */*',
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(values)
+      body: JSON.stringify(tags)
     }).then(res => res.json()).then(result => {
       this.setState({
         songs: result.songs,
         url: 'https://www.youtube.com/watch?v=' + result.songs[0].youTubeId,
-        index: 1
+        index: 1,
+        showModal: false
       });
     });
   }
@@ -44179,11 +47521,31 @@ let Home = class Home extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     });
   }
 
+  openModal() {
+    this.setState({
+      showModal: true
+    });
+  }
+
+  closeModal() {
+    this.setState({
+      showModal: false
+    });
+  }
+
   render() {
-    return react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", null, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_Components_Search_jsx__WEBPACK_IMPORTED_MODULE_3__["Search"], {
+    return react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", null, react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", {
+      style: {
+        'textAlign': 'right'
+      }
+    }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](office_ui_fabric_react_lib_Button__WEBPACK_IMPORTED_MODULE_5__["DefaultButton"], {
+      text: "Create your song list",
+      onClick: () => this.openModal()
+    })), react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_Components_Search_jsx__WEBPACK_IMPORTED_MODULE_3__["Search"], {
       search: this.search,
-      addSearchTerm: this.addSearchTerm,
-      searchTerms: this.state.searchTerms
+      showModal: this.state.showModal,
+      openModal: this.openModal,
+      closeModal: this.closeModal
     }), this.state.songs.length > 0 && react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_Components_Player_jsx__WEBPACK_IMPORTED_MODULE_4__["Player"], {
       songs: this.state.songs,
       index: this.state.index,
