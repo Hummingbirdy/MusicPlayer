@@ -9,6 +9,7 @@ using Music.Data;
 using Microsoft.EntityFrameworkCore;
 using Music.Modals;
 using Microsoft.AspNetCore.Identity;
+using Music.DataAccess.Repositories;
 
 namespace Music
 {
@@ -32,6 +33,9 @@ namespace Music
             services.AddIdentity<ApplicationUser, IdentityRole>()
            .AddEntityFrameworkStores<ApplicationDbContext>()
            .AddDefaultTokenProviders();
+
+            services.AddSingleton<SongRepository>();
+            services.AddSingleton<TagRepository>();
 
             // MVC
             services.AddMvc();

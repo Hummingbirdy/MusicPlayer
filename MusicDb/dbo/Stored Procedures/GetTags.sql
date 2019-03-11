@@ -2,7 +2,8 @@
 AS
 	SELECT 
 		[TagId], 
-		[Tag]
+		[Tag],
+		[TagType]
 	FROM 
 		Tags
 RETURN 0

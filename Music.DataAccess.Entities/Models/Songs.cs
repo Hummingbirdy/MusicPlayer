@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Music.Modals;
 
 namespace Music
 {
@@ -15,6 +16,7 @@ namespace Music
         public DateTime PublishedDate { get; set; }
         public DateTime CreatedDate { get; set; }
         public DateTime UpdatedDate { get; set; }
+        public List<TagReferences> Tags { get; set; }
 
         public string Playlist { get; set; }
         public int TagId { get; set; }

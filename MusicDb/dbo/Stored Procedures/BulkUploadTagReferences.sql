@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [dbo].[UploadTagReferences]
+﻿CREATE PROCEDURE [dbo].[BulkUploadTagReferences]
 	@references [dbo].[TagRefenceImportType]  readonly
 AS
 	BEGIN
@@ -13,12 +13,15 @@ AS
 				WHEN NOT MATCHED THEN
 					INSERT (
 						[TagId],
-						[YouTubeId]
+						[YouTubeId],
+						[Fixed]
 					)
 					VALUES (
 						SOURCE.[TagId],
-						SOURCE.[YouTubeId]
-					);
+						SOURCE.[YouTubeId],
+						1
+					)
+				WHEN NOT MATCHED BY SOURCE THEN DELETE;
 
 			COMMIT TRANSACTION;
 		END TRY

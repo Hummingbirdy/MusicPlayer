@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Music.DataAccess.Core\Music.DataAccess.Core.csproj" />
+    <ProjectReference Include="..\Music.DataAccess.Entities\Music.DataAccess.Entities.csproj" />
+  </ItemGroup>
+
+</Project>

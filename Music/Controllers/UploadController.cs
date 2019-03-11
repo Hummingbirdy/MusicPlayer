@@ -10,20 +10,27 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Protocols;
+using Music.DataAccess.Repositories;
 using Music.Modals;
 
 
 namespace Music.Controllers
 {
     public class UploadController : Controller
-    {
-        private string _connectionString = "Server=tcp:lemasterworks.database.windows.net,1433;Initial Catalog=MusicPlayer;Persist Security Info=False;User ID=tlemaster;Password=Lexielm2;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+    {        
         private readonly UserManager<ApplicationUser> _userManager;
+        private readonly SongRepository _songRepository;
+        private readonly TagRepository _tagRepository;
 
-        public UploadController(UserManager<ApplicationUser> userManager)
+        public UploadController(
+            UserManager<ApplicationUser> userManager,
+            SongRepository songRepository,
+            TagRepository tagRepository)
         {
             _userManager = userManager;
-        }       
+            _songRepository = songRepository;
+            _tagRepository = tagRepository;
+        }
 
         [HttpPost]
         public void Playlist(List<Songs> songs)
@@ -37,63 +44,36 @@ namespace Music.Controllers
 
             var distinctSongs = songs.GroupBy(s => s.YouTubeId).Select(s => s.OrderBy(x => x.YouTubeId).First()).ToList();
 
-            using (var connection = new SqlConnection(_connectionString))
+            var currentTags = _tagRepository.All();
+            var playlists = songs.GroupBy(s => s.Playlist).Select(s => s.OrderBy(x => x.Playlist).First()).ToList();
+            var references = new List<TagReferences>();
+            playlists.ForEach(p =>
             {
-                connection.Open();
-                try
+                var tagId = 0;
+                if (!currentTags.Any(t => t.Tag == p.Playlist))
                 {
-                    var currentTags = connection.Query<Tags>("GetTags", commandType: CommandType.StoredProcedure).ToList();
-                    var playlists = songs.GroupBy(s => s.Playlist).Select(s => s.OrderBy(x => x.Playlist).First()).ToList();
-                    var references = new List<TagReferences>();
-                    playlists.ForEach(p =>
-                    {
-                        var tagId = 0;
-                        if (!currentTags.Any(t => t.Tag == p.Playlist))
-                        {
-                            tagId = connection.Query<int>("UploadTag", new { tag = p.Playlist }, commandType: CommandType.StoredProcedure).FirstOrDefault();
-                        }
-                        else
-                        {
-                            tagId = currentTags.Where(t => t.Tag == p.Playlist).Select(t => t.TagId).First();
-                        }
+                    tagId = _tagRepository.Upload(p.Playlist);
+                }
+                else
+                {
+                    tagId = currentTags.Where(t => t.Tag == p.Playlist).Select(t => t.TagId).First();
+                }
 
-                        songs.ForEach(s =>
+                songs.ForEach(s =>
+                {
+                    if (s.Playlist == p.Playlist)
+                    {
+                        references.Add(new TagReferences()
                         {
-                            if (s.Playlist == p.Playlist)
-                            {
-                                references.Add(new TagReferences()
-                                {
-                                    TagId = tagId,
-                                    YoutTubeId = s.YouTubeId
-                                });
-                            }
+                            TagId = tagId,
+                            YouTubeId = s.YouTubeId
                         });
-                    });
+                    }
+                });
+            });
 
-                    var rec = references.Select(r => new
-                    {
-                        r.TagId,
-                        r.YoutTubeId
-                    }).ToDataTable();
-                    connection.Query("UploadTagReferences", new { references = rec }, commandType: CommandType.StoredProcedure);
-
-                    var records = distinctSongs.Select(s => new
-                    {
-                        userId,
-                        s.YouTubeId,
-                        s.Name,
-                        s.Thumbnail,
-                        s.PublishedDate
-                    }).ToDataTable();
-                    connection.Query("UploadSongs", new { songs = records }, commandType: CommandType.StoredProcedure);
-
-                }
-                catch(Exception ex)
-                {
-                    var message = ex;
-                    throw;
-                }
-            }
+            _tagRepository.BulkUploadReferences(references);
+            _songRepository.BulkUpload(userId, distinctSongs);
         }
     }
 }

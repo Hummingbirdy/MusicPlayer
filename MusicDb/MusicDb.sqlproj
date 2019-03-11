@@ -74,7 +74,8 @@
     <Build Include="dbo\Stored Procedures\UploadTag.sql" />
     <Build Include="dbo\User Defined Types\TagRefenceImportType.sql" />
     <Build Include="dbo\Stored Procedures\GetTags.sql" />
-    <Build Include="dbo\Stored Procedures\UploadTagReferences.sql" />
+    <Build Include="dbo\Stored Procedures\BulkUploadTagReferences.sql" />
     <Build Include="dbo\Stored Procedures\GetSongs.sql" />
+    <Build Include="dbo\Stored Procedures\GetTagReferences.sql" />
   </ItemGroup>
 </Project>

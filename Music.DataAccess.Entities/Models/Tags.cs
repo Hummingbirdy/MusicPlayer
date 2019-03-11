@@ -5,9 +5,10 @@ using System.Threading.Tasks;
 
 namespace Music.Modals
 {
-    public class TagReferences
+    public class Tags
     {
         public int TagId { get; set; }
-        public string YoutTubeId { get; set; }
+        public string Tag { get; set; }
+        public int TagType { get; set; }
     }
 }
