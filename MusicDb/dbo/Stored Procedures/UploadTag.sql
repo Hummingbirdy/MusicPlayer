@@ -1,11 +1,12 @@
 ﻿CREATE PROCEDURE [dbo].[UploadTag]
-	@tag NVARCHAR(50)
+	@tag NVARCHAR(50),
+	@type INT
 AS
 	BEGIN
 		BEGIN TRY
 			BEGIN TRANSACTION
-				INSERT INTO [dbo].[Tags] ([Tag])
-				VALUES (@tag)
+				INSERT INTO [dbo].[Tags] ([Tag], [TagType])
+				VALUES (@tag, @type)
 
 				SELECT
 					[TagId]

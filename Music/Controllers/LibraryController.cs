@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Dapper;
 using Microsoft.AspNetCore.Mvc;
+using Music.App.Modals;
 using Music.DataAccess.Repositories;
 using Music.Modals;
 
@@ -37,9 +38,22 @@ namespace Music.Controllers
         }
 
         [HttpPost]
-        public JsonResult AddTagReference([FromBody] string name, string youTubeId)
+        public JsonResult AddTagReference([FromBody]TagDetails tagDetails)
         {
-            return Json(new { });
+            if(tagDetails.TagId == null)
+            {
+                tagDetails.TagId = _tagRepository.Upload(tagDetails.Tag, 2);
+            }
+            _tagRepository.UploadReference((int)tagDetails.TagId, tagDetails.YouTubeId);
+            return Json("");
         }
+
+        //[HttpPost]
+        //public JsonResult AddTag([FromBody] string tag)
+        //{
+        //    _tagRepository.Upload(tag, 2);
+
+        //    return Json("");
+        //}
     }
 }

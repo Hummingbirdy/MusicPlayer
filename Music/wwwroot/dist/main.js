@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./wwwroot/source/app.jsx");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./wwwroot/source/main/app.jsx");
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -10726,7 +10726,7 @@ exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader
 
 
 // module
-exports.push([module.i, ".modal-container {\r\n    height: 70vh;\r\n    min-height: 670px;\r\n    min-width: 500px;\r\n    width: 30vw;\r\n    position: relative;\r\n}\r\n\r\n.-auto {\r\n    height: initial;\r\n    min-height: initial;\r\n}\r\n\r\n.-wide {\r\n    min-width: 850px;\r\n    width: 40vw;\r\n}\r\n\r\n.-xwide {\r\n    min-width: 971px;\r\n    width: 55vw;\r\n}\r\n\r\n.-xxwide {\r\n    min-width: 1100px;\r\n    width: 70vw;\r\n}\r\n\r\n.modal-container .header {\r\n    color: darkred;\r\n    margin: 40px 0 20px 0;\r\n    padding: 0 40px;\r\n    border-bottom: 1px solid darkgrey;\r\n}\r\n\r\n    .modal-container .header .title {\r\n        font-size: 21px;\r\n        font-weight: 400;\r\n        font-family: Georgia;\r\n        font-style: italic;\r\n    }\r\n\r\n.modal-container .body {\r\n    padding: 5px 47px;\r\n    padding-bottom: 20px;\r\n}\r\n\r\n    .modal-container .body .controls {\r\n        width: 100%;\r\n        text-align: right;\r\n        cursor: pointer;\r\n    }\r\n\r\n        .modal-container .body .controls i {\r\n            color: #a80000;\r\n            cursor: pointer;\r\n            margin-left: 4px;\r\n        }\r\n\r\n.modal-container .footer {\r\n    position: absolute;\r\n    bottom: 0;\r\n    width: 100%;\r\n    padding: 40px 40px;\r\n    text-align: right;\r\n    background-color: lightgrey;\r\n}\r\n\r\n    .modal-container .footer .button {\r\n        margin-left: 8px;\r\n    }\r\n\r\n.search-term-bubble {\r\n    border: 2px solid darkred;\r\n    border-radius: 10px;\r\n    margin: 5px;\r\n    padding: 5px;\r\n    color: darkred;\r\n    box-shadow: 5px 5px 2px grey;\r\n    background-color: #f5f5f5;\r\n}\r\n", ""]);
+exports.push([module.i, ".modal-container {\r\n    height: 70vh;\r\n    min-height: 670px;\r\n    min-width: 500px;\r\n    width: 30vw;\r\n    position: relative;\r\n}\r\n\r\n.-auto {\r\n    height: initial;\r\n    min-height: initial;\r\n}\r\n\r\n.-wide {\r\n    min-width: 850px;\r\n    width: 40vw;\r\n}\r\n\r\n.-xwide {\r\n    min-width: 971px;\r\n    width: 55vw;\r\n}\r\n\r\n.-xxwide {\r\n    min-width: 1100px;\r\n    width: 70vw;\r\n}\r\n\r\n.modal-container .header {\r\n    color: darkred;\r\n    margin: 40px 0 20px 0;\r\n    padding: 0 40px;\r\n    border-bottom: 1px solid darkgrey;\r\n}\r\n\r\n    .modal-container .header .title {\r\n        font-size: 21px;\r\n        font-weight: 400;\r\n        font-family: Georgia;\r\n        font-style: italic;\r\n    }\r\n\r\n.modal-container .body {\r\n    padding: 5px 47px;\r\n    padding-bottom: 20px;\r\n}\r\n\r\n    .modal-container .body .controls {\r\n        width: 100%;\r\n        text-align: right;\r\n        cursor: pointer;\r\n    }\r\n\r\n        .modal-container .body .controls i {\r\n            color: #a80000;\r\n            cursor: pointer;\r\n            margin-left: 4px;\r\n        }\r\n\r\n.modal-container .footer {\r\n    position: absolute;\r\n    bottom: 0;\r\n    width: 100%;\r\n    padding: 40px 40px;\r\n    text-align: right;\r\n    background-color: lightgrey;\r\n}\r\n\r\n    .modal-container .footer .button {\r\n        margin-left: 8px;\r\n    }\r\n\r\n.search-term-bubble {\r\n    border: 2px solid darkred;\r\n    border-radius: 10px;\r\n    margin: 5px;\r\n    padding: 5px;\r\n    color: darkred;\r\n    box-shadow: 5px 5px 2px grey;\r\n    background-color: #f5f5f5;\r\n}\r\n\r\n.ms-ListGhostingExample-container{\r\n    overflow: auto;\r\n    max-height: 500px;\r\n}\r\n\r\n.ms-ListGhostingExample-itemCell {\r\n    position: relative;\r\n    outline: transparent;\r\n    min-height: 54px;\r\n    padding: 10px;\r\n    -webkit-box-sizing: border-box;\r\n    box-sizing: border-box;\r\n    border-bottom: 1px solid #eaeaea;\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n}\r\n\r\n.ms-ListGhostingExample-itemImage{\r\n    flex-shrink: 0;\r\n    margin-right: 15px;\r\n}\r\n\r\n.ms-ListGhostingExample-itemContext{\r\n    margin-left: 10px;\r\n    overflow: hidden;\r\n    -webkit-box-flex: 1;\r\n    flex-grow: 1;\r\n}\r\n\r\n.ms-ListGhostingExample-itemName{\r\n    font-size: 21px;\r\n    font-weight: 100;\r\n    white-space: nowrap;\r\n    overflow: hidden;\r\n    text-overflow: ellipsis;\r\n}\r\n\r\n.ms-ListGhostingExample-itemIndex {\r\n    font-size: 12px;\r\n    color: #a6a6a6;\r\n    margin-bottom: 10px;\r\n}\r\n\r\n.tags {\r\n    list-style: none;\r\n    margin: 0;\r\n    overflow: hidden;\r\n    padding: 0;\r\n}\r\n\r\n    .tags li {\r\n        float: left;\r\n    }\r\n\r\n.tag {\r\n    background: #eee;\r\n    border-radius: 3px 0 0 3px;\r\n    color: #999;\r\n    display: inline-block;\r\n    height: 26px;\r\n    line-height: 26px;\r\n    padding: 0 20px 0 23px;\r\n    position: relative;\r\n    margin: 0 10px 10px 0;\r\n    text-decoration: none;\r\n    -webkit-transition: color 0.2s;\r\n}\r\n\r\n    .tag::before {\r\n        background: #fff;\r\n        border-radius: 10px;\r\n        box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);\r\n        content: '';\r\n        height: 6px;\r\n        left: 10px;\r\n        position: absolute;\r\n        width: 6px;\r\n        top: 10px;\r\n    }\r\n\r\n    .tag::after {\r\n        background: #fff;\r\n        border-bottom: 13px solid transparent;\r\n        border-right: 10px solid #eee;\r\n        border-top: 13px solid transparent;\r\n        content: '';\r\n        position: absolute;\r\n        left: 0;\r\n        top: 0;\r\n    }", ""]);
 
 // exports
 
@@ -47217,10 +47217,10 @@ if(false) {}
 
 /***/ }),
 
-/***/ "./wwwroot/source/Components/Player.jsx":
-/*!**********************************************!*\
-  !*** ./wwwroot/source/Components/Player.jsx ***!
-  \**********************************************/
+/***/ "./wwwroot/source/main/Components/Player.jsx":
+/*!***************************************************!*\
+  !*** ./wwwroot/source/main/Components/Player.jsx ***!
+  \***************************************************/
 /*! exports provided: Player */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -47284,10 +47284,10 @@ let Player = class Player extends react__WEBPACK_IMPORTED_MODULE_0__["Component"
 
 /***/ }),
 
-/***/ "./wwwroot/source/Components/Search.jsx":
-/*!**********************************************!*\
-  !*** ./wwwroot/source/Components/Search.jsx ***!
-  \**********************************************/
+/***/ "./wwwroot/source/main/Components/Search.jsx":
+/*!***************************************************!*\
+  !*** ./wwwroot/source/main/Components/Search.jsx ***!
+  \***************************************************/
 /*! exports provided: Search */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -47384,9 +47384,10 @@ let Search = class Search extends react__WEBPACK_IMPORTED_MODULE_0__["Component"
       className: "header"
     }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("span", {
       class: "title"
-    }, "Add search terms to create playlist")), react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", {
+    }, "Create your playlist")), react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", {
       className: "body"
     }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](office_ui_fabric_react_lib_components_pickers_TagPicker_TagPicker__WEBPACK_IMPORTED_MODULE_2__["TagPicker"], {
+      select: true,
       componentRef: this._resolveSearchBoxRef,
       onResolveSuggestions: this._onFilterChanged,
       getTextFromItem: this._getTextFromItem,
@@ -47414,10 +47415,10 @@ let Search = class Search extends react__WEBPACK_IMPORTED_MODULE_0__["Component"
 
 /***/ }),
 
-/***/ "./wwwroot/source/Home.jsx":
-/*!*********************************!*\
-  !*** ./wwwroot/source/Home.jsx ***!
-  \*********************************/
+/***/ "./wwwroot/source/main/Home.jsx":
+/*!**************************************!*\
+  !*** ./wwwroot/source/main/Home.jsx ***!
+  \**************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -47426,19 +47427,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Home; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var querystring__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! querystring */ "./node_modules/querystring-es3/index.js");
-/* harmony import */ var querystring__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(querystring__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var office_ui_fabric_react_lib_Icons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! office-ui-fabric-react/lib/Icons */ "./node_modules/office-ui-fabric-react/lib/Icons.js");
-/* harmony import */ var _Components_Search_jsx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Components/Search.jsx */ "./wwwroot/source/Components/Search.jsx");
-/* harmony import */ var _Components_Player_jsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Components/Player.jsx */ "./wwwroot/source/Components/Player.jsx");
-/* harmony import */ var office_ui_fabric_react_lib_Button__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! office-ui-fabric-react/lib/Button */ "./node_modules/office-ui-fabric-react/lib/Button.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var querystring__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! querystring */ "./node_modules/querystring-es3/index.js");
+/* harmony import */ var querystring__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(querystring__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var office_ui_fabric_react_lib_Icons__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! office-ui-fabric-react/lib/Icons */ "./node_modules/office-ui-fabric-react/lib/Icons.js");
+/* harmony import */ var _Components_Search_jsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Components/Search.jsx */ "./wwwroot/source/main/Components/Search.jsx");
+/* harmony import */ var _Components_Player_jsx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Components/Player.jsx */ "./wwwroot/source/main/Components/Player.jsx");
+/* harmony import */ var office_ui_fabric_react_lib_Button__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! office-ui-fabric-react/lib/Button */ "./node_modules/office-ui-fabric-react/lib/Button.js");
 
 
 
 
 
 
-Object(office_ui_fabric_react_lib_Icons__WEBPACK_IMPORTED_MODULE_2__["initializeIcons"])();
+
+Object(office_ui_fabric_react_lib_Icons__WEBPACK_IMPORTED_MODULE_3__["initializeIcons"])();
 let Home = class Home extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   constructor(props) {
     super(props);
@@ -47538,15 +47542,15 @@ let Home = class Home extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       style: {
         'textAlign': 'right'
       }
-    }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](office_ui_fabric_react_lib_Button__WEBPACK_IMPORTED_MODULE_5__["DefaultButton"], {
+    }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](office_ui_fabric_react_lib_Button__WEBPACK_IMPORTED_MODULE_6__["DefaultButton"], {
       text: "Create your song list",
       onClick: () => this.openModal()
-    })), react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_Components_Search_jsx__WEBPACK_IMPORTED_MODULE_3__["Search"], {
+    })), react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_Components_Search_jsx__WEBPACK_IMPORTED_MODULE_4__["Search"], {
       search: this.search,
       showModal: this.state.showModal,
       openModal: this.openModal,
       closeModal: this.closeModal
-    }), this.state.songs.length > 0 && react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_Components_Player_jsx__WEBPACK_IMPORTED_MODULE_4__["Player"], {
+    }), this.state.songs.length > 0 && react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_Components_Player_jsx__WEBPACK_IMPORTED_MODULE_5__["Player"], {
       songs: this.state.songs,
       index: this.state.index,
       url: this.state.url,
@@ -47561,10 +47565,10 @@ let Home = class Home extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
 /***/ }),
 
-/***/ "./wwwroot/source/app.jsx":
-/*!********************************!*\
-  !*** ./wwwroot/source/app.jsx ***!
-  \********************************/
+/***/ "./wwwroot/source/main/app.jsx":
+/*!*************************************!*\
+  !*** ./wwwroot/source/main/app.jsx ***!
+  \*************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -47572,20 +47576,17 @@ let Home = class Home extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ "./node_modules/bootstrap/dist/css/bootstrap.min.css");
 /* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _CSS_site_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../CSS/site.css */ "./wwwroot/CSS/site.css");
+/* harmony import */ var _CSS_site_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../CSS/site.css */ "./wwwroot/CSS/site.css");
 /* harmony import */ var _CSS_site_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_CSS_site_css__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _Home_jsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Home.jsx */ "./wwwroot/source/Home.jsx");
-//require('./lib');
+/* harmony import */ var _Home_jsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Home.jsx */ "./wwwroot/source/main/Home.jsx");
 
 
 
- //import Counter from './reactComponent';
 
- //import ES6Lib from './es6codelib';
 
 react_dom__WEBPACK_IMPORTED_MODULE_3___default.a.render(react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_Home_jsx__WEBPACK_IMPORTED_MODULE_4__["default"], null), document.getElementById('content'));
 

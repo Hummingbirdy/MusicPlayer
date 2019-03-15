@@ -52,7 +52,7 @@ namespace Music.Controllers
                 var tagId = 0;
                 if (!currentTags.Any(t => t.Tag == p.Playlist))
                 {
-                    tagId = _tagRepository.Upload(p.Playlist);
+                    tagId = _tagRepository.Upload(p.Playlist, 1);
                 }
                 else
                 {

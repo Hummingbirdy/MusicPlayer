@@ -75,10 +75,11 @@ render() {
                 containerClassName="modal-container -xwide"
             >
                 <div className="header">
-                    <span class="title">Add search terms to create playlist</span>
+                    <span class="title">Create your playlist</span>
                 </div>
                 <div className="body">
                     <TagPicker
+                        select
                         componentRef={this._resolveSearchBoxRef}
                         onResolveSuggestions={this._onFilterChanged}
                         getTextFromItem={this._getTextFromItem}

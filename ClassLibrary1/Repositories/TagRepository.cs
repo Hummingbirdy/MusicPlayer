@@ -20,11 +20,11 @@ namespace Music.DataAccess.Repositories
             return tags.ToList();
         }
 
-        public int Upload(string tag)
+        public int Upload(string tag, int type)
         {
             var tagId = Retrieve(
                 "UploadTag",
-                new { tag },
+                new { tag, type },
                 (db, cmd) => db.QueryFirstOrDefault<int>(cmd)
             );
 
@@ -54,6 +54,15 @@ namespace Music.DataAccess.Repositories
             );
 
             return references.ToList();
+        }
+
+        public void UploadReference(int tagId, string youTubeId)
+        {
+            Execute(
+                "[UploadTagReference",
+                new { tagId, youTubeId },
+                (db, cmd) => db.Execute(cmd)
+            );
         }
     }
 }

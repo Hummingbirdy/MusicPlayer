@@ -1,4 +1,5 @@
 ﻿import * as React from 'react';
+import ReactDOM from 'react-dom';
 import { stringify } from 'querystring';
 import { initializeIcons } from 'office-ui-fabric-react/lib/Icons';
 import { Search } from "./Components/Search.jsx";
