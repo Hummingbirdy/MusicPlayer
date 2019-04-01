@@ -37,6 +37,13 @@ namespace Music.Controllers
             });
         }
 
+        [HttpGet]
+        public JsonResult GetColors()
+        {
+            var colors = _tagRepository.AllColors();
+            return Json(new { colors });
+        }
+
         [HttpPost]
         public JsonResult AddTagReference([FromBody]TagDetails tagDetails)
         {

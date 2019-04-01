@@ -10,6 +10,7 @@ initializeIcons(/* optional base url */);
 export default class Library extends React.Component {
     constructor(props) {
         super(props);
+        this._load = this._load.bind(this);
         this.addTag = this.addTag.bind(this);
         this.openModal = this.openModal.bind(this);
         this.closeModal = this.closeModal.bind(this);
@@ -17,17 +18,30 @@ export default class Library extends React.Component {
         this.state = {
             songs: [],
             tags: [],
+            colors: [],
             showModal: false,
             modalSong: null
         }
     }
 
     componentDidMount() {
+        this._load();
+    }
+
+    _load() {
         fetch("/Player/Songs")
             .then(res => res.json())
             .then((result) => {
                 this.setState({
                     songs: result.songs,
+                });
+            });
+
+        fetch("/Library/GetColors")
+            .then(res => res.json())
+            .then((result) => {
+                this.setState({
+                    colors: result.colors
                 });
             });
 
@@ -54,7 +68,7 @@ export default class Library extends React.Component {
                 keyedTags.push({
                     key: 'add',
                     text: 'Add a new Tag',
-                    data: { icon: 'Add' } 
+                    data: { icon: 'Add' }
                 });
                 this.setState({
                     tags: keyedTags
@@ -74,9 +88,10 @@ export default class Library extends React.Component {
         })
             .then(res => res.json())
             .then((result) => {
-                this.setState({
-                    showModal: false
-                });
+                this._load(),
+                    this.setState({
+                        showModal: false
+                    });
             });
     }
 
@@ -110,6 +125,7 @@ export default class Library extends React.Component {
                     closeModal={this.closeModal}
                     song={this.state.modalSong}
                     tags={this.state.tags}
+                    colors={this.state.colors}
                     save={this.addTag}
                 />
             </div>

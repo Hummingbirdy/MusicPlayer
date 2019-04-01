@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using Dapper;
 using Music.DataAccess.Core;
+using Music.DataAccess.Entities.Models;
 using Music.Modals;
 
 namespace Music.DataAccess.Repositories
@@ -59,10 +60,20 @@ namespace Music.DataAccess.Repositories
         public void UploadReference(int tagId, string youTubeId)
         {
             Execute(
-                "[UploadTagReference",
+                "UploadTagReference",
                 new { tagId, youTubeId },
                 (db, cmd) => db.Execute(cmd)
             );
+        }
+
+        public List<Colors> AllColors()
+        {
+            var colors = Retrieve(
+                "GetColors",
+                (db, cmd) => db.Query<Colors>(cmd)
+            );
+
+            return colors.ToList();
         }
     }
 }

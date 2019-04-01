@@ -63,6 +63,7 @@
     <Folder Include="dbo\Tables\" />
     <Folder Include="dbo\User Defined Types" />
     <Folder Include="dbo\Stored Procedures" />
+    <Folder Include="data" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\MediaType.sql" />
@@ -78,5 +79,10 @@
     <Build Include="dbo\Stored Procedures\GetSongs.sql" />
     <Build Include="dbo\Stored Procedures\GetTagReferences.sql" />
     <Build Include="dbo\Stored Procedures\UploadTagReference.sql" />
+    <Build Include="dbo\Tables\Colors.sql" />
+    <Build Include="dbo\Stored Procedures\GetColors.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data\Colors.sql" />
   </ItemGroup>
 </Project>

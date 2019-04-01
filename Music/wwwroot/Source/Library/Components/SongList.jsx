@@ -36,7 +36,7 @@ export class SongList extends React.Component {
                         })}
                         <IconButton
                             iconProps={{ iconName: 'AddTo' }}
-                            onClick={() => this.props.openModal(song.name)}
+                            onClick={() => this.props.openModal(song)}
                         />
                     </ul>
                 </div>
