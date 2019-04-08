@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
 using Dapper;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Music.App.Modals;
 using Music.DataAccess.Repositories;
@@ -14,10 +15,14 @@ namespace Music.Controllers
 {
     public class LibraryController : Controller
     {
+        private readonly UserManager<ApplicationUser> _userManager;
         private readonly TagRepository _tagRepository;
 
-        public LibraryController(TagRepository tagRepository)
+        public LibraryController(
+            UserManager<ApplicationUser> userManager,
+            TagRepository tagRepository)
         {
+            _userManager = userManager;
             _tagRepository = tagRepository;
         }
 
@@ -29,7 +34,8 @@ namespace Music.Controllers
         [HttpGet]
         public JsonResult GetAllTags()
         {
-            var tags = _tagRepository.All();
+            var userId = _userManager.GetUserId(HttpContext.User);
+            var tags = _tagRepository.All(userId);
 
             return Json(new
             {
@@ -47,11 +53,19 @@ namespace Music.Controllers
         [HttpPost]
         public JsonResult AddTagReference([FromBody]TagDetails tagDetails)
         {
-            if(tagDetails.TagId == null)
+            var userId = _userManager.GetUserId(HttpContext.User);
+            if (tagDetails.TagId == null)
             {
-                tagDetails.TagId = _tagRepository.Upload(tagDetails.Tag, 2);
+                tagDetails.TagId = _tagRepository.Upload(userId, tagDetails.Tag, 2, tagDetails.Color);
             }
-            _tagRepository.UploadReference((int)tagDetails.TagId, tagDetails.YouTubeId);
+            _tagRepository.UploadReference(userId, (int)tagDetails.TagId, tagDetails.YouTubeId);
+            return Json("");
+        }
+
+        [HttpPost]
+        public JsonResult DeleteTagReference([FromBody]int referenceId)
+        {
+            _tagRepository.DeleteTagReference(referenceId);
             return Json("");
         }
 

@@ -12,6 +12,7 @@ export default class Library extends React.Component {
         super(props);
         this._load = this._load.bind(this);
         this.addTag = this.addTag.bind(this);
+        this.deleteTag = this.deleteTag.bind(this);
         this.openModal = this.openModal.bind(this);
         this.closeModal = this.closeModal.bind(this);
 
@@ -77,7 +78,6 @@ export default class Library extends React.Component {
     }
 
     addTag(tagDetails) {
-
         fetch('/Library/AddTagReference', {
             method: 'post',
             headers: {
@@ -93,6 +93,25 @@ export default class Library extends React.Component {
                         showModal: false
                     });
             });
+    }
+
+    deleteTag(referenceId) {
+        fetch('/Library/DeleteTagReference', {
+            method: 'post',
+            headers: {
+                'Accept': 'application/json, text/plain, */*',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(referenceId),
+        })
+            .then(res => res.json())
+            .then((result) => {
+                this._load(),
+                    this.setState({
+                        showModal: false
+                    });
+            });
+
     }
 
     openModal(song) {
@@ -119,6 +138,7 @@ export default class Library extends React.Component {
                     songs={this.state.songs}
                     tags={this.state.tags}
                     openModal={this.openModal}
+                    delete={this.deleteTag}
                 />
                 <TagModal
                     showModal={this.state.showModal}

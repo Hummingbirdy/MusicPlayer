@@ -44,7 +44,7 @@ namespace Music.Controllers
 
             var distinctSongs = songs.GroupBy(s => s.YouTubeId).Select(s => s.OrderBy(x => x.YouTubeId).First()).ToList();
 
-            var currentTags = _tagRepository.All();
+            var currentTags = _tagRepository.All(userId);
             var playlists = songs.GroupBy(s => s.Playlist).Select(s => s.OrderBy(x => x.Playlist).First()).ToList();
             var references = new List<TagReferences>();
             playlists.ForEach(p =>
@@ -52,7 +52,7 @@ namespace Music.Controllers
                 var tagId = 0;
                 if (!currentTags.Any(t => t.Tag == p.Playlist))
                 {
-                    tagId = _tagRepository.Upload(p.Playlist, 1);
+                    tagId = _tagRepository.Upload(userId, p.Playlist, 1, null);
                 }
                 else
                 {

@@ -1,12 +1,13 @@
 ﻿CREATE PROCEDURE [dbo].[UploadTagReference]
+	@userId VARCHAR(50),
 	@tagId INT,
 	@youTubeId NVARCHAR(200)
 AS
 	BEGIN
 		BEGIN TRY
 			BEGIN TRANSACTION
-				INSERT INTO [dbo].[TagReferences] ([TagId], [YouTubeId], [Fixed])
-				VALUES (@tagId, @youTubeId, 0)
+				INSERT INTO [dbo].[TagReferences] ([UserId], [TagId], [YouTubeId], [Fixed])
+				VALUES (@userId, @tagId, @youTubeId, 0)
 
 			COMMIT TRANSACTION;
 		END TRY

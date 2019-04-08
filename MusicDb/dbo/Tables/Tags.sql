@@ -1,7 +1,10 @@
 ﻿CREATE TABLE [dbo].[Tags] (
-    [TagId] INT           IDENTITY (1, 1) NOT NULL,
-    [Tag]   NVARCHAR (50) NOT NULL,
-	[TagType] INT NOT NULL DEFAULT 1,
+    [TagId]			INT				NOT NULL	IDENTITY (1, 1),
+	[UserId]		NVARCHAR(50)	NOT NULL	DEFAULT '9b107906-4975-49fa-8d7a-d6f2274d995b',
+    [Tag]			NVARCHAR (50)	NOT NULL,
+	[TagType]		INT				NOT NULL	DEFAULT 1,
+	[Color]			NVARCHAR(20)	NULL,
+
     PRIMARY KEY CLUSTERED ([TagId] ASC)
 );
 

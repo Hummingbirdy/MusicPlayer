@@ -3,7 +3,15 @@
 
 AS
 	SELECT
-		*
+		[SongId], 
+		[UserId], 
+		[YouTubeId], 
+		[Name], 
+		[Type], 
+		[Thumbnail], 
+		[PublishedDate], 
+		[CreatedDate], 
+		[UpdatedDate]
 	FROM
 		[dbo].[Songs]
 	WHERE

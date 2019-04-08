@@ -29,8 +29,38 @@ export class SongList extends React.Component {
                     <ul className="tags">
                         {song.tags.map((tag, i) => {
                             return (
-                                <li className="tag" >
-                                    {tag.tag  }                                   
+                                <li className="tag"
+                                    style={{
+                                        color: tag.color,
+                                        'fontWeight': 'bold'
+                                    }}
+                                >
+                                    {tag.tag}
+                                    {
+                                        tag.fixed ?
+                                            (
+                                                <span
+                                                    style={{
+                                                        width: '15px',
+                                                        display: 'inline-block'
+                                                    }}
+                                                >{}</span>
+                                            )
+                                            :
+                                            (
+                                                <IconButton
+                                                    iconProps={{
+                                                        iconName: "StatusCircleErrorX"
+                                                    }}
+                                                    style={{
+                                                        'height': '26px'
+                                                    }}
+                                                    onClick={() => this.props.delete(tag.tagReferenceId)}
+                                                    disabled={tag.fixed}
+                                                />
+                                            )
+                                    }
+
                                 </li>
                             )
                         })}

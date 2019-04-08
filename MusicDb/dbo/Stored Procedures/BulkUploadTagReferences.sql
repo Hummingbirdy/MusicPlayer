@@ -12,11 +12,13 @@ AS
 
 				WHEN NOT MATCHED THEN
 					INSERT (
+						[UserId],
 						[TagId],
 						[YouTubeId],
 						[Fixed]
 					)
 					VALUES (
+						SOURCE.[UserId],
 						SOURCE.[TagId],
 						SOURCE.[YouTubeId],
 						1

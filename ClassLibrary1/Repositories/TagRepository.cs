@@ -11,21 +11,27 @@ namespace Music.DataAccess.Repositories
 {
     public class TagRepository : BaseRepository
     {
-        public List<Tags> All()
+        public List<Tags> All(string userId)
         {
             var tags = Retrieve(
                 "GetTags",
+                new { userId },
                 (db, cmd) => db.Query<Tags>(cmd)
             );
 
             return tags.ToList();
         }
 
-        public int Upload(string tag, int type)
+        public int Upload(string userId, string tag, int type, string color)
         {
             var tagId = Retrieve(
                 "UploadTag",
-                new { tag, type },
+                new {
+                    userId,
+                    tag,
+                    type,
+                    color
+                },
                 (db, cmd) => db.QueryFirstOrDefault<int>(cmd)
             );
 
@@ -36,8 +42,9 @@ namespace Music.DataAccess.Repositories
         {
             var records = tagReferences.Select(r => new
             {
+                r.UserId,
                 r.TagId,
-                r.YouTubeId
+                r.YouTubeId,
             }).ToDataTable();
 
             Execute(
@@ -47,21 +54,22 @@ namespace Music.DataAccess.Repositories
             );
         }
 
-        public List<TagReferences> AllReferences()
+        public List<TagReferences> AllReferences(string userId)
         {
             var references = Retrieve(
                 "GetTagReferences",
+                new { userId },
                 (db, cmd) => db.Query<TagReferences>(cmd)
             );
 
             return references.ToList();
         }
 
-        public void UploadReference(int tagId, string youTubeId)
+        public void UploadReference(string userId, int tagId, string youTubeId)
         {
             Execute(
                 "UploadTagReference",
-                new { tagId, youTubeId },
+                new { userId, tagId, youTubeId },
                 (db, cmd) => db.Execute(cmd)
             );
         }
@@ -74,6 +82,15 @@ namespace Music.DataAccess.Repositories
             );
 
             return colors.ToList();
+        }
+
+        public void DeleteTagReference(int referenceId)
+        {
+            Execute(
+               "DeleteTagReference",
+               new { referenceId },
+               (db, cmd) => db.Execute(cmd)
+            );
         }
     }
 }

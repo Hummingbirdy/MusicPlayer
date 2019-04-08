@@ -10,5 +10,6 @@ namespace Music.App.Modals
         public int? TagId { get; set; }
         public string YouTubeId { get; set; }
         public string Tag { get; set; }
+        public string Color { get; set; }
     }
 }

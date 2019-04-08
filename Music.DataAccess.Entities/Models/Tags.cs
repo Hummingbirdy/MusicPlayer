@@ -10,5 +10,6 @@ namespace Music.Modals
         public int TagId { get; set; }
         public string Tag { get; set; }
         public int TagType { get; set; }
+        public string Color { get; set; }
     }
 }

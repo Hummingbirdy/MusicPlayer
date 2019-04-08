@@ -34,7 +34,7 @@ namespace Music.Controllers
             var userId = _userManager.GetUserId(HttpContext.User);
 
             var songs = _songRepository.All(userId);
-            var references = _tagRepository.AllReferences();
+            var references = _tagRepository.AllReferences(userId);
 
             foreach (var song in songs)
             {
@@ -45,7 +45,10 @@ namespace Music.Controllers
                     {
                         var tag = new TagReferences()
                         {
-                            Tag = reference.Tag
+                            TagReferenceId = reference.TagReferenceId,
+                            Tag = reference.Tag,
+                            Fixed = reference.Fixed,
+                            Color = reference.Color
                         };
                         tags.Add(tag);
                     }

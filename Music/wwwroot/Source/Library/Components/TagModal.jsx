@@ -15,6 +15,7 @@ export class TagModal extends React.Component {
         super(props);
         this._renderOption = this._renderOption.bind(this);
         this._onClick_Save = this._onClick_Save.bind(this);
+        this._onClick_Close = this._onClick_Close.bind(this);
         this.state = {
             adding: false,
             newTagName: null,
@@ -37,11 +38,21 @@ export class TagModal extends React.Component {
 
     _onClick_Save() {
         let tagDetails = {
-            TagId: this.state.tagId,
+            TagId: this.state.adding ? null : this.state.tagId,
             YouTubeId: this.props.song.youTubeId,
-            Tag: this.state.newTagName
+            Tag: this.state.newTagName,
+            Color: this.state.selectedHex
         }
         this.props.save(tagDetails);
+    }
+
+    _onClick_Close() {
+        this.setState({
+            adding: false,
+            newTagName: null,
+            tagId: null,
+        }),
+            this.props.closeModal()
     }
 
     render() {
@@ -49,7 +60,7 @@ export class TagModal extends React.Component {
         return (
             <Modal
                 isOpen={this.props.showModal}
-                onDismiss={this.props.closeModal}
+                onDismiss={this._onClick_Close}
                 isBlocking={false}
                 containerClassName="modal-container -xwide"
             >
