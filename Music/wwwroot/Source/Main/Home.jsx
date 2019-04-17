@@ -5,29 +5,45 @@ import { initializeIcons } from 'office-ui-fabric-react/lib/Icons';
 import { Search } from "./Components/Search.jsx";
 import { Player } from "./Components/Player.jsx";
 import { DefaultButton } from 'office-ui-fabric-react/lib/Button';
+import { TagModal } from '../shared/TagModal.jsx';
+import { DropdownMenuItemType } from 'office-ui-fabric-react';
 
 initializeIcons(/* optional base url */);
 
 export default class Home extends React.Component {
     constructor(props) {
         super(props);
+        this._load = this._load.bind(this);
         this.goNext = this.goNext.bind(this);
         this.playSong = this.playSong.bind(this);
         this.search = this.search.bind(this);
         this.shuffle = this.shuffle.bind(this);
         this.openModal = this.openModal.bind(this);
         this.closeModal = this.closeModal.bind(this);
+        this.addTag = this.addTag.bind(this);
+        this.deleteTag = this.deleteTag.bind(this);
+        this.openTagModal = this.openTagModal.bind(this);
+        this.closeTagModal = this.closeTagModal.bind(this);
 
         this.state = {
             songs: [],
             url: null,
             index: 0,
             nextSongName: null,
-            showModal: false
+            showModal: false,
+            tags: [],
+            showTagModal: false,
+            colors: [],
+            modalSong: null,
+            modalTags: []
         };
     }
 
     componentDidMount() {
+        this._load();
+    }
+
+    _load() {
         fetch("/Player/Songs")
             .then(res => res.json())
             .then((result) => {
@@ -37,17 +53,66 @@ export default class Home extends React.Component {
                     nextSongName: result.songs[this.state.index + 1].name,
                     index: this.state.index + 1
                 });
-            })
+            });
+
+        fetch("/Library/GetAllTags")
+            .then(res => res.json())
+            .then((result) => {
+                let keyedTags = [];
+                result.tags.map(r => {
+                    keyedTags.push({
+                        key: r.tagId,
+                        name: r.tag,
+                    });
+                });
+                this.setState({
+                    tags: keyedTags
+                });
+
+                let modalTags = [];
+                result.tags.map(r => {
+                    if (r.tagType != 1) {
+                        modalTags.push({
+                            key: r.tagId,
+                            text: r.tag,
+                            data: {}
+                        });
+                    }
+                });
+                if (modalTags.length > 0) {
+                    modalTags.push({
+                        key: 'divider',
+                        text: '-',
+                        itemType: DropdownMenuItemType.Divider
+                    });
+                }
+                modalTags.push({
+                    key: 'add',
+                    text: 'Add a new Tag',
+                    data: { icon: 'Add' }
+                });
+                this.setState({
+                    modalTags: modalTags
+                });
+            });
+
+        fetch("/Library/GetColors")
+            .then(res => res.json())
+            .then((result) => {
+                this.setState({
+                    colors: result.colors
+                });
+            });
     }
 
-    search(tags) {
+    search(searchTerms) {
         fetch(`/Player/Search`, {
             method: 'post',
             headers: {
                 'Accept': 'application/json, text/plain, */*',
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(tags),
+            body: JSON.stringify(searchTerms),
 
         })
             .then(res => res.json())
@@ -107,6 +172,56 @@ export default class Home extends React.Component {
         });
     }
 
+    addTag(tagDetails) {
+        fetch('/Library/AddTagReference', {
+            method: 'post',
+            headers: {
+                'Accept': 'application/json, text/plain, */*',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(tagDetails),
+        })
+            .then(res => res.json())
+            .then((result) => {
+                this._load(),
+                    this.setState({
+                        showTagModal: false
+                    });
+            });
+    }
+
+    deleteTag(referenceId) {
+        fetch('/Library/DeleteTagReference', {
+            method: 'post',
+            headers: {
+                'Accept': 'application/json, text/plain, */*',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(referenceId),
+        })
+            .then(res => res.json())
+            .then((result) => {
+                this._load(),
+                    this.setState({
+                        showTagModal: false
+                    });
+            });
+
+    }
+
+    openTagModal(song) {
+        this.setState({
+            showTagModal: true,
+            modalSong: song
+        });
+    }
+
+    closeTagModal() {
+        this.setState({
+            showTagModal: false
+        })
+    }
+
     render() {
         return (
             <div>
@@ -121,6 +236,7 @@ export default class Home extends React.Component {
                     showModal={this.state.showModal}
                     openModal={this.openModal}
                     closeModal={this.closeModal}
+                    tags={this.state.tags}
                 />
                 {this.state.songs.length > 0 &&
                     <Player
@@ -130,8 +246,17 @@ export default class Home extends React.Component {
                         goNext={this.goNext}
                         shuffle={this.shuffle}
                         playSong={this.playSong}
+                        openModal={this.openTagModal}
                     />
                 }
+                <TagModal
+                    showModal={this.state.showTagModal}
+                    closeModal={this.closeModal}
+                    song={this.state.modalSong}
+                    tags={this.state.modalTags}
+                    colors={this.state.colors}
+                    save={this.addTag}
+                />
             </div>
         );
     }

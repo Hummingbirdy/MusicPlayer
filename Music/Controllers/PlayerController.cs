@@ -62,18 +62,47 @@ namespace Music.Controllers
         }
 
         [HttpPost]
-        public JsonResult Search([FromBody] List<SearchTerms> values)
+        public JsonResult Search([FromBody] Result searchTerms)
         {
             var userId = _userManager.GetUserId(HttpContext.User);
             var fullPlayList = _songRepository.All(userId);
             var results = new List<Songs>();
-            values.ForEach(value =>
+            searchTerms.Names.ForEach(value =>
             {
                 var searched = fullPlayList.Where(s => s.Name.ToLower().Contains(value.Name.ToLower())).ToList();
                 results = results.Concat(searched).ToList();
             });
 
+            searchTerms.Tags.ForEach(t =>
+            {
+                var songsForTag = _songRepository.GetByTag(t.Name);
+                results.AddRange(songsForTag);
+            });
+
             var distinct = results.Distinct().ToList();
+
+            var references = _tagRepository.AllReferences(userId);
+
+            foreach (var song in distinct)
+            {
+                var tags = new List<TagReferences>();
+                foreach (var reference in references)
+                {
+                    if (reference.YouTubeId == song.YouTubeId)
+                    {
+                        var tag = new TagReferences()
+                        {
+                            TagReferenceId = reference.TagReferenceId,
+                            Tag = reference.Tag,
+                            Fixed = reference.Fixed,
+                            Color = reference.Color
+                        };
+                        tags.Add(tag);
+                    }
+                }
+                song.Tags = tags;
+            }
+
             Random rnd = new Random();
             var songs = from song in distinct
                         orderby rnd.Next()
@@ -81,6 +110,11 @@ namespace Music.Controllers
 
             return Json(new { songs });
         }
+    }
+    public class Result
+    {
+        public List<SearchTerms> Names { get; set; }
+        public List<SearchTerms> Tags { get; set; }
     }
 
     public class SearchTerms

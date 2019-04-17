@@ -40,5 +40,17 @@ namespace Music.DataAccess.Repositories
                 (db, cmd) => db.Execute(cmd)
             );
         }
+
+        public List<Songs> GetByTag(string tag)
+        {
+            var songs = Retrieve(
+                "GetSongsByTag",
+                new { tag },
+                (db, cmd) => db.Query<Songs>(cmd)
+            )
+            .ToList();
+
+            return songs;
+        }
     }
 }

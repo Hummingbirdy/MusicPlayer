@@ -82,6 +82,7 @@
     <Build Include="dbo\Tables\Colors.sql" />
     <Build Include="dbo\Stored Procedures\GetColors.sql" />
     <Build Include="dbo\Stored Procedures\DeleteTagReference.sql" />
+    <Build Include="dbo\Stored Procedures\GetSongsByTag.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="data\Colors.sql" />

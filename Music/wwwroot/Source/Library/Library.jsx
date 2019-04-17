@@ -2,7 +2,7 @@
 import ReactDOM from 'react-dom';
 import { initializeIcons } from 'office-ui-fabric-react/lib/Icons';
 import { SongList } from './Components/SongList.jsx';
-import { TagModal } from './Components/TagModal.jsx';
+import { TagModal } from '../shared/TagModal.jsx';
 import { DropdownMenuItemType } from 'office-ui-fabric-react';
 
 initializeIcons(/* optional base url */);
