@@ -2,8 +2,9 @@
 import ReactPlayer from 'react-player/lib/players/YouTube';
 import { Modal } from 'office-ui-fabric-react/lib/Modal';
 import {
+    autobind,
     DefaultButton, IconButton,
-    Dropdown, DropdownMenuItemType,
+    Dropdown, DropdownMenuItemType, IDropdownStyles,
     Icon,
     TextField,
     SwatchColorPicker,
@@ -16,6 +17,7 @@ export class TagModal extends React.Component {
         this._renderOption = this._renderOption.bind(this);
         this._onClick_Save = this._onClick_Save.bind(this);
         this._onClick_Close = this._onClick_Close.bind(this);
+        this._onRenderTitle = this._onRenderTitle.bind(this);
         this.state = {
             adding: false,
             newTagName: null,
@@ -62,7 +64,7 @@ export class TagModal extends React.Component {
                 isOpen={this.props.showModal}
                 onDismiss={this._onClick_Close}
                 isBlocking={false}
-                containerClassName="modal-container -xwide"
+                containerClassName="modal-container -wide"
             >
                 <div className="header">
                     {
@@ -75,17 +77,32 @@ export class TagModal extends React.Component {
                         adding ?
                             (
                                 <div>
+                                    <div
+                                        style={{
+                                            'color': '#DDDFD4',
+                                            'marginBottom': '5px'
+                                        }}
+                                    >
+                                        Tag
+                                    </div>
                                     <TextField
-                                        label={'Tag'}
                                         placeholder={'Enter tag name...'}
                                         onChange={(ev, value) => {
                                             this.setState({
                                                 newTagName: value
                                             });
                                         }}
+                                        style={{ color: '#DDDFD4', 'fontWeight': 'bold' }}
                                     />
                                     <hr />
-                                    <Label> Select tag color... </Label>
+                                    <div
+                                        style={{
+                                            'color': '#DDDFD4',
+                                            'marginBottom': '5px'
+                                        }}
+                                    >
+                                        Select tag color...
+                                    </div>
                                     <SwatchColorPicker
                                         selectedId={this.state.color}
                                         onCellHovered={(id, color) => this.setState({ previewColor: color })}
@@ -106,31 +123,48 @@ export class TagModal extends React.Component {
                             )
                             :
                             (
-                                <Dropdown
-                                    label="Select tag"
-                                    onRenderOption={this._renderOption}
-                                    options={this.props.tags}
-                                    onChange={(ev, option) => {
-                                        if (option.key === 'add') {
-                                            this.setState({
-                                                adding: true
-                                            });
-                                        }
-                                        else {
-                                            this.setState({
-                                                tagId: option.key
-                                            });
-                                        }
-                                    }}
-                                />
+                                <div>
+                                    <div
+                                        style={{
+                                            'color': '#DDDFD4',
+                                            'marginBottom': '5px'
+                                        }}
+                                    >
+                                        Select Tag
+                                    </div>
+                                    <Dropdown
+                                        onRenderOption={this._renderOption}
+                                        options={this.props.tags}
+                                        onChange={(ev, option) => {
+                                            if (option.key === 'add') {
+                                                this.setState({
+                                                    adding: true
+                                                });
+                                            }
+                                            else {
+                                                this.setState({
+                                                    tagId: option.key
+                                                });
+                                            }
+                                        }}
+                                        onRenderTitle={this._onRenderTitle}
+                                        style={{
+                                            caretColor: '#DDDFD4'
+                                        }}
+                                    />
+                                </div>
                             )
                     }
                 </div>
-                <div className="footer">
+                <div className="footer-button">
                     <div className="button">
                         <DefaultButton
+                            className={'default-button'}
                             text='Add'
                             onClick={() => this._onClick_Save()}
+                            style={{
+                                'width': '100%'
+                            }}
                         />
                     </div>
                 </div>
@@ -138,5 +172,11 @@ export class TagModal extends React.Component {
         )
     }
 
-
+    _onRenderTitle(options) {
+        return (
+            <span style={{ color: '#DDDFD4', 'fontWeight': 'bold' }}>
+                {options[0].text}
+            </span>
+        );
+    }
 }

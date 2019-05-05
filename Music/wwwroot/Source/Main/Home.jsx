@@ -227,6 +227,7 @@ export default class Home extends React.Component {
             <div>
                 <div style={{ 'textAlign': 'right' }}>
                     <DefaultButton
+                        className={'default-button'}
                         text='Create your song list'
                         onClick={() => this.openModal()}
                     />
@@ -251,7 +252,7 @@ export default class Home extends React.Component {
                 }
                 <TagModal
                     showModal={this.state.showTagModal}
-                    closeModal={this.closeModal}
+                    closeModal={this.closeTagModal}
                     song={this.state.modalSong}
                     tags={this.state.modalTags}
                     colors={this.state.colors}

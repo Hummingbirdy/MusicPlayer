@@ -1,9 +1,55 @@
-﻿.modal-container {
-    height: 70vh;
-    min-height: 670px;
+﻿body {
+    background-color: #151516;
+    color: #DDDFD4
+}
+
+.custom-dark-nav {
+    background-color: #151516;
+    color: #3FB0AC;
+}
+
+a {
+    color: #3FB0AC;
+
+}
+
+    a:hover {
+        color: #3FB0AC;
+        text-decoration: underline #FAE596 !important;
+    }
+
+button {
+    background-color: #151516 !important;
+    font-weight: bold !important;
+    color: #3FB0AC !important;
+}
+
+    button:hover {
+        color: #173E43 !important;
+    }
+
+    button:active {
+        border: 1px solid #FAE596 !important;
+    }
+
+.default-button {
+    border: 1px solid #3FB0AC !important;
+    border-radius: 5px !important;
+}
+
+.tag-icon {
+    background-color:  #eee !important;
+    border-style: none;
+    color: black !important;
+}
+
+.modal-container {
+    height: 65vh;
     min-width: 500px;
     width: 30vw;
     position: relative;
+    background-color: #2a2a2b !important;
+    color: darkgrey !important;
 }
 
 .-auto {
@@ -27,10 +73,9 @@
 }
 
 .modal-container .header {
-    color: darkred;
+    color: #3FB0AC;
     margin: 40px 0 20px 0;
     padding: 0 40px;
-    border-bottom: 1px solid darkgrey;
 }
 
     .modal-container .header .title {
@@ -57,13 +102,21 @@
             margin-left: 4px;
         }
 
+
+.modal-container .footer-button {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: right;
+    background-color: #173E43;
+}
+
 .modal-container .footer {
     position: absolute;
     bottom: 0;
     width: 100%;
-    padding: 40px 40px;
     text-align: right;
-    background-color: lightgrey;
+    background-color: #173E43;
 }
 
     .modal-container .footer .button {
@@ -138,7 +191,7 @@
 .tag {
     background: #eee;
     border-radius: 3px 0 0 3px;
-    color: #999;
+    color: #173E43;
     display: inline-block;
     height: 26px;
     line-height: 26px;
@@ -150,9 +203,9 @@
 }
 
     .tag::before {
-        background: #fff;
+        background: #151516;
         border-radius: 10px;
-        box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
+        box-shadow: inset 0 1px rgba(21,21,22, 0.25);
         content: '';
         height: 6px;
         left: 10px;
@@ -162,7 +215,7 @@
     }
 
     .tag::after {
-        background: #fff;
+        background: #151516;
         border-bottom: 13px solid transparent;
         border-right: 10px solid #eee;
         border-top: 13px solid transparent;
@@ -171,3 +224,52 @@
         left: 0;
         top: 0;
     }
+
+.scrollbar {
+    margin-left: 30px;
+    float: left;
+    height: 600px;
+    width: 100%;
+    background: #151516;
+    overflow-y: scroll;
+    margin-bottom: 25px;
+}
+
+.force-overflow
+{
+	min-height: 450px;
+}
+
+#wrapper
+{
+	text-align: center;
+	width: 500px;
+	margin: auto;
+}
+
+#style-2::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: #151516;
+}
+
+#style-2::-webkit-scrollbar {
+    width: 12px;
+    background-color: #151516;
+}
+
+#style-2::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #FAE596;
+}
+
+.ms-Dropdown-title {
+    background-color: #3F3F40 !important;
+    border-color: #DDDFD4 !important;
+}
+
+.ms-TextField-field {
+    background-color: #3F3F40 !important;
+    border-color: #DDDFD4 !important;
+}

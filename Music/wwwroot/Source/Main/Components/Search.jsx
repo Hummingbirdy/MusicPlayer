@@ -57,27 +57,41 @@ export class Search extends React.Component {
                         <span class="title">Create your playlist</span>
                     </div>
                     <div className="body">
-                        <Label>
+                        <div
+                            style={{
+                                'color': '#DDDFD4',
+                                'marginBottom': '5px'
+                            }}
+                        >
                             Search by song or artist
-                    </Label>
+                    </div>
                         <TagPickerComponent
                             items={this.state.items}
                             update={this._updateNames}
                         />
                         <br />
-                        <Label>
+                        <div
+                            style={{
+                                'color': '#DDDFD4',
+                                'marginBottom': '5px'
+                            }}
+                        >
                             Search by Tag
-                        </Label>
+                        </div>
                         <TagPickerComponent
                             items={this.props.tags}
                             update={this._updateTags}
                         />
                     </div>
-                    <div className="footer">
+                    <div className="footer-button">
                         <div className="button">
                             <DefaultButton
+                                className={'default-button'}
                                 text='Search'
                                 onClick={() => this._onSearch()}
+                                style={{
+                                    'width': '100%'
+                                }}
                             />
                         </div>
                     </div>

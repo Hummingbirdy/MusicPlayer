@@ -49,6 +49,7 @@ export class SongList extends React.Component {
                                             :
                                             (
                                                 <IconButton
+                                                    className={'tag-icon'}
                                                     iconProps={{
                                                         iconName: "StatusCircleErrorX"
                                                     }}
@@ -79,11 +80,13 @@ export class SongList extends React.Component {
     render() {
         return (
             <FocusZone direction={FocusZoneDirection.vertical} >
-                <div className="ms-ListGhostingExample-container" data-is-scrollable={true}>
-                    <List
-                        items={this.props.songs}
-                        onRenderCell={this._onRenderCell}
-                    />
+                <div className="ms-ListGhostingExample-container scrollbar" id="style-2">
+                    <div className="force-overflow">
+                        <List
+                            items={this.props.songs}
+                            onRenderCell={this._onRenderCell}
+                        />
+                    </div>
                 </div>
             </FocusZone>
         );
