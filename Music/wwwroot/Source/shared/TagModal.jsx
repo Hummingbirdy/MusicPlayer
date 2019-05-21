@@ -107,7 +107,7 @@ export class TagModal extends React.Component {
                                         selectedId={this.state.color}
                                         onCellHovered={(id, color) => this.setState({ previewColor: color })}
                                         onCellFocused={(id, color) => this.setState({ previewColor: color })}
-                                        columnCount={4}
+                                        columnCount={11}
                                         cellShape={'circle'}
                                         cellHeight={35}
                                         cellWidth={35}
