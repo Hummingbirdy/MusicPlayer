@@ -17,7 +17,7 @@ using Music.Modals;
 namespace Music.Controllers
 {
     public class UploadController : Controller
-    {        
+    {
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SongRepository _songRepository;
         private readonly TagRepository _tagRepository;
@@ -33,9 +33,9 @@ namespace Music.Controllers
         }
 
         [HttpPost]
-        public void Playlist(List<Songs> songs)
+        public void Playlist([FromBody]List<Songs> songArray)
         {
-            UploadSongs(songs);
+            UploadSongs(songArray);
         }
 
         public void UploadSongs(List<Songs> songs)
@@ -45,35 +45,45 @@ namespace Music.Controllers
             var distinctSongs = songs.GroupBy(s => s.YouTubeId).Select(s => s.OrderBy(x => x.YouTubeId).First()).ToList();
 
             var currentTags = _tagRepository.All(userId);
-            var playlists = songs.GroupBy(s => s.Playlist).Select(s => s.OrderBy(x => x.Playlist).First()).ToList();
+
+            var playlists = songs.ToLookup(s => s.Playlist);
             var references = new List<TagReferences>();
-            playlists.ForEach(p =>
+
+            foreach (var playlist in playlists)
             {
                 var tagId = 0;
-                if (!currentTags.Any(t => t.Tag == p.Playlist))
+                if (!currentTags.Any(t => t.Tag == playlist.Key))
                 {
-                    tagId = _tagRepository.Upload(userId, p.Playlist, 1, null);
+                    tagId = _tagRepository.Upload(userId, playlist.Key, 1, null);
                 }
                 else
                 {
-                    tagId = currentTags.Where(t => t.Tag == p.Playlist).Select(t => t.TagId).First();
+                    tagId = currentTags.Where(t => t.Tag == playlist.Key).Select(t => t.TagId).First();
                 }
 
-                songs.ForEach(s =>
+                foreach (var song in playlist)
                 {
-                    if (s.Playlist == p.Playlist)
+                    references.Add(new TagReferences()
                     {
-                        references.Add(new TagReferences()
-                        {
-                            TagId = tagId,
-                            YouTubeId = s.YouTubeId
-                        });
-                    }
-                });
-            });
+                        TagId = tagId,
+                        YouTubeId = song.YouTubeId,
+                        UserId = userId
+                    });                   
+                }
+            }
 
-            _tagRepository.BulkUploadReferences(references);
-            _songRepository.BulkUpload(userId, distinctSongs);
+            try
+            {
+                _songRepository.BulkUpload(userId, distinctSongs);
+                _tagRepository.BulkUploadReferences(references);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                throw;
+            }
+
+
         }
     }
 }

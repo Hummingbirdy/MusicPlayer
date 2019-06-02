@@ -36,7 +36,7 @@ namespace Music.DataAccess.Repositories
 
             Execute(
                 "UploadSongs",
-                new { records },
+                new { songs = records },
                 (db, cmd) => db.Execute(cmd)
             );
         }

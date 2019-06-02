@@ -49,7 +49,7 @@ namespace Music.DataAccess.Repositories
 
             Execute(
                 "BulkUploadTagReferences",
-                new { records },
+                new { references = records },
                 (db, cmd) => db.Execute(cmd)
             );
         }

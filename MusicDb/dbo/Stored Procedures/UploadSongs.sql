@@ -18,7 +18,7 @@ AS
 							[Type] = 1,
 							[Thumbnail] = SOURCE.[Thumbnail],
 							[PublishedDate] = SOURCE.[PublishedDate],
-							[UpdatedDate] = getdate()
+							[UpdatedDate] = GETDATE()
 
 				WHEN NOT MATCHED THEN
 					INSERT (

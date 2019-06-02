@@ -6,6 +6,7 @@ module.exports = {
     entry: {
         main: './wwwroot/source/main/app.jsx',
         library: './wwwroot/source/library/app.jsx',
+        import: './wwwroot/source/import/app.jsx',
 
         vendors: [
             "babel-polyfill",

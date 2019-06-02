@@ -34,4 +34,8 @@
 	  <ProjectReference Include="..\Music.DataAccess.Entities\Music.DataAccess.Entities.csproj" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Folder Include="wwwroot\Source\Import\Components\" />
+	</ItemGroup>
+
 </Project>
