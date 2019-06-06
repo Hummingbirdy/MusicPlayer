@@ -23,19 +23,25 @@
     <PackageReference Include="Ninject" Version="3.3.4" />
   </ItemGroup>
 
-	<ItemGroup>
-		<DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.0" />
-		<DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
-		<DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.0" />
-	</ItemGroup>
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.0" />
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
+    <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.0" />
+  </ItemGroup>
 
-	<ItemGroup>
-	  <ProjectReference Include="..\ClassLibrary1\Music.DataAccess.csproj" />
-	  <ProjectReference Include="..\Music.DataAccess.Entities\Music.DataAccess.Entities.csproj" />
-	</ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary1\Music.DataAccess.csproj" />
+    <ProjectReference Include="..\Music.DataAccess.Entities\Music.DataAccess.Entities.csproj" />
+  </ItemGroup>
 
-	<ItemGroup>
-	  <Folder Include="wwwroot\Source\Import\Components\" />
-	</ItemGroup>
+  <ItemGroup>
+    <Folder Include="wwwroot\Source\Import\Components\" />
+  </ItemGroup>
+  
+  <PropertyGroup>
+    <TypeScriptExperimentalDecorators>true</TypeScriptExperimentalDecorators>
+  </PropertyGroup>
+
+
 
 </Project>

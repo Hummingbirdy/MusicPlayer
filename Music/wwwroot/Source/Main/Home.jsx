@@ -1,12 +1,14 @@
 ﻿import * as React from 'react';
 import ReactDOM from 'react-dom';
 import { stringify } from 'querystring';
-import { initializeIcons } from 'office-ui-fabric-react/lib/Icons';
+import {
+    initializeIcons,
+    DefaultButton,
+    DropdownMenuItemType
+} from 'office-ui-fabric-react';
 import { Search } from "./Components/Search.jsx";
 import { Player } from "./Components/Player.jsx";
-import { DefaultButton } from 'office-ui-fabric-react/lib/Button';
 import { TagModal } from '../shared/TagModal.jsx';
-import { DropdownMenuItemType } from 'office-ui-fabric-react';
 
 initializeIcons(/* optional base url */);
 
