@@ -4,7 +4,8 @@ import { stringify } from 'querystring';
 import {
     initializeIcons,
     DefaultButton,
-    DropdownMenuItemType
+    DropdownMenuItemType,
+    IconButton
 } from 'office-ui-fabric-react';
 import { Search } from "./Components/Search.jsx";
 import { Player } from "./Components/Player.jsx";
@@ -230,10 +231,12 @@ export default class Home extends React.Component {
                 <div style={{ 'textAlign': 'right' }}>
                     <DefaultButton
                         className={'default-button'}
-                        text='Create your song list'
+                        text='M'
                         onClick={() => this.openModal()}
                     />
+                  
                 </div>
+               
                 <Search
                     search={this.search}
                     showModal={this.state.showModal}
@@ -260,6 +263,7 @@ export default class Home extends React.Component {
                     colors={this.state.colors}
                     save={this.addTag}
                 />
+                
             </div>
         );
     }

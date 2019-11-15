@@ -59,7 +59,6 @@ export class Search extends React.Component {
                     <div className="body">
                         <div
                             style={{
-                                'color': '#DDDFD4',
                                 'marginBottom': '5px'
                             }}
                         >
@@ -72,7 +71,6 @@ export class Search extends React.Component {
                         <br />
                         <div
                             style={{
-                                'color': '#DDDFD4',
                                 'marginBottom': '5px'
                             }}
                         >

@@ -15,7 +15,10 @@ a {
 
     a:hover {
         color: #3FB0AC;
-        text-decoration: underline #FAE596 !important;
+    }
+
+    a:active{
+        outline: none;
     }
 
 button {
@@ -28,8 +31,8 @@ button {
         color: #173E43 !important;
     }
 
-    button:active {
-        border: 1px solid #FAE596 !important;
+    button:active{
+        outline: none;
     }
 
 .default-button {
@@ -264,7 +267,7 @@ button {
     background-color: #FAE596;
 }
 
-.ms-Dropdown-title {
+/*.ms-Dropdown-title {
     background-color: #3F3F40 !important;
     border-color: #DDDFD4 !important;
 }
@@ -272,4 +275,4 @@ button {
 .ms-TextField-field {
     background-color: #3F3F40 !important;
     border-color: #DDDFD4 !important;
-}
+}*/

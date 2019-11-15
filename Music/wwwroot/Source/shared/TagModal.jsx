@@ -14,10 +14,9 @@ import {
 export class TagModal extends React.Component {
     constructor(props) {
         super(props);
-        this._renderOption = this._renderOption.bind(this);
+      //  this._renderOption = this._renderOption.bind(this);
         this._onClick_Save = this._onClick_Save.bind(this);
         this._onClick_Close = this._onClick_Close.bind(this);
-        this._onRenderTitle = this._onRenderTitle.bind(this);
         this.state = {
             adding: false,
             newTagName: null,
@@ -79,7 +78,6 @@ export class TagModal extends React.Component {
                                 <div>
                                     <div
                                         style={{
-                                            'color': '#DDDFD4',
                                             'marginBottom': '5px'
                                         }}
                                     >
@@ -92,12 +90,10 @@ export class TagModal extends React.Component {
                                                 newTagName: value
                                             });
                                         }}
-                                        style={{ color: '#DDDFD4', 'fontWeight': 'bold' }}
                                     />
                                     <hr />
                                     <div
                                         style={{
-                                            'color': '#DDDFD4',
                                             'marginBottom': '5px'
                                         }}
                                     >
@@ -126,7 +122,6 @@ export class TagModal extends React.Component {
                                 <div>
                                     <div
                                         style={{
-                                            'color': '#DDDFD4',
                                             'marginBottom': '5px'
                                         }}
                                     >
@@ -147,10 +142,6 @@ export class TagModal extends React.Component {
                                                 });
                                             }
                                         }}
-                                        onRenderTitle={this._onRenderTitle}
-                                        style={{
-                                            caretColor: '#DDDFD4'
-                                        }}
                                     />
                                 </div>
                             )
@@ -170,13 +161,5 @@ export class TagModal extends React.Component {
                 </div>
             </Modal>
         )
-    }
-
-    _onRenderTitle(options) {
-        return (
-            <span style={{ color: '#DDDFD4', 'fontWeight': 'bold' }}>
-                {options[0].text}
-            </span>
-        );
     }
 }

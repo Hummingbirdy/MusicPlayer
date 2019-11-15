@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using Dapper;
 using Music.DataAccess.Core;
+using Music.DataAccess.Entities.Models;
 
 namespace Music.DataAccess.Repositories
 {
@@ -51,6 +52,26 @@ namespace Music.DataAccess.Repositories
             .ToList();
 
             return songs;
+        }
+
+        public Stats GetStats()
+        {
+            var stats = Retrieve(
+                "GetStats",
+                (db, cmd) =>
+                {
+                    using (var multi = db.QueryMultiple(cmd))
+                    {
+                        return new Stats()
+                        {
+                            LastSyncDate = multi.ReadFirst<DateTime>(),
+                            SongCount = multi.ReadFirst<int>()
+                        };
+                    }
+                }
+            );
+
+            return stats;
         }
     }
 }

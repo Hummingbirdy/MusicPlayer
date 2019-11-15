@@ -4,9 +4,7 @@ const webpack = require('webpack');
 
 module.exports = {
     entry: {
-        main: './wwwroot/source/main/app.jsx',
-        library: './wwwroot/source/library/app.jsx',
-        import: './wwwroot/source/import/app.jsx',
+        app: './wwwroot/source/App.jsx',
 
         vendors: [
             "babel-polyfill",
@@ -15,18 +13,14 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, 'wwwroot/dist'),
-        // filename: 'bundle.js',
         filename: '[name].js',
-        publicPath: 'dist/'
+        publicPath: '/'
     },
-    //plugins: [
-    //    new webpack.ProvidePlugin({
-    //        $: 'jquery',
-    //        jQuery: 'jquery',
-    //        'window.jQuery': 'jquery',
-    //        Popper: ['popper.js', 'default']
-    //    })
-    //],
+    devServer: {
+        historyApiFallback: true,
+        contentBase: './',
+        hot: true
+    },
     module: {
         rules: [
             {
