@@ -62,11 +62,8 @@ namespace Music.Controllers
         }
 
         [HttpPost]
-        [AllowAnonymous]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Register(RegisterViewModel model, string returnUrl = null)
+        public async Task<JsonResult> Register([FromBody]RegisterViewModel model)
         {
-            ViewData["ReturnUrl"] = returnUrl;
             if (ModelState.IsValid)
             {
                 var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
@@ -77,13 +74,13 @@ namespace Music.Controllers
 
                     await _signInManager.SignInAsync(user, isPersistent: false);
                     _logger.LogInformation("User created a new account with password.");
-                    return RedirectToLocal(returnUrl);
+                    return Json(new { Success = true });
                 }
                 AddErrors(result);
             }
 
             // If we got this far, something failed, redisplay form
-            return View(model);
+            return Json(new { Success = false });
         }
 
 
@@ -100,10 +97,8 @@ namespace Music.Controllers
 
         [HttpPost]
         [AllowAnonymous]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Login(LoginViewModel model, string returnUrl = null)
+        public async Task<JsonResult> LoginApi([FromBody]LoginViewModel model)
         {
-            ViewData["ReturnUrl"] = returnUrl;
             if (ModelState.IsValid)
             {
                 // This doesn't count login failures towards account lockout
@@ -112,22 +107,24 @@ namespace Music.Controllers
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User logged in.");
-                    return RedirectToLocal(returnUrl);
+                    return Json(new { Success = true });
                 }
                 if (result.IsLockedOut)
                 {
-                    _logger.LogWarning("User account locked out.");
-                    return RedirectToAction(nameof(Lockout));
+                    var message = "User account locked out.";
+                    _logger.LogWarning(message);
+                    return Json(new { Success = false, Message = message });
                 }
                 else
                 {
-                    ModelState.AddModelError(string.Empty, "Invalid login attempt.");
-                    return View(model);
+                    var message = "Invalid login attempt.";
+                    ModelState.AddModelError(string.Empty, message);
+                    return Json(new { Success = false, Message = message });
                 }
             }
 
             // If we got this far, something failed, redisplay form
-            return View(model);
+            return Json(new { Success = false, Message = "error" });
         }
 
         [HttpGet]
@@ -138,13 +135,28 @@ namespace Music.Controllers
         }
 
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Logout()
+        [HttpGet]
+        public async Task<JsonResult> Logout()
         {
             await _signInManager.SignOutAsync();
-            _logger.LogInformation("User logged out.");
-            return RedirectToAction(nameof(HomeController.Index), "Home");
+            return Json(true);
+            //_logger.LogInformation("User logged out.");
+            //return RedirectToAction(nameof(HomeController.Index), "Home");
+        }
+
+        [HttpGet]
+        [AllowAnonymous]
+        public async Task<JsonResult> CheckLoginStatus()
+        {
+            var isSignedIn = _signInManager.IsSignedIn(HttpContext.User);
+            if (isSignedIn)
+            {
+
+                var user = await _userManager.GetUserAsync(HttpContext.User);
+                return Json(new { SignedIn = true, User = user });
+            }
+
+            return Json(new { SignedIn = false });
         }
 
     }

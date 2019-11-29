@@ -5,7 +5,8 @@ import {
     initializeIcons,
     DefaultButton,
     DropdownMenuItemType,
-    IconButton
+    IconButton,
+    SearchBox
 } from 'office-ui-fabric-react';
 import { Search } from "./Components/Search.jsx";
 import { Player } from "./Components/Player.jsx";
@@ -109,7 +110,7 @@ export default class Home extends React.Component {
     }
 
     search(searchTerms) {
-        fetch(`/Player/Search`, {
+        fetch(`/Player/Search?search=${searchTerms}`, {
             method: 'post',
             headers: {
                 'Accept': 'application/json, text/plain, */*',
@@ -228,22 +229,29 @@ export default class Home extends React.Component {
     render() {
         return (
             <div>
-                <div style={{ 'textAlign': 'right' }}>
+                {/*<div style={{ 'textAlign': 'right' }}>
                     <DefaultButton
                         className={'default-button'}
                         text='M'
                         onClick={() => this.openModal()}
                     />
                   
-                </div>
-               
-                <Search
+                </div>*/}
+                <SearchBox
+                    placeholder="Search"
+                    onSearch={newValue => this.search(newValue)}
+                    //onFocus={() => console.log('onFocus called')}
+                    //onBlur={() => console.log('onBlur called')}
+                    //onChange={() => console.log('onChange called')}
+                />
+                <br />
+                {/*<Search
                     search={this.search}
                     showModal={this.state.showModal}
                     openModal={this.openModal}
                     closeModal={this.closeModal}
                     tags={this.state.tags}
-                />
+                />*/}
                 {this.state.songs.length > 0 &&
                     <Player
                         songs={this.state.songs}

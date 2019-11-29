@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
 using Dapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Music.DataAccess.Repositories;
@@ -29,10 +30,11 @@ namespace Music.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         public JsonResult Songs()
         {
-            //var userId = _userManager.GetUserId(HttpContext.User);
-            var userId = "9b107906-4975-49fa-8d7a-d6f2274d995b";
+            var userId = _userManager.GetUserId(HttpContext.User);
+           // var userId = "9b107906-4975-49fa-8d7a-d6f2274d995b";
 
             var songs = _songRepository.All(userId);
             var references = _tagRepository.AllReferences(userId);
@@ -63,53 +65,13 @@ namespace Music.Controllers
         }
 
         [HttpPost]
-        public JsonResult Search([FromBody] Result searchTerms)
+        [Authorize]
+        public JsonResult Search(string search)
         {
-            var userId = _userManager.GetUserId(HttpContext.User);
+             var userId = _userManager.GetUserId(HttpContext.User);
+            //var userId = "9b107906-4975-49fa-8d7a-d6f2274d995b";
 
-            var fullPlayList = _songRepository.All(userId);
-            var results = new List<Songs>();
-            searchTerms.Names.ForEach(value =>
-            {
-                var searched = fullPlayList.Where(s => s.Name.ToLower().Contains(value.Name.ToLower())).ToList();
-                results = results.Concat(searched).ToList();
-            });
-
-            searchTerms.Tags.ForEach(t =>
-            {
-                var songsForTag = _songRepository.GetByTag(t.Name);
-                results.AddRange(songsForTag);
-            });
-
-            var distinct = results.Distinct().ToList();
-
-            var references = _tagRepository.AllReferences(userId);
-
-            foreach (var song in distinct)
-            {
-                var tags = new List<TagReferences>();
-                foreach (var reference in references)
-                {
-                    if (reference.YouTubeId == song.YouTubeId)
-                    {
-                        var tag = new TagReferences()
-                        {
-                            TagReferenceId = reference.TagReferenceId,
-                            Tag = reference.Tag,
-                            Fixed = reference.Fixed,
-                            Color = reference.Color
-                        };
-                        tags.Add(tag);
-                    }
-                }
-                song.Tags = tags;
-            }
-
-            Random rnd = new Random();
-            var songs = from song in distinct
-                        orderby rnd.Next()
-                        select song;
-
+            var songs = RunSearch(search, userId);
             return Json(new { songs });
         }
 
@@ -118,6 +80,14 @@ namespace Music.Controllers
         {
             var userId = "9b107906-4975-49fa-8d7a-d6f2274d995b";
 
+            var songs = RunSearch(search, userId);
+
+
+            return Json(songs);
+        }
+
+        private List<Songs> RunSearch (string search, string userId)
+        {
             string[] searchingFor = new string[] { };
             string[] doesNotContain = new string[] { };
 
@@ -156,7 +126,8 @@ namespace Music.Controllers
                 search = search.Remove(startQuote, endQuote - startQuote + 1);
             }
 
-               // string[] searchTerms = search.Split(' ');
+            string[] searchTerms = search.Split(' ');
+            searchingFor = searchingFor.Concat(searchTerms).ToArray();
 
             var fullPlayList = _songRepository.All(userId);
             var results = new List<Songs>();
@@ -204,9 +175,10 @@ namespace Music.Controllers
                         orderby rnd.Next()
                         select song;
 
-            return Json(songs.ToList());
+            return songs.ToList();
         }
     }
+
     public class Result
     {
         public List<SearchTerms> Names { get; set; }

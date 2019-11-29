@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
 using Dapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Music.App.Modals;
@@ -32,6 +33,7 @@ namespace Music.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         public JsonResult GetAllTags()
         {
             var userId = _userManager.GetUserId(HttpContext.User);
@@ -51,6 +53,7 @@ namespace Music.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public JsonResult AddTagReference([FromBody]TagDetails tagDetails)
         {
             var userId = _userManager.GetUserId(HttpContext.User);
@@ -63,6 +66,7 @@ namespace Music.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public JsonResult DeleteTagReference([FromBody]int referenceId)
         {
             _tagRepository.DeleteTagReference(referenceId);

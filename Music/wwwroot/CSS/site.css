@@ -267,6 +267,16 @@ button {
     background-color: #FAE596;
 }
 
+.align-far-right{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.align-centered {
+    display: flex;
+    align-items: center;
+}
+
 /*.ms-Dropdown-title {
     background-color: #3F3F40 !important;
     border-color: #DDDFD4 !important;
