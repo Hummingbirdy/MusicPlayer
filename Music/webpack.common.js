@@ -4,7 +4,7 @@ const webpack = require('webpack');
 
 module.exports = {
     entry: {
-        app: './wwwroot/source/App.jsx',
+        app: './wwwroot/source/index.jsx',
 
         vendors: [
             "babel-polyfill",

@@ -1,4 +1,5 @@
 ﻿import * as React from 'react';
+import { GoogleLogin } from 'react-google-login';
 import {
     TextField,
     PrimaryButton,    Dialog, DialogType, DialogFooter,
@@ -53,6 +54,14 @@ export default class Login extends React.Component {
                             password
                         });
                     }}
+                />
+                <br />
+                <GoogleLogin
+                    clientId="808066877362-2kidrssv2qlpl7434q7j2gcetj9ulljc.apps.googleusercontent.com"
+                    buttonText="Sign in with Google"
+                    onSuccess={this._onSuccess}
+                    onFailure={this._onFail}
+                    cookiePolicy={'single_host_origin'}
                 />
                 <br />
                 <DialogFooter>
@@ -129,5 +138,13 @@ export default class Login extends React.Component {
                     });
                 }
             });
+    }
+
+    _onSuccess = (user) => {
+        debugger;
+    }
+
+    _onFail = (message) => {
+        debugger;
     }
 }

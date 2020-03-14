@@ -8,22 +8,20 @@ using Dapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Music.App.Controllers;
 using Music.App.Modals;
 using Music.DataAccess.Repositories;
 using Music.Modals;
 
 namespace Music.Controllers
 {
-    public class LibraryController : Controller
+    public class LibraryController : BaseAPIController
     {
-        private readonly UserManager<ApplicationUser> _userManager;
         private readonly TagRepository _tagRepository;
 
         public LibraryController(
-            UserManager<ApplicationUser> userManager,
             TagRepository tagRepository)
         {
-            _userManager = userManager;
             _tagRepository = tagRepository;
         }
 
@@ -36,7 +34,7 @@ namespace Music.Controllers
         [Authorize]
         public JsonResult GetAllTags()
         {
-            var userId = _userManager.GetUserId(HttpContext.User);
+            var userId = GetUser();
             var tags = _tagRepository.All(userId);
 
             return Json(new
@@ -56,7 +54,7 @@ namespace Music.Controllers
         [Authorize]
         public JsonResult AddTagReference([FromBody]TagDetails tagDetails)
         {
-            var userId = _userManager.GetUserId(HttpContext.User);
+            var userId = GetUser();
             if (tagDetails.TagId == null)
             {
                 tagDetails.TagId = _tagRepository.Upload(userId, tagDetails.Tag, 2, tagDetails.Color);

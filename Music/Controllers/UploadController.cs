@@ -9,38 +9,31 @@ using Dapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.IdentityModel.Protocols;
+using Music.App.Controllers;
 using Music.DataAccess.Repositories;
 using Music.Modals;
 
 
 namespace Music.Controllers
 {
-    public class UploadController : Controller
+    public class UploadController : BaseAPIController
     {
-        private readonly UserManager<ApplicationUser> _userManager;
         private readonly SongRepository _songRepository;
         private readonly TagRepository _tagRepository;
 
         public UploadController(
-            UserManager<ApplicationUser> userManager,
             SongRepository songRepository,
             TagRepository tagRepository)
         {
-            _userManager = userManager;
             _songRepository = songRepository;
             _tagRepository = tagRepository;
         }
 
         [HttpPost]
-        public void Playlist([FromBody]List<Songs> songArray)
-        {
-            UploadSongs(songArray);
-        }
-
-        public void UploadSongs(List<Songs> songs)
-        {
-            var userId = _userManager.GetUserId(HttpContext.User);
+        [Authorize]
+        public void Playlist([FromBody]List<Songs> songs)
+        {         
+            var userId = GetUser();
 
             var distinctSongs = songs.GroupBy(s => s.YouTubeId).Select(s => s.OrderBy(x => x.YouTubeId).First()).ToList();
 
@@ -82,8 +75,6 @@ namespace Music.Controllers
                 Console.WriteLine(ex.Message);
                 throw;
             }
-
-
         }
     }
 }

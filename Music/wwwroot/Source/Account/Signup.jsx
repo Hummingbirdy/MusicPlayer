@@ -1,4 +1,5 @@
 ﻿import * as React from 'react';
+import { GoogleLogin } from 'react-google-login';
 import {
     TextField,
     PrimaryButton,    Dialog, DialogType, DialogFooter,

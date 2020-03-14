@@ -8,7 +8,7 @@ import { setTimeout } from 'timers';
 
 initializeIcons(/* optional base url */);
 
-let CLIENT_ID = '803038318923-b61uu8gs8ksnvc5rk0sllacr9cr48sai.apps.googleusercontent.com',
+let CLIENT_ID = '1045432309664-0039a2pvcumd9ctu48nnopqe430fhi3g.apps.googleusercontent.com',
     DISCOVERYDOCS = ["https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest"],
     SCOPES = 'https://www.googleapis.com/auth/youtube.readonly';
 
@@ -116,7 +116,8 @@ export default class Import extends React.Component {
         const config = {
             headers: {
                 'Accept': 'application/json, text/plain, */*',
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${this.props.auth.getAccessToken()}`
             }
         };
 

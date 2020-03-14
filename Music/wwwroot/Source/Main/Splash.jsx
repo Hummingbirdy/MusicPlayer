@@ -13,9 +13,9 @@ export default class Splash extends React.Component {
                     </div>                      
                     <div>
                         <PrimaryButton
-                            onClick={() => this.props.openSignupDialog()}
+                            onClick={this.props.auth.login}
                         >
-                            Sign up to get started
+                            Sign up or Log in to get started
                     </PrimaryButton>
                     </div>
                 </div>

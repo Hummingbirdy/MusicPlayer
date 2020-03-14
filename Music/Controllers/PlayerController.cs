@@ -3,28 +3,26 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Dapper;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Music.App.Controllers;
 using Music.DataAccess.Repositories;
 using Music.Modals;
 
 namespace Music.Controllers
 {
-    public class PlayerController : Controller
+    public class PlayerController : BaseAPIController
     {
-        private readonly UserManager<ApplicationUser> _userManager;
         private readonly SongRepository _songRepository;
         private readonly TagRepository _tagRepository;
 
         public PlayerController(
-            UserManager<ApplicationUser> userManager, 
             SongRepository songRepository,
             TagRepository tagRepository)
         {
-            _userManager = userManager;
             _songRepository = songRepository;
             _tagRepository = tagRepository;
         }
@@ -33,8 +31,7 @@ namespace Music.Controllers
         [Authorize]
         public JsonResult Songs()
         {
-            var userId = _userManager.GetUserId(HttpContext.User);
-           // var userId = "9b107906-4975-49fa-8d7a-d6f2274d995b";
+            var userId = GetUser();
 
             var songs = _songRepository.All(userId);
             var references = _tagRepository.AllReferences(userId);
@@ -66,10 +63,9 @@ namespace Music.Controllers
 
         [HttpPost]
         [Authorize]
-        public JsonResult Search(string search)
+        public JsonResult Search([FromBody]string search)
         {
-             var userId = _userManager.GetUserId(HttpContext.User);
-            //var userId = "9b107906-4975-49fa-8d7a-d6f2274d995b";
+            var userId = GetUser();
 
             var songs = RunSearch(search, userId);
             return Json(new { songs });
@@ -86,7 +82,7 @@ namespace Music.Controllers
             return Json(songs);
         }
 
-        private List<Songs> RunSearch (string search, string userId)
+        private List<Songs> RunSearch(string search, string userId)
         {
             string[] searchingFor = new string[] { };
             string[] doesNotContain = new string[] { };

@@ -11,6 +11,7 @@ import {
 import { Search } from "./Components/Search.jsx";
 import { Player } from "./Components/Player.jsx";
 import { TagModal } from '../shared/TagModal.jsx';
+import axios from 'axios';
 
 initializeIcons(/* optional base url */);
 
@@ -48,7 +49,9 @@ export default class Home extends React.Component {
     }
 
     _load() {
-        fetch("/Player/Songs")
+        fetch("/Player/Songs", {
+            headers: { Authorization: `Bearer ${this.props.auth.getAccessToken()}` }
+        })
             .then(res => res.json())
             .then((result) => {
                 this.setState({
@@ -59,7 +62,9 @@ export default class Home extends React.Component {
                 });
             });
 
-        fetch("/Library/GetAllTags")
+        fetch("/Library/GetAllTags", {
+            headers: { Authorization: `Bearer ${this.props.auth.getAccessToken()}` }
+        })
             .then(res => res.json())
             .then((result) => {
                 let keyedTags = [];
@@ -110,20 +115,20 @@ export default class Home extends React.Component {
     }
 
     search(searchTerms) {
-        fetch(`/Player/Search?search=${searchTerms}`, {
-            method: 'post',
+        const config = {
             headers: {
                 'Accept': 'application/json, text/plain, */*',
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(searchTerms),
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${this.props.auth.getAccessToken()}`
+            }
+        };
 
-        })
-            .then(res => res.json())
+        axios.post('/Player/Search', JSON.stringify(searchTerms), config)
+          //  .then(res => res.json())
             .then((result) => {
                 this.setState({
-                    songs: result.songs,
-                    url: 'https://www.youtube.com/watch?v=' + result.songs[0].youTubeId,
+                    songs: result.data.songs,
+                    url: 'https://www.youtube.com/watch?v=' + result.data.songs[0].youTubeId,
                     index: 1,
                     showModal: false
                 });
@@ -181,7 +186,8 @@ export default class Home extends React.Component {
             method: 'post',
             headers: {
                 'Accept': 'application/json, text/plain, */*',
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                ' Authorization': `Bearer ${this.props.auth.getAccessToken()}`
             },
             body: JSON.stringify(tagDetails),
         })
@@ -199,7 +205,8 @@ export default class Home extends React.Component {
             method: 'post',
             headers: {
                 'Accept': 'application/json, text/plain, */*',
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                ' Authorization': `Bearer ${this.props.auth.getAccessToken()}`
             },
             body: JSON.stringify(referenceId),
         })
@@ -240,9 +247,9 @@ export default class Home extends React.Component {
                 <SearchBox
                     placeholder="Search"
                     onSearch={newValue => this.search(newValue)}
-                    //onFocus={() => console.log('onFocus called')}
-                    //onBlur={() => console.log('onBlur called')}
-                    //onChange={() => console.log('onChange called')}
+                //onFocus={() => console.log('onFocus called')}
+                //onBlur={() => console.log('onBlur called')}
+                //onChange={() => console.log('onChange called')}
                 />
                 <br />
                 {/*<Search
@@ -271,7 +278,7 @@ export default class Home extends React.Component {
                     colors={this.state.colors}
                     save={this.addTag}
                 />
-                
+
             </div>
         );
     }
