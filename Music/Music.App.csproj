@@ -6,10 +6,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove=".env.development" />
+  </ItemGroup>
+
+  <ItemGroup>
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include=".env.development">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
     <Content Include="webpack.dev.js" />
     <Content Include="webpack.prod.js" />
   </ItemGroup>

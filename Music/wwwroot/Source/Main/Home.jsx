@@ -50,7 +50,7 @@ export default class Home extends React.Component {
 
     _load() {
         fetch("/Player/Songs", {
-            headers: { Authorization: `Bearer ${this.props.auth.getAccessToken()}` }
+           headers: { Authorization: `Bearer ${this.props.auth.getAccessToken()}` }
         })
             .then(res => res.json())
             .then((result) => {

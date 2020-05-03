@@ -276,3 +276,13 @@ Music/wwwroot/dist/vendors\.js
 Music/wwwroot/dist/vendors\.js\.map
 
 Music/wwwroot/dist/
+
+Music/.env
+
+Music/.env.development
+
+Music/appsettings.development.json
+
+Music/appsettings.json
+
+Music/appsettings.production.json

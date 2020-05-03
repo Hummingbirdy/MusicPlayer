@@ -32,15 +32,17 @@ namespace Music
             // services.AddRazorPages();
             IdentityModelEventSource.ShowPII = true;
 
+            // Add Autho0 Authentication Services
             services.AddAuthentication(options =>
             {
                 options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
                 options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
             }).AddJwtBearer(options =>
             {
-                options.Authority = $"https://lemaster-works.auth0.com";
-                options.Audience = "http://localhost:49283";
+                options.Authority = Configuration["Auth0:Domain"];
+                options.Audience = Configuration["Auth0:Audience"];
             });
+
             services.AddControllers();
 
             // Identity
@@ -54,7 +56,6 @@ namespace Music
             // MVC
             services.AddMvc();
 
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -67,7 +68,7 @@ namespace Music
 
             app.UseStaticFiles();
 
-            app.UseHttpsRedirection();
+           // app.UseHttpsRedirection();
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();

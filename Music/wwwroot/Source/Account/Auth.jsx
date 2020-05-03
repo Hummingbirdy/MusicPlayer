@@ -5,9 +5,9 @@ export default class Auth {
         this.history = history;
         this.auth0 = new Auth0.WebAuth({
             domain: 'lemaster-works.auth0.com',
-            clientID: 'u7z730UjoZu8GY57Kc2cXELl7B4BPIrE',
-            redirectUri: 'http://localhost:49283/callback',
-            audience: "http://localhost:49283",
+            clientID: process.env.REACT_APP_CLIENT_ID,
+            redirectUri: process.env.REACT_APP_REDIRECT_URI,
+            audience: process.env.REACT_APP_AUDIENCE,
             responseType: "token id_token",
             scope: "openid profile email"
         });
